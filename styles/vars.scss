@@ -1,0 +1,14 @@
+$xs-xl: unquote("only screen and (max-width: 1199px)");
+$xs-lg: unquote("only screen and (max-width: 991px)");
+$xsmall: unquote("only screen and (max-width: 575px)");
+$xxsmall: unquote("only screen and (max-width: 360px)");
+$touch: unquote("only screen and (max-width: 767px)");
+$tablet: unquote("only screen and (min-width: 576px) and (max-width: 767px)");
+$iphone5: unquote("only screen and (max-width: 320px)");
+$not-touch: unquote("only screen and (min-width: 768px)");
+
+$md-xl-height: unquote("only screen and (min-height: 720px)");
+
+$md-xxl: unquote("only screen and (min-width: 768px)");
+$lg-xxl: unquote("only screen and (min-width: 992px)");
+$xl-xxl: unquote("only screen and (min-width: 1200px)");
