@@ -17,7 +17,8 @@
       "@styles/*": ["./styles/*"],
       "@atoms/*": ["./components/atoms/*"],
       "@molecules/*": ["./components/molecules/*"],
-      "@features/*": ["./components/features/*"]
+      "@features/*": ["./components/features/*"],
+      "@svgs/*": ["./svgs/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

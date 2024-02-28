@@ -1,0 +1,87 @@
+.container {
+  height: calc(100vh - 80px);
+  height: calc(100dvh - 80px);
+  background: url("/bg-top-1.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.heading {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  position: relative;
+  top: -24px;
+  span {
+    display: block;
+  }
+  .first {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+  }
+  .second {
+    font-style: italic;
+    font-weight: 800;
+    color: #ffca10;
+  }
+}
+.scrollBtn {
+  position: absolute;
+  bottom: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .text {
+    color: #ffca10;
+    line-height: 1;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: -1.333px;
+  }
+}
+.ornament1,
+.ornament2,
+.ornament3,
+.ornament4,
+.ornament5,
+.ornament6,
+.ornament7 {
+  position: absolute;
+}
+.ornament1 {
+  top: 0px;
+  left: 32px;
+}
+.ornament2 {
+  top: 0px;
+  left: 50%;
+}
+.ornament3 {
+  top: 32px;
+  right: -90px;
+}
+.ornament4 {
+  top: 92px;
+  left: -66px;
+  transform: scale(0.9);
+}
+.ornament5 {
+  right: -28px;
+  bottom: 84px;
+  transform: scale(0.9);
+}
+.ornament6 {
+  bottom: 88px;
+  left: 20%;
+}
+.ornament7 {
+  bottom: 160px;
+  left: -12px;
+}
