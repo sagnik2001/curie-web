@@ -4,8 +4,8 @@ import { calson } from "@utilities/font";
 
 export default function DownloadMobile() {
   return (
-    <div className={clsx(styles.btn, calson.className)} onClick={() => {}}>
-      <button>
+    <div className={styles.btn} onClick={() => {}}>
+      <button className={calson.className}>
         <span>download curie</span>
       </button>
     </div>

@@ -1,12 +1,25 @@
+@import "@styles/vars.scss";
+
 .container {
   position: relative;
   padding: 0 24px 48px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  @media #{$not-touch} {
+    padding: 0 64px 48px;
+  }
 }
 .title {
   font-size: 40px;
   color: #ffca10;
   margin-top: 20px;
   margin-bottom: 40px;
+  @media #{$not-touch} {
+    font-size: 88px;
+    margin-top: 60px;
+    margin-bottom: 72px;
+  }
 }
 .para {
   color: white;
@@ -14,6 +27,10 @@
   font-weight: 500;
   line-height: 1.75;
   margin-bottom: 32px;
+  @media #{$not-touch} {
+    font-size: 20px;
+    margin-bottom: 48px;
+  }
 }
 ul.para {
   padding-left: 16px;
@@ -28,4 +45,7 @@ ul.para {
   font-style: normal;
   font-weight: 700;
   margin-bottom: 12px;
+  @media #{$not-touch} {
+    font-size: 28px;
+  }
 }
