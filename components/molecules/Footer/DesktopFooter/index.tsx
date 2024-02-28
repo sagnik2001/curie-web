@@ -25,13 +25,13 @@ export default function DesktopFooter({
             </h4>
           </div>
           <div className={styles.linkRow}>
-            <Link href="" className={styles.link}>
+            <Link href="/about-us" className={styles.link}>
               About
             </Link>
-            <Link href="" className={styles.link}>
+            <Link href="/privacy" className={styles.link}>
               Privacy Policy
             </Link>
-            <Link href="" className={styles.link}>
+            <Link href="/terms" className={styles.link}>
               Term and Conditions
             </Link>
           </div>
