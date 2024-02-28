@@ -41,7 +41,10 @@ export default function Footer({
         <div className={styles.socialBox}>
           <span className={styles.socialLabel}>Whatsapp</span>
           <span className={styles.socialValue}>
-            <Link href="mailto:hello@curie.money" target="_blank">
+            <Link
+              href="https://chat.whatsapp.com/IvJATkpzt6uEucYWxdf6lH"
+              target="_blank"
+            >
               @curie_community
             </Link>
           </span>
@@ -49,21 +52,21 @@ export default function Footer({
         <div className={styles.socialBox}>
           <span className={styles.socialLabel}>Twitter</span>
           <span className={styles.socialValue}>
-            <Link href="mailto:hello@curie.money" target="_blank">
+            <Link href="https://twitter.com/CurieMoney" target="_blank">
+              @curie_money
+            </Link>
+          </span>
+        </div>
+        <div className={styles.socialBox}>
+          <span className={styles.socialLabel}>Instagram</span>
+          <span className={styles.socialValue}>
+            <Link href="https://www.instagram.com/curiemoney/" target="_blank">
               @curie_money
             </Link>
           </span>
         </div>
         <div className={styles.socialBox}>
           <span className={styles.socialLabel}>Youtube</span>
-          <span className={styles.socialValue}>
-            <Link href="mailto:hello@curie.money" target="_blank">
-              @curie_money
-            </Link>
-          </span>
-        </div>
-        <div className={styles.socialBox}>
-          <span className={styles.socialLabel}>Email</span>
           <span className={styles.socialValue}>
             <Link href="mailto:hello@curie.money" target="_blank">
               @curie_money
