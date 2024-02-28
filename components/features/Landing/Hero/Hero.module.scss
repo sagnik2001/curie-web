@@ -15,7 +15,10 @@
   line-height: 1.15;
   letter-spacing: -0.8px;
   position: relative;
-  top: -24px;
+  top: -52px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.4s;
   span {
     display: block;
   }
@@ -28,6 +31,9 @@
     font-style: italic;
     font-weight: 800;
     color: #ffca10;
+  }
+  &.animateHeading {
+    opacity: 1;
   }
 }
 .scrollBtn {
@@ -54,34 +60,77 @@
 .ornament6,
 .ornament7 {
   position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 .ornament1 {
-  top: 0px;
-  left: 32px;
+  top: 80px;
+  left: 90px;
+  opacity: 0;
+  &.animateOrnament1 {
+    top: 0px;
+    left: 32px;
+    opacity: 1;
+  }
 }
 .ornament2 {
-  top: 0px;
-  left: 50%;
+  top: 80px;
+  left: 45%;
+  opacity: 0;
+  &.animateOrnament2 {
+    top: 0px;
+    left: 50%;
+    opacity: 1;
+  }
 }
 .ornament3 {
-  top: 32px;
-  right: -90px;
+  top: 90px;
+  right: 20px;
+  opacity: 0;
+  &.animateOrnament3 {
+    top: 32px;
+    right: -90px;
+    opacity: 1;
+  }
 }
 .ornament4 {
-  top: 92px;
-  left: -66px;
+  top: 120px;
+  left: -0px;
   transform: scale(0.9);
+  opacity: 0;
+  &.animateOrnament4 {
+    top: 92px;
+    left: -66px;
+    opacity: 1;
+  }
 }
 .ornament5 {
-  right: -28px;
-  bottom: 84px;
+  right: 40px;
+  bottom: 160px;
   transform: scale(0.9);
+  opacity: 0;
+  &.animateOrnament5 {
+    right: -28px;
+    bottom: 84px;
+    opacity: 1;
+  }
 }
 .ornament6 {
-  bottom: 88px;
-  left: 20%;
+  bottom: 240px;
+  left: 40%;
+  opacity: 0;
+  &.animateOrnament6 {
+    bottom: 88px;
+    left: 20%;
+    opacity: 1;
+  }
 }
 .ornament7 {
-  bottom: 160px;
-  left: -12px;
+  bottom: 240px;
+  left: 40px;
+  opacity: 0;
+  &.animateOrnament7 {
+    bottom: 160px;
+    left: -12px;
+    opacity: 1;
+  }
 }
