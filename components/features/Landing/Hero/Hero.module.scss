@@ -9,7 +9,6 @@
 }
 .bg {
   position: absolute;
-  top: -48px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -23,10 +22,10 @@
   line-height: 1.15;
   letter-spacing: -0.8px;
   position: relative;
-  top: -52px;
+  top: -20px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  transition-delay: 0.4s;
+  transition-delay: 0.55s;
   span {
     display: block;
   }
@@ -68,7 +67,7 @@
 .ornament6,
 .ornament7 {
   position: absolute;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .ornament1 {
   top: 80px;

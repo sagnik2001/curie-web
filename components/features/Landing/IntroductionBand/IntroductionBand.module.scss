@@ -20,7 +20,7 @@
   background: #3f008e;
   color: #ffca10;
   bottom: 0;
-  transform: translateX(-50%) rotate(-10deg) translateY(5px);
+  transform: translateX(-50%) rotate(-10deg) translateY(-15px);
   left: 50%;
 
   span {
@@ -36,7 +36,7 @@
   background: #27003a;
   color: #743511;
   bottom: 0;
-  transform: translateX(-50%) rotate(10deg) translateY(5px);
+  transform: translateX(-50%) rotate(10deg) translateY(-15px);
   left: 50%;
 
   span {
@@ -50,5 +50,6 @@
 .container {
   overflow: hidden;
   height: 140px;
+  top: -28px;
   position: relative;
 }
