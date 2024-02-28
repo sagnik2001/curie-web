@@ -1,0 +1,54 @@
+.baseBand {
+  display: flex;
+  font-style: italic;
+  align-items: center;
+  gap: 18px;
+  letter-spacing: 0.367px;
+  line-height: 1.36;
+  height: 30px;
+  font-size: 18px;
+  width: fit-content;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.band {
+  background: #3f008e;
+  color: #ffca10;
+  bottom: 0;
+  transform: translateX(-50%) rotate(-10deg) translateY(5px);
+  left: 50%;
+
+  span {
+    width: 104px;
+    display: block;
+    flex-shrink: 0;
+    line-height: 1;
+    position: relative;
+    top: 2px;
+  }
+}
+.inroBand {
+  background: #27003a;
+  color: #743511;
+  bottom: 0;
+  transform: translateX(-50%) rotate(10deg) translateY(5px);
+  left: 50%;
+
+  span {
+    display: block;
+    flex-shrink: 0;
+    line-height: 1;
+    position: relative;
+    top: 2px;
+  }
+}
+.container {
+  overflow: hidden;
+  height: 140px;
+  position: relative;
+}

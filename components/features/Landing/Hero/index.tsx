@@ -21,6 +21,7 @@ export default function Hero() {
       className={styles.container}
       onClick={() => setLoadAnimation((animation) => !animation)}
     >
+      <img src="/bg-top-1.png" className={styles.bg} />
       <Ornament1
         className={clsx(
           styles.ornament1,
