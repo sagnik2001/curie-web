@@ -17,10 +17,6 @@ export default function IntroductionBand() {
         <span className={clsx(calson.className)}>India&apos;s first</span>
         <span className={clsx(calson.className)}>India&apos;s first</span>
       </div>
-      <div className={styles.marker} />
-      <div className={styles.marker2} />
-      <div className={styles.marker3} />
-      <div className={styles.marker4} />
     </div>
   );
 }

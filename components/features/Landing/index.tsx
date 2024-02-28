@@ -3,6 +3,7 @@ import * as styles from "./Landing.module.scss";
 import Hero from "./Hero";
 import DownloadMobile from "./DownloadMobile";
 import IntroductionBand from "./IntroductionBand";
+import Explain from "./Explain";
 
 export default function Landing() {
   return (
@@ -10,6 +11,7 @@ export default function Landing() {
       <Navbar />
       <Hero />
       <IntroductionBand />
+      <Explain />
       <DownloadMobile />
     </div>
   );
