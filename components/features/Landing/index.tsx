@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import DownloadMobile from "./DownloadMobile";
 import IntroductionBand from "./IntroductionBand";
 import Explain from "./Explain";
+import Footer from "@molecules/Footer";
 
 export default function Landing() {
   return (
@@ -12,6 +13,7 @@ export default function Landing() {
       <Hero />
       <IntroductionBand />
       <Explain />
+      <Footer landingPage />
       <DownloadMobile />
     </div>
   );

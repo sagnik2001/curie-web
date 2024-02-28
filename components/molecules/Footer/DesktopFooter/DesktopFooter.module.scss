@@ -1,7 +1,7 @@
 @import "@styles/vars.scss";
 
 .footer {
-  @media #{$not-touch} {
+  @media #{$touch} {
     display: none;
   }
 }
@@ -9,63 +9,83 @@
   height: 40px;
   width: 100%;
   background: #ffca10;
-  margin-bottom: 64px;
+  margin-bottom: 80px;
+}
+.container {
+  display: flex;
 }
 .join {
-  padding: 0 24px 0 0;
-  margin-bottom: 18px;
+  width: 50%;
+}
+.linkRow {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  gap: 40px;
+  width: fit-content;
+  .link {
+    color: #ffca10;
+    text-decoration-color: #ffca10;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+  }
+}
+.msg {
+  color: #ffca10;
+  text-align: right;
+  font-size: 88px;
+  font-weight: 700;
+  margin-bottom: 110px;
+
+  span {
+    display: block;
+  }
+}
+.msgBox {
   position: relative;
   &::after {
     content: "";
-    top: 24px;
+    top: 48px;
     left: 0;
-    width: calc(100% - 224px);
-    background-color: #ffca10;
+    width: calc(100% - 340px);
     height: 4px;
     position: absolute;
+    background-color: #ffca10;
   }
 }
-.joinText {
-  text-align: right;
-  color: #ffca10;
-  font-size: 52px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  span {
-    display: block;
-  }
+.contact {
+  padding-left: 106px;
 }
-.paraText {
-  text-align: right;
+.learnInfo {
+  max-width: 520px;
+  width: 100%;
   color: #ffca10;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.42;
-  letter-spacing: 0.1px;
-  margin-bottom: 32px;
-  span {
-    display: block;
-  }
+  letter-spacing: 0.15px;
+  margin-bottom: 38px;
 }
 .socialBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 24px 16px;
+  margin-bottom: 24px;
   padding-bottom: 12px;
   border-bottom: 1px solid #664e12;
 }
 .socialLabel {
   color: #ffca10;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.42;
-  letter-spacing: 0.1px;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
 }
 .socialValue {
   color: #664e12;
   text-align: right;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.45;
   letter-spacing: 0.2px;
@@ -79,23 +99,6 @@
     }
   }
 }
-.links {
-  margin-top: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-left: 24px;
-  margin-bottom: 54px;
-
-  .link {
-    text-decoration-color: #664e12;
-    color: #ffca10;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.15px;
-    text-decoration-line: underline;
-  }
-}
 .partnerBox {
   border-radius: 12px;
   border: 1px solid #ffca10;
@@ -105,6 +108,7 @@
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+  margin-top: 116px;
 
   .tag {
     position: absolute;
@@ -123,11 +127,5 @@
 .bankBox {
   display: flex;
   align-items: center;
-  gap: 40px;
-}
-.regulatorBox {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  margin-top: 20px;
+  gap: 64px;
 }
