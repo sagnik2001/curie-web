@@ -10,7 +10,7 @@ import Ornament5 from "@svgs/hero/ornament5.svg";
 import Ornament6 from "@svgs/hero/ornament6.svg";
 import Ornament7 from "@svgs/hero/ornament7.svg";
 import { useEffect, useState } from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated, easings } from "@react-spring/web";
 
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
@@ -24,39 +24,39 @@ export default function Hero() {
   const ornment1AnimationProps = useSpring({
     from: { top: "80px", left: "90px", opacity: 0 },
     to: { top: "0px", left: "32px", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
   const ornment2AnimationProps = useSpring({
     from: { top: "80px", left: "45%", opacity: 0 },
     to: { top: "0px", left: "50%", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
 
   const ornment3AnimationProps = useSpring({
     from: { top: "90px", right: "20px", opacity: 0 },
     to: { top: "32px", right: "-90px", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
 
   const ornment4AnimationProps = useSpring({
     from: { top: "120px", left: "-0px", opacity: 0 },
     to: { top: "92px", left: "-66px", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
   const ornment5AnimationProps = useSpring({
     from: { right: "40px", bottom: "160px", opacity: 0 },
     to: { right: "-28px", bottom: "84px", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
   const ornment6AnimationProps = useSpring({
     from: { bottom: "240px", left: "40%", opacity: 0 },
     to: { bottom: "88px", left: "20%", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
   const ornment7AnimationProps = useSpring({
     from: { bottom: "240px", left: "40px", opacity: 0 },
     to: { bottom: "160px", left: "-12px", opacity: 1 },
-    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+    config: { easing: easings.easeOutSine, duration: 400 },
   });
 
   useEffect(() => {
@@ -65,34 +65,47 @@ export default function Hero() {
   return (
     <div className={styles.container}>
       <img src="/bg-top-1.png" className={styles.bg} />
-      <AnimatedOrnament1
-        style={{ position: "absolute", ...ornment1AnimationProps }}
+      <Ornament1
+        className={clsx(
+          styles.ornament1,
+          loadAnimation && styles.animateOrnament1
+        )}
       />
-      <AnimatedOrnament2
-        style={{ position: "absolute", ...ornment2AnimationProps }}
+      <Ornament2
+        className={clsx(
+          styles.ornament2,
+          loadAnimation && styles.animateOrnament2
+        )}
       />
-      <AnimatedOrnament3
-        style={{ position: "absolute", ...ornment3AnimationProps }}
+      <Ornament3
+        className={clsx(
+          styles.ornament3,
+          loadAnimation && styles.animateOrnament3
+        )}
       />
-      <AnimatedOrnament4
-        style={{
-          position: "absolute",
-          transform: "scale(0.9)",
-          ...ornment4AnimationProps,
-        }}
+      <Ornament4
+        className={clsx(
+          styles.ornament4,
+          loadAnimation && styles.animateOrnament4
+        )}
       />
-      <AnimatedOrnament5
-        style={{
-          position: "absolute",
-          transform: "scale(0.9)",
-          ...ornment5AnimationProps,
-        }}
+      <Ornament5
+        className={clsx(
+          styles.ornament5,
+          loadAnimation && styles.animateOrnament5
+        )}
       />
-      <AnimatedOrnament6
-        style={{ position: "absolute", ...ornment6AnimationProps }}
+      <Ornament6
+        className={clsx(
+          styles.ornament6,
+          loadAnimation && styles.animateOrnament6
+        )}
       />
-      <AnimatedOrnament7
-        style={{ position: "absolute", ...ornment7AnimationProps }}
+      <Ornament7
+        className={clsx(
+          styles.ornament7,
+          loadAnimation && styles.animateOrnament7
+        )}
       />
       <h1
         className={clsx(styles.heading, loadAnimation && styles.animateHeading)}
