@@ -2,9 +2,31 @@
   color: #ffca10;
   font-size: 40px;
   font-weight: 700;
+  position: relative;
+  z-index: 2;
   span {
     display: block;
   }
+}
+.img {
+  width: 372px;
+  height: 333px;
+  position: absolute;
+  bottom: 147px;
+  right: -36px;
+}
+.bg {
+  width: 554px;
+  height: 446px;
+  position: absolute;
+  top: 170px;
+  right: 17px;
+  z-index: 0;
+}
+.container {
+  overflow: hidden;
+  height: 100dvh;
+  position: relative;
 }
 .para {
   color: white;
