@@ -10,9 +10,17 @@ import Ornament5 from "@svgs/hero/ornament5.svg";
 import Ornament6 from "@svgs/hero/ornament6.svg";
 import Ornament7 from "@svgs/hero/ornament7.svg";
 import { useEffect, useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
 
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
+  const AnimatedOrnament1 = animated(Ornament1);
+  const ornment1AnimationProps = useSpring({
+    from: { top: "80px", left: "90px", opacity: 0 },
+    to: { top: "0px", left: "32px", opacity: 1 },
+    config: { mass: 1, damping: 10, tension: 15, duration: 400 },
+  });
+
   useEffect(() => {
     setLoadAnimation(true);
   }, []);
@@ -22,11 +30,14 @@ export default function Hero() {
       onClick={() => setLoadAnimation((animation) => !animation)}
     >
       <img src="/bg-top-1.png" className={styles.bg} />
-      <Ornament1
+      {/* <Ornament1
         className={clsx(
           styles.ornament1,
           loadAnimation && styles.animateOrnament1
         )}
+      /> */}
+      <AnimatedOrnament1
+        style={{ position: "absolute", ...ornment1AnimationProps }}
       />
       <Ornament2
         className={clsx(
