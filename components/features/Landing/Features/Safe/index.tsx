@@ -9,6 +9,7 @@ export default function Safe() {
         <span>always safe</span>
       </h2>
       <p className={styles.description}>with our licensed Bank and AMC</p>
+      <img src="/mobile-feature-3.png" alt="" className={styles.img} />
     </div>
   );
 }

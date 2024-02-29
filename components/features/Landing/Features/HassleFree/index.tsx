@@ -9,6 +9,7 @@ export default function HassleFree() {
         <span>hassle free</span>
       </h2>
       <p className={styles.description}>with UPI & debit card</p>
+      <img src="/mobile-feature-2.png" alt="" className={styles.img} />
     </div>
   );
 }
