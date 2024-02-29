@@ -7,20 +7,27 @@ import Explain from "./Explain";
 import Footer from "@molecules/Footer";
 import Welcome from "./Welcome";
 import Features from "./Features";
-import { useRef } from "react";
+import { useEffect, useState } from "react";
+import DesktopLanding from "./Desktop";
+
+type ScreenSize = "unknown" | "mobile" | "not-mobile";
 
 export default function Landing() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const snapContainerRef = useRef<HTMLDivElement>(null);
+  const [screenSize, setScreenSize] = useState<ScreenSize>("unknown");
+  useEffect(() => {
+    const screenSize = window.screen.width > 767 ? "not-mobile" : "mobile";
+    setScreenSize(screenSize);
+  }, []);
+  if (screenSize === "unknown") return <></>;
+  if (screenSize === "not-mobile") return <DesktopLanding />;
+
   return (
-    <div className={styles.container} ref={containerRef}>
+    <div className={styles.container}>
       <Navbar />
       <Hero />
       <IntroductionBand />
-      <div ref={snapContainerRef}>
-        <Explain />
-        <Features />
-      </div>
+      <Explain />
+      <Features />
       <Welcome />
       <Footer landingPage />
       <DownloadMobile />
