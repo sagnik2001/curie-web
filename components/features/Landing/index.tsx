@@ -15,8 +15,13 @@ type ScreenSize = "unknown" | "mobile" | "not-mobile";
 export default function Landing() {
   const [screenSize, setScreenSize] = useState<ScreenSize>("unknown");
   useEffect(() => {
-    const screenSize = window.screen.width > 767 ? "not-mobile" : "mobile";
-    setScreenSize(screenSize);
+    const handleScreenSize = () => {
+      const screenSize = window.screen.width > 767 ? "not-mobile" : "mobile";
+      setScreenSize(screenSize);
+    };
+    handleScreenSize();
+    window.addEventListener("resize", handleScreenSize);
+    return () => window.removeEventListener("resize", handleScreenSize);
   }, []);
   if (screenSize === "unknown") return <></>;
   if (screenSize === "not-mobile") return <DesktopLanding />;
