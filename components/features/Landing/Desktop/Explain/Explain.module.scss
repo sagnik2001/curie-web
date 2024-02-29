@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  height: 100dvh;
+}
+.title {
+  padding-left: 24px;
+  span {
+    display: block;
+  }
+  color: #ffca10;
+  font-size: 88px;
+  font-weight: 700;
+  margin-top: 40px;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.para {
+  padding-left: 24px;
+  span {
+    display: block;
+  }
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+}
