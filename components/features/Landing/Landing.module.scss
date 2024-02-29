@@ -1,3 +1,7 @@
 .container {
   position: relative;
+  overflow: auto;
+  scroll-snap-type: both;
+  scroll-behavior: smooth;
+  height: 100vh;
 }

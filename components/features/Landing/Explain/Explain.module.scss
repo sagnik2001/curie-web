@@ -19,14 +19,16 @@
   width: 554px;
   height: 446px;
   position: absolute;
-  top: 170px;
+  top: 255px;
   right: 17px;
   z-index: 0;
 }
 .container {
   overflow: hidden;
+  height: 100vh;
   height: 100dvh;
   position: relative;
+  scroll-snap-align: center;
 }
 .para {
   color: white;

@@ -8,7 +8,7 @@ export default function Explain() {
   //   top: {top: "43%",right: "42%"},
   //   from: {top: "44%", right: "36%"},
 
-  // })) 
+  // }))
   return (
     <div className={styles.container}>
       <img src="/bg-explain.png" alt="" className={styles.bg} />
@@ -20,7 +20,9 @@ export default function Explain() {
         <span>Zero balance account with</span>
         <span>no hidden fees</span>
       </p>
-      <AnimatedOrnament1 style={{ position: "absolute" }} />
+      <AnimatedOrnament1
+        style={{ position: "absolute", top: "43%", right: "42%" }}
+      />
       <img src="/mobile.png" alt="" className={styles.img} />
     </div>
   );
