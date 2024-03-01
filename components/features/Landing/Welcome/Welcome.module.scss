@@ -7,7 +7,7 @@
   background: #180036;
   &::after {
     content: "";
-    top: -7px;
+    top: 24px;
     left: 0;
     background: linear-gradient(180deg, #180036 0%, rgba(24, 0, 54, 0) 100%);
     width: 100%;
@@ -23,17 +23,17 @@
 }
 .img {
   position: absolute;
-  top: -27px;
+  top: 0;
   left: -342px;
   object-fit: cover;
   aspect-ratio: 168 / 103;
   width: 882px;
-  height: 539px;
+  height: 568px;
 }
 .title {
   position: absolute;
   z-index: 10;
-  top: -20px;
+  top: 20px;
   width: 100%;
   text-align: center;
   span {
