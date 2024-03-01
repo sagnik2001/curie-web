@@ -13,7 +13,7 @@ import Ornament8 from "@svgs/desktop-hero/ornament8.svg";
 
 export default function Hero() {
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Ornament1 className={styles.ornament1} />
       <div className={styles.container}>
         <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
@@ -36,6 +36,6 @@ export default function Hero() {
           <div className={clsx(calson.className, styles.text)}>scroll</div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

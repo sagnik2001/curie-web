@@ -1,5 +1,32 @@
 .container {
   height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.ornament1,
+.ornament2,
+.ornament3 {
+  position: absolute;
+}
+.ornament1 {
+  top: 150px;
+  right: 40%;
+}
+.ornament3 {
+  bottom: 20px;
+  right: 20px;
+}
+.ornament2{
+  bottom: 100px;
+  left: 20%;
+}
+.bg {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  object-fit: contain;
+  bottom: 0;
+  right: 0;
 }
 .title {
   padding-left: 24px;
@@ -12,6 +39,8 @@
   margin-top: 40px;
   line-height: 1.15;
   margin-bottom: 4px;
+  position: relative;
+  z-index: 4;
 }
 .para {
   padding-left: 24px;
@@ -21,4 +50,13 @@
   color: #fff;
   font-size: 32px;
   font-weight: 500;
+  position: relative;
+  z-index: 4;
+}
+.img {
+  width: 886px;
+  height: 793px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
