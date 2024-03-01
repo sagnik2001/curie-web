@@ -1,9 +1,9 @@
 .container {
   background: #180036;
   overflow: hidden;
-  height: 100vh;
   position: relative;
-  padding-top: 100px;
+  min-height: 780px;
+  padding-top: 60px;
 }
 .title {
   color: #ffca10;
