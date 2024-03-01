@@ -2,12 +2,12 @@
   height: 968px;
   border-bottom: 8px solid #ffca10;
   position: relative;
-  padding-top: 80px;
+  padding-top: 200px;
   background: #180036;
   margin-bottom: 152px;
   &::after {
     content: "";
-    top: -7px;
+    top: 80px;
     left: 0;
     background: linear-gradient(180deg, #180036 0%, rgba(24, 0, 54, 0) 100%);
     width: 100%;
@@ -33,7 +33,7 @@
 .title {
   position: absolute;
   z-index: 10;
-  top: -40px;
+  top: 60px;
   width: 100%;
   text-align: center;
   span {
