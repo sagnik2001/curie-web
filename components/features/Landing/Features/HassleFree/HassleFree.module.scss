@@ -4,21 +4,7 @@
   height: 100vh;
   height: 100dvh;
   position: relative;
-  padding-top: 120px;
-}
-.bg {
-  width: 572.08px;
-  height: 643.575px;
-  left: 0;
-  top: 211px;
-  position: absolute;
-}
-.img {
-  width: 99.689px;
-  height: 275.214px;
-  position: absolute;
-  bottom: 136px;
-  left: 12px;
+  padding-top: 60px;
 }
 .title {
   color: #ffca10;
@@ -27,6 +13,8 @@
   font-style: italic;
   font-weight: 800;
   margin-bottom: 12px;
+  position: relative;
+  z-index: 4;
   span {
     display: block;
   }
@@ -36,4 +24,12 @@
   text-align: center;
   font-size: 20px;
   font-weight: 500;
+  position: relative;
+  z-index: 4;
+}
+.img {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  right: 0;
 }
