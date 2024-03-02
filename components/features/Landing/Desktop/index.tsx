@@ -16,6 +16,13 @@ export default function DesktopLanding() {
     };
   }, []);
   return (
+    <iframe
+      src="https://extended-experience-658832.framer.app/"
+      frameBorder="0"
+      style={{ width: "100%", height: "100vh" }}
+    ></iframe>
+  );
+  return (
     <div className={styles.container}>
       <Navbar className={styles.nav} />
       <Hero />
