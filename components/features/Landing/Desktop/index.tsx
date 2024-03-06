@@ -9,12 +9,12 @@ import { useEffect } from "react";
 import * as styles from "./Desktop.module.scss";
 
 export default function DesktopLanding() {
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.overflow = "hidden";
+  //   return () => {
+  //     document.body.style.overflow = "unset";
+  //   };
+  // }, []);
   return (
     <iframe
       src="https://extended-experience-658832.framer.app/"

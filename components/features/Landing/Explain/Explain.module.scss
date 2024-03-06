@@ -1,5 +1,5 @@
 .title {
-  color: #ffca10;
+  color: #010101;
   font-size: 40px;
   font-weight: 700;
   position: relative;
@@ -12,23 +12,35 @@
 }
 .img {
   position: absolute;
-  bottom: 100px;
-  right: 0;
-  width: 100%;
+  bottom: 50px;
+  right: -68px;
+  width: 510px;
+  height: 437px;
   object-fit: contain;
   z-index: 0;
+
+  @media screen and (min-height: 700px) {
+    width: 140%;
+    bottom: 0;
+    right: -73px;
+    height: unset;
+  }
 }
 .container {
   overflow: hidden;
-  height: 100vh;
+  min-height: 100dvh;
   position: relative;
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
 }
 .para {
-  color: white;
+  color: #010101;
   font-weight: 500;
   font-size: 20px;
   position: relative;
   z-index: 4;
+  padding-left: 22px;
 
   span {
     display: block;
@@ -36,6 +48,26 @@
 }
 .container {
   padding-left: 24px;
-  min-height: 780px;
-  padding-top: 40px;
+  height: 100vh;
+  padding-top: 0px;
+  background-color: #ffbb0b;
+  z-index: 2;
+  position: relative;
+}
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -22px;
+    left: 0;
+    height: 600px;
+    background-color: #ffbb0b;
+    width: 150vw;
+    transform: rotate(-10deg) translateY(-10%);
+    @media screen and (min-width: 360px) {
+      top: -26px;
+    }
+  }
 }
