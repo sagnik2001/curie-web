@@ -28,11 +28,9 @@
 }
 .container {
   overflow: hidden;
-  min-height: 100dvh;
+  height: 110vh;
+  height: 110svh;
   position: relative;
-  @supports (-webkit-touch-callout: none) {
-    min-height: -webkit-fill-available;
-  }
 }
 .para {
   color: #010101;
