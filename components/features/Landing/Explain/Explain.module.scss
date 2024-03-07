@@ -12,7 +12,7 @@
 }
 .img {
   position: absolute;
-  bottom: 50px;
+  bottom: 14%;
   right: -68px;
   width: 510px;
   height: 437px;
@@ -21,7 +21,6 @@
 
   @media screen and (min-height: 700px) {
     width: 140%;
-    bottom: 0;
     right: -73px;
     height: unset;
   }
@@ -63,7 +62,7 @@
     height: 600px;
     background-color: #ffbb0b;
     width: 150vw;
-    transform: rotate(-10deg) translateY(-10%);
+    transform: rotate(-8deg) translateY(-10%);
     @media screen and (min-width: 360px) {
       top: -26px;
     }

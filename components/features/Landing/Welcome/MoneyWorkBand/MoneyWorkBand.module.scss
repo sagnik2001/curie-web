@@ -24,17 +24,17 @@
   left: 50%;
 
   span {
-    width: 104px;
+    width: 284px;
     display: block;
     flex-shrink: 0;
     line-height: 1;
-    position: relative;
-    top: 2px;
   }
 }
 .container {
   overflow: hidden;
   height: 120px;
-  top: -28px;
-  position: relative;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  top: -16px;
 }

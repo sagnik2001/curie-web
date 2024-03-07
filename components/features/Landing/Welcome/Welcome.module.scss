@@ -3,16 +3,17 @@
   margin-bottom: 76px;
   border-bottom: 8px solid #ffca10;
   position: relative;
-  padding-top: 80px;
   background: #180036;
   &::after {
     content: "";
-    top: 24px;
+    top: 0;
     left: 0;
-    background: linear-gradient(180deg, #180036 0%, rgba(24, 0, 54, 0) 100%);
-    width: 100%;
-    height: 155px;
+    background: #180036;
+    width: 150vw;
+    height: 10%;
     position: absolute;
+    transform: rotate(-8deg) translateY(-74%);
+    z-index: 4;
   }
 }
 .imgBox {
@@ -23,30 +24,30 @@
 }
 .img {
   position: absolute;
-  top: 0;
+  top: 20px;
   left: -342px;
   object-fit: cover;
   aspect-ratio: 168 / 103;
   width: 882px;
-  height: 568px;
+  height: 100%;
 }
 .title {
   position: absolute;
   z-index: 10;
-  top: 20px;
+  top: 180px;
   width: 100%;
   text-align: center;
   span {
     display: block;
   }
   .imp {
-    color: #ffca10;
+    color: #5209af;
     text-align: center;
     font-size: 48px;
     font-weight: 700;
   }
   .content {
-    color: #ffca10;
+    color: #5209af;
     font-size: 44px;
     text-align: center;
     font-style: italic;
