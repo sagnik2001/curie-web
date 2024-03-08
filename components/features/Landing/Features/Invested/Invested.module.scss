@@ -5,8 +5,11 @@
   height: 90vh;
   min-height: 680px;
   max-height: 800px;
-  padding-top: 40px;
+  padding-top: 0px;
   z-index: 3;
+  @media screen and (min-height: 700px) {
+    padding-top: 20px;
+  }
 }
 .title {
   color: #ffca10;
@@ -25,7 +28,7 @@
   height: 445px;
   width: 508px;
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   object-fit: contain;
   right: -68px;
   background-image: url("/invested.png");
@@ -33,7 +36,7 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @media screen and (min-height: 700px) {
-    bottom: 100px;
+    bottom: 120px;
   }
   @media screen and (min-width: 400px) {
     right: -40px;
@@ -55,6 +58,8 @@
     content: "";
     top: 0;
     height: 90vh;
+    min-height: 680px;
+    max-height: 700px;
     background-color: #180036;
     width: 150vw;
     transform: rotate(-8deg) translateY(-10%);

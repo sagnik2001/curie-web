@@ -5,8 +5,11 @@
   height: 90vh;
   min-height: 680px;
   max-height: 800px;
-  padding-top: 40px;
+  padding-top: 0px;
   z-index: 4;
+  @media screen and (min-height: 700px) {
+    padding-top: 20px;
+  }
 }
 .title {
   color: #010101;
@@ -37,11 +40,11 @@
   background-repeat: no-repeat;
   width: 480px;
   height: 436px;
-  bottom: 40px;
+  bottom: 60px;
   right: -108px;
   object-fit: contain;
   @media screen and (min-height: 700px) {
-    bottom: 100px;
+    bottom: 140px;
   }
   @media screen and (min-width: 400px) {
     right: -80px;
@@ -55,6 +58,8 @@
     content: "";
     top: 0;
     height: 90vh;
+    min-height: 680px;
+    max-height: 700px;
     background-color: #ffbb0b;
     width: 150vw;
     transform: rotate(-8deg) translateY(-10%);

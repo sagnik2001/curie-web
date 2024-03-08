@@ -3,9 +3,8 @@
   font-size: 40px;
   font-weight: 700;
   position: relative;
-  z-index: 2;
-  position: relative;
   z-index: 4;
+  margin-bottom: 12px;
   span {
     display: block;
   }
@@ -23,7 +22,8 @@
   object-fit: contain;
   z-index: 0;
   @media screen and (min-height: 700px) {
-    bottom: 100px;
+    bottom: 140px;
+    transform: scale(1.1);
   }
 }
 .container {

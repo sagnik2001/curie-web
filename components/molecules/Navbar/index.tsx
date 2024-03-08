@@ -7,9 +7,17 @@ import Link from "next/link";
 export default function Navbar({ className = "" }: { className?: string }) {
   return (
     <div className={clsx(styles.container, className)}>
-      <Link href="/">
+      <div
+        onClick={() =>
+          window.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          })
+        }
+      >
         <CurieLogo />
-      </Link>
+      </div>
       <div className={styles.btn}>
         <a
           href="https://play.google.com/store/apps/details?id=com.yield.curie_money"

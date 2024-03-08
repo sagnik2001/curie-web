@@ -5,7 +5,7 @@
   height: 90vh;
   min-height: 680px;
   max-height: 800px;
-  padding-top: 40px;
+  padding-top: 20px;
   z-index: 5;
 }
 .title {
@@ -41,7 +41,8 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @media screen and (min-height: 700px) {
-    bottom: 100px;
+    transform: scale(1.1);
+    bottom: 120px;
   }
   @media screen and (min-width: 400px) {
     right: -90px;
@@ -55,6 +56,8 @@
     content: "";
     top: 0;
     height: 90vh;
+    min-height: 680px;
+    max-height: 800px;
     background-color: #180036;
     width: 150vw;
     transform: rotate(-8deg) translateY(-10%);
