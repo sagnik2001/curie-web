@@ -28,6 +28,10 @@
   bottom: 40px;
   object-fit: contain;
   right: -68px;
+  background-image: url("/invested.png");
+  background-position: right center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   @media screen and (min-height: 700px) {
     bottom: 100px;
   }

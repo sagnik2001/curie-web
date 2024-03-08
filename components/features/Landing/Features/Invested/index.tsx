@@ -4,7 +4,7 @@ export default function Invested() {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
-        <img src="/invested.png" alt="" className={styles.img} />
+        <div className={styles.img} />
         <h2 className={styles.title}>
           <span>Stay invested</span>
           <span>all the time</span>

@@ -4,7 +4,7 @@ export default function HassleFree() {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
-        <img src="/hasslefree.png" alt="" className={styles.img} />
+        <div className={styles.img} />
         <h2 className={styles.title}>
           <span>Use your money</span>
           <span>hassle free</span>

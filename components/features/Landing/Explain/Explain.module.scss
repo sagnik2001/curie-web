@@ -12,6 +12,10 @@
 }
 .img {
   position: absolute;
+  background-image: url("/explain.png");
+  background-position: right center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   bottom: 14%;
   right: -68px;
   width: 510px;

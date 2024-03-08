@@ -4,7 +4,7 @@ export default function Explain() {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
-        <img src="/explain.png" className={styles.img} />
+        <div className={styles.img} />
         <h2 className={styles.title}>
           <span>High yield</span>
           <span>savings account</span>

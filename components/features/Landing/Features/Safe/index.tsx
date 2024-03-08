@@ -4,7 +4,7 @@ export default function Safe() {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
-        <img src="/safe.png" alt="" className={styles.img} />
+        <div className={styles.img} />
         <h2 className={styles.title}>
           <span>Your money is</span>
           <span>always safe</span>
