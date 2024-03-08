@@ -2,7 +2,9 @@
   background: #ffbb0b;
   overflow: hidden;
   position: relative;
-  height: 110vh;
+  height: 90vh;
+  min-height: 680px;
+  max-height: 800px;
   padding-top: 40px;
   z-index: 4;
 }
@@ -36,9 +38,10 @@
   right: -108px;
   object-fit: contain;
   @media screen and (min-height: 700px) {
-    width: 550px;
-    height: unset;
-    right: -140px;
+    bottom: 100px;
+  }
+  @media screen and (min-width: 400px) {
+    right: -80px;
   }
 }
 .box {

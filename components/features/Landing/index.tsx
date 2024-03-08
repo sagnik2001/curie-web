@@ -28,7 +28,7 @@ export default function Landing() {
 
   return (
     <div className={styles.container}>
-      <Navbar />
+      <Navbar className={styles.nav} />
       <Hero />
       <IntroductionBand />
       <Explain />

@@ -2,7 +2,9 @@
   background: #180036;
   overflow: hidden;
   position: relative;
-  height: 110vh;
+  height: 90vh;
+  min-height: 680px;
+  max-height: 800px;
   padding-top: 40px;
   z-index: 3;
 }
@@ -26,10 +28,11 @@
   bottom: 40px;
   object-fit: contain;
   right: -68px;
-
   @media screen and (min-height: 700px) {
-    width: 550px;
-    height: unset;
+    bottom: 100px;
+  }
+  @media screen and (min-width: 400px) {
+    right: -40px;
   }
 }
 .description {
