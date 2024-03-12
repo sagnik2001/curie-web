@@ -3,8 +3,8 @@
   overflow: hidden;
   height: 100vh;
   position: relative;
-  padding-top: 80px;
   padding-left: 100px;
+  z-index: 4;
 }
 .title {
   color: #ffca10;
@@ -39,4 +39,19 @@
   position: absolute;
   bottom: 150px;
   right: 200px;
+}
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -150px;
+    left: 0;
+    height: 80vh;
+    background-color: #180036;
+    width: 150vw;
+    transform: rotate(-5deg);
+    z-index: 3;
+  }
 }

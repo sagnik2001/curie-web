@@ -10,55 +10,9 @@ import Ornament5 from "@svgs/hero/ornament5.svg";
 import Ornament6 from "@svgs/hero/ornament6.svg";
 import Ornament7 from "@svgs/hero/ornament7.svg";
 import { useEffect, useState } from "react";
-import { useSpring, animated, easings } from "@react-spring/web";
 
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
-  const AnimatedOrnament1 = animated(Ornament1);
-  const AnimatedOrnament2 = animated(Ornament2);
-  const AnimatedOrnament3 = animated(Ornament3);
-  const AnimatedOrnament4 = animated(Ornament4);
-  const AnimatedOrnament5 = animated(Ornament5);
-  const AnimatedOrnament6 = animated(Ornament6);
-  const AnimatedOrnament7 = animated(Ornament7);
-  const ornment1AnimationProps = useSpring({
-    from: { top: "80px", left: "90px", opacity: 0 },
-    to: { top: "0px", left: "32px", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-  const ornment2AnimationProps = useSpring({
-    from: { top: "80px", left: "45%", opacity: 0 },
-    to: { top: "0px", left: "50%", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-
-  const ornment3AnimationProps = useSpring({
-    from: { top: "90px", right: "20px", opacity: 0 },
-    to: { top: "32px", right: "-90px", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-
-  const ornment4AnimationProps = useSpring({
-    from: { top: "120px", left: "-0px", opacity: 0 },
-    to: { top: "92px", left: "-66px", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-  const ornment5AnimationProps = useSpring({
-    from: { right: "40px", bottom: "160px", opacity: 0 },
-    to: { right: "-28px", bottom: "84px", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-  const ornment6AnimationProps = useSpring({
-    from: { bottom: "240px", left: "40%", opacity: 0 },
-    to: { bottom: "88px", left: "20%", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-  const ornment7AnimationProps = useSpring({
-    from: { bottom: "240px", left: "40px", opacity: 0 },
-    to: { bottom: "160px", left: "-12px", opacity: 1 },
-    config: { easing: easings.easeOutSine, duration: 400 },
-  });
-
   useEffect(() => {
     setLoadAnimation(true);
   }, []);
@@ -68,43 +22,50 @@ export default function Hero() {
       <Ornament1
         className={clsx(
           styles.ornament1,
-          loadAnimation && styles.animateOrnament1
+          loadAnimation && styles.animateOrnament1,
+          loadAnimation && styles.float
         )}
       />
       <Ornament2
         className={clsx(
           styles.ornament2,
-          loadAnimation && styles.animateOrnament2
+          loadAnimation && styles.animateOrnament2,
+          loadAnimation && styles.float
         )}
       />
       <Ornament3
         className={clsx(
           styles.ornament3,
-          loadAnimation && styles.animateOrnament3
+          loadAnimation && styles.animateOrnament3,
+          loadAnimation && styles.float
         )}
       />
       <Ornament4
         className={clsx(
           styles.ornament4,
-          loadAnimation && styles.animateOrnament4
+          loadAnimation && styles.animateOrnament4,
+          loadAnimation && styles.ornamentfloat4
         )}
       />
       <Ornament5
         className={clsx(
           styles.ornament5,
-          loadAnimation && styles.animateOrnament5
+          loadAnimation && styles.animateOrnament5,
+          loadAnimation && styles.ornamentfloat5
         )}
       />
       <Ornament6
         className={clsx(
           styles.ornament6,
-          loadAnimation && styles.animateOrnament6
+          loadAnimation && styles.animateOrnament6,
+          loadAnimation && styles.float
         )}
       />
       <Ornament7
         className={clsx(
           styles.ornament7,
-          loadAnimation && styles.animateOrnament7
+          loadAnimation && styles.animateOrnament7,
+          loadAnimation && styles.float
         )}
       />
       <h1

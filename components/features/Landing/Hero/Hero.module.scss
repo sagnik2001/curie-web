@@ -66,7 +66,7 @@
 .ornament6,
 .ornament7 {
   position: absolute;
-  transition: all 0.4s cubic-bezier(.47,.59,0,.91);
+  transition: all 0.4s cubic-bezier(0.47, 0.59, 0, 0.91);
   transition-delay: 0.1s;
 }
 .ornament1 {
@@ -77,6 +77,25 @@
     top: 0px;
     left: 32px;
     opacity: 1;
+  }
+}
+.float {
+  animation-name: Floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+}
+
+@keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 20px);
+  }
+  to {
+    transform: translate(0, -0px);
   }
 }
 .ornament2 {
@@ -91,7 +110,7 @@
 }
 .ornament3 {
   top: 90px;
-  right: 20px;
+  right: 60px;
   opacity: 0;
   &.animateOrnament3 {
     top: 32px;
@@ -105,9 +124,27 @@
   transform: scale(0.9);
   opacity: 0;
   &.animateOrnament4 {
-    top: 92px;
+    top: 140px;
     left: -66px;
     opacity: 1;
+  }
+}
+.ornamentfloat4 {
+  animation-name: Floating4;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+}
+@keyframes Floating4 {
+  from {
+    transform: scale(0.9) translate(0, 0px);
+  }
+  65% {
+    transform: scale(0.9) translate(0, 20px);
+  }
+  to {
+    transform: scale(0.9) translate(0, -0px);
   }
 }
 .ornament5 {
@@ -121,6 +158,25 @@
     opacity: 1;
   }
 }
+.ornamentfloat5 {
+  animation-name: Floating5;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+}
+@keyframes Floating5 {
+  from {
+    transform: scale(0.9) translate(0, 0px);
+  }
+  65% {
+    transform: scale(0.9) translate(0, 20px);
+  }
+  to {
+    transform: scale(0.9) translate(0, -0px);
+  }
+}
+
 .ornament6 {
   bottom: 240px;
   left: 40%;

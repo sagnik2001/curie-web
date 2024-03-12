@@ -1,9 +1,10 @@
 .container {
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   position: relative;
-  padding-top: 80px;
   padding-left: 100px;
+  background-color: #ffbb0b;
+  z-index: 2;
 }
 .ornament1,
 .ornament2,
@@ -31,29 +32,25 @@
   right: 0;
 }
 .title {
-  padding-left: 24px;
   span {
     display: block;
   }
-  color: #ffca10;
-  font-size: 88px;
+  color: #010101;
+  font-size: 76px;
   font-weight: 700;
-  margin-top: 40px;
   line-height: 1.15;
-  margin-bottom: 4px;
-  position: relative;
-  z-index: 4;
+  margin-bottom: 16px;
 }
 .para {
-  padding-left: 24px;
   span {
     display: block;
   }
-  color: #fff;
-  font-size: 32px;
+  color: #010101;
+  font-size: 28px;
   font-weight: 500;
-  position: relative;
-  z-index: 4;
+}
+ul.para {
+  padding-left: 30px;
 }
 .img {
   width: 886px;
@@ -61,4 +58,18 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -150px;
+    left: 0;
+    height: 80vh;
+    background-color: #ffbb0b;
+    width: 150vw;
+    transform: rotate(-5deg);
+  }
 }

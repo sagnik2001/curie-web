@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   gap: 46px;
-  height: 80px;
+  height: 72px;
   position: absolute;
-  transition: all 0.01ms ease;
+  top: 40px;
 
   span {
-    font-size: 50px;
+    font-size: 44px;
     font-style: italic;
     font-weight: 400;
     line-height: 1;
@@ -27,18 +27,13 @@
 .india {
   background: #3f008e;
   bottom: 0;
-  transform: translateX(-50%) rotate(-10deg) translateY(-182px);
+  transform: translateX(-50%) rotate(-5deg);
   left: 50%;
+  top: 224px;
   span {
     color: #ffca10;
   }
-}
-.introducing {
-  background: #27003a;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) rotate(10deg) translateY(-182px);
-  span {
-    color: #743511;
+  @media screen and (max-width: 1600px) {
+    top: 210px;
   }
 }
