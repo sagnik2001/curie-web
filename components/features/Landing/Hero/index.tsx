@@ -18,7 +18,7 @@ export default function Hero() {
   }, []);
   return (
     <div className={styles.container}>
-      <div className={styles.bg} />
+      <img src="/bg-top-1.png" className={styles.bg} />
       <Ornament1
         className={clsx(
           styles.ornament1,
