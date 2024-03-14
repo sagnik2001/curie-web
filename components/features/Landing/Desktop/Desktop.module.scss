@@ -1,7 +1,7 @@
 .container {
   position: relative;
   padding-top: 80px;
-  max-width: 1680px;
+  // max-width: 1680px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -10,7 +10,7 @@
 .nav.nav {
   position: fixed;
   width: 100vw;
-  max-width: 1680px;
+  // max-width: 1680px;
   z-index: 99;
   height: 64px;
   background: linear-gradient(
@@ -18,7 +18,7 @@
     rgba(0, 0, 0, 0.5) 3.72%,
     rgba(0, 0, 0, 0) 94.33%
   );
-  @media screen and (min-width: 1680px) {
-    margin-left: calc((100vw - 1680px)/2);
-  }
+  // @media screen and (min-width: 1680px) {
+  //   margin-left: calc((100vw - 1680px)/2);
+  // }
 }

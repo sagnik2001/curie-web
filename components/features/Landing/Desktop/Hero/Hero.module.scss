@@ -7,6 +7,14 @@
   align-items: center;
   justify-content: center;
 }
+.titleBox {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  transition-delay: 0.45s;
+  &.animatedBox {
+    opacity: 1;
+  }
+}
 .title {
   color: #fafaff;
   text-align: center;
@@ -73,36 +81,105 @@
 .ornament7,
 .ornament8 {
   position: absolute;
+  transition: all 0.6s cubic-bezier(0, 0, 0.09, 0.99);
+  transition-delay: 0.1s;
 }
 .ornament1 {
-  top: -80px;
+  top: 0px;
   left: 50%;
+  z-index: 2;
+  opacity: 0;
+  &.animateOrnament1 {
+    top: -120px;
+    opacity: 1;
+  }
 }
 .ornament2 {
-  top: 20px;
-  left: 20%;
+  top: 120px;
+  left: 30%;
+  opacity: 0;
+  &.animateOrnament2 {
+    top: 20px;
+    left: 20%;
+    opacity: 1;
+  }
 }
 .ornament5 {
-  right: 350px;
-  top: 10px;
+  right: 450px;
+  top: 60px;
+  opacity: 0;
+  &.animateOrnament5 {
+    right: 350px;
+    top: 10px;
+    opacity: 1;
+  }
 }
 .ornament4 {
-  right: 400px;
-  bottom: 50px;
+  right: 500px;
+  bottom: 100px;
+  opacity: 0;
+  &.animateOrnament4 {
+    right: 400px;
+    bottom: 50px;
+    opacity: 1;
+  }
 }
 .ornament3 {
-  left: 400px;
-  bottom: 60px;
+  left: 500px;
+  bottom: 90px;
+  opacity: 0;
+  &.animateOrnament3 {
+    left: 400px;
+    bottom: 60px;
+    opacity: 1;
+  }
 }
 .ornament6 {
-  left: -76px;
+  left: 100px;
   top: 296px;
+  opacity: 0;
+  &.animateOrnament6 {
+    left: -76px;
+    top: 296px;
+    opacity: 1;
+  }
 }
 .ornament7 {
-  top: -51px;
-  right: -86px;
+  top: 50px;
+  right: 40px;
+  opacity: 0;
+  &.animateOrnament7 {
+    top: -51px;
+    right: -86px;
+    opacity: 1;
+  }
 }
 .ornament8 {
-  right: -58px;
-  bottom: -28px;
+  right: 50px;
+  bottom: 40px;
+  opacity: 0;
+  &.animateOrnament8 {
+    right: -58px;
+    bottom: -28px;
+    opacity: 1;
+  }
+}
+.float {
+  animation-name: Floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.9s;
+}
+
+@keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 40px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
 }
