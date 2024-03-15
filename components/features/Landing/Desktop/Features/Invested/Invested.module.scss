@@ -1,20 +1,23 @@
 .container {
   background: #180036;
   overflow: hidden;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   padding-left: 100px;
   z-index: 4;
+  min-height: 1000px;
+  max-height: 1200px;
 }
 .title {
   color: #ffca10;
   font-size: 64px;
   font-style: italic;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   position: relative;
-  z-index: 4;
+  z-index: 100;
   padding-left: 100px;
+  padding-top: 180px;
   span {
     display: block;
   }
@@ -24,21 +27,23 @@
   font-size: 32px;
   font-weight: 500;
   position: relative;
-  z-index: 4;
+  z-index: 100;
   padding-left: 100px;
 }
 .bg {
   width: 100%;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   position: absolute;
 }
 .img {
-  width: 293px;
-  height: 338px;
+  width: 272.476px;
+  height: 651.45px;
   position: absolute;
-  bottom: 150px;
-  right: 200px;
+  top: 0;
+  right: 300px;
+  bottom: 0;
+  z-index: 100;
 }
 .box {
   position: relative;
@@ -54,4 +59,38 @@
     transform: rotate(-5deg);
     z-index: 3;
   }
+}
+.ornament1,
+.ornament2,
+.ornament3,
+.ornament4 {
+  position: absolute;
+}
+.ornament4 {
+  width: 194.519px;
+  height: 194.519px;
+  left: 35%;
+  bottom: 300px;
+  z-index: 99;
+}
+.ornament3 {
+  width: 238.517px;
+  height: 238.517px;
+  left: 45%;
+  z-index: 99;
+  top: 200px;
+}
+.ornament2 {
+  width: 206.097px;
+  height: 206.097px;
+  right: 100px;
+  z-index: 99;
+  bottom: 500px;
+}
+.ornament1 {
+  width: 248.715px;
+  height: 248.715px;
+  top: -100px;
+  right: 100px;
+  z-index: 5;
 }

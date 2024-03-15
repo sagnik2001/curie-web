@@ -5,6 +5,9 @@
   position: relative;
   padding-top: 80px;
   padding-left: 100px;
+  min-height: 1000px;
+  max-height: 1200px;
+  z-index: 7;
 }
 .bg {
   width: 100%;
@@ -64,7 +67,22 @@
   left: 50px;
   bottom: 400px;
 }
-.ornament5{
+.ornament5 {
   top: 200px;
   right: 100px;
+}
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -150px;
+    left: 0;
+    height: 80vh;
+    background-color: #180036;
+    width: 150vw;
+    transform: rotate(-5deg);
+    z-index: 6;
+  }
 }

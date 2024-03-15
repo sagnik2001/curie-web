@@ -1,11 +1,14 @@
 .container {
-  background: #180036;
+  background: #ffbb0b;
   overflow: hidden;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  min-height: 1000px;
+  max-height: 1200px;
+  z-index: 6;
 }
 .bg {
   height: 80%;
@@ -15,7 +18,7 @@
   object-fit: contain;
 }
 .title {
-  color: #ffca10;
+  color: #010101;
   text-align: right;
   font-size: 64px;
   font-style: italic;
@@ -28,10 +31,26 @@
   }
 }
 .description {
-  color: #fff;
+  color: #010101;
   text-align: right;
   font-size: 32px;
   font-weight: 500;
   position: relative;
   z-index: 4;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -150px;
+    left: 0;
+    height: 80vh;
+    background-color: #ffbb0b;
+    width: 150vw;
+    transform: rotate(-5deg);
+    z-index: 4;
+  }
 }
