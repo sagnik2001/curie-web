@@ -34,15 +34,13 @@
 }
 .img {
   position: absolute;
-  background-image: url("/hasslefree.png");
-  background-position: right center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   width: 480px;
   height: 436px;
   bottom: 60px;
   right: -108px;
   object-fit: contain;
+  pointer-events: none;
+  user-select: none;
   @media screen and (min-height: 700px) {
     bottom: 120px;
   }

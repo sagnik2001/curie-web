@@ -4,7 +4,24 @@ export default function HassleFree() {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
-        <div className={styles.img} />
+        <picture>
+          <source
+            srcSet="/hasslefree.avif"
+            type="image/avif"
+            className={styles.img}
+          />
+          <source
+            srcSet="/hasslefree.webp"
+            type="image/webp"
+            className={styles.img}
+          />
+          <source
+            srcSet="/hasslefree.png"
+            type="image/png"
+            className={styles.img}
+          />
+          <img src="/hasslefree.png" alt="" className={styles.img} />
+        </picture>
         <h2 className={styles.title}>
           <span>Use your money</span>
           <span>hassle free</span>

@@ -30,6 +30,8 @@
   aspect-ratio: 168 / 103;
   width: 882px;
   height: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 .title {
   position: absolute;

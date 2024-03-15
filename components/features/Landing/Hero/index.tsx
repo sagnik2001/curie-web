@@ -18,7 +18,20 @@ export default function Hero() {
   }, []);
   return (
     <div className={styles.container}>
-      <img src="/bg-top-1.png" className={styles.bg} />
+      <picture>
+        <source
+          srcSet="/bg-top-1.avif"
+          type="image/avif"
+          className={styles.bg}
+        />
+        <source
+          srcSet="/bg-top-1.webp"
+          type="image/webp"
+          className={styles.bg}
+        />
+        <source srcSet="/bg-top-1.png" type="image/png" className={styles.bg} />
+        <img src="/bg-top-1.png" alt="" className={styles.bg} />
+      </picture>
       <Ornament1
         className={clsx(
           styles.ornament1,

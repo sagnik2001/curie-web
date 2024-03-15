@@ -14,7 +14,24 @@ export default function Welcome() {
         </span>
       </h4>
       <div className={styles.imgBox}>
-        <img src="/welcome.png" alt="" className={styles.img} />
+        <picture>
+          <source
+            srcSet="/welcome.avif"
+            type="image/avif"
+            className={styles.img}
+          />
+          <source
+            srcSet="/welcome.webp"
+            type="image/webp"
+            className={styles.img}
+          />
+          <source
+            srcSet="/welcome.png"
+            type="image/png"
+            className={styles.img}
+          />
+          <img src="/welcome.png" alt="" className={styles.img} />
+        </picture>
       </div>
     </div>
   );

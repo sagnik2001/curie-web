@@ -18,10 +18,7 @@ export default function Hero() {
     setLoadAnimation(true);
   }, []);
   return (
-    <div
-      style={{ position: "relative" }}
-      onClick={() => setLoadAnimation((an) => !an)}
-    >
+    <div style={{ position: "relative" }}>
       <Ornament1
         className={clsx(
           styles.ornament1,

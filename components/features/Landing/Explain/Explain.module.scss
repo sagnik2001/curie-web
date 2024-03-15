@@ -10,17 +10,15 @@
   }
 }
 .img {
-  position: absolute;
-  background-image: url("/explain.png");
-  background-position: right center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   bottom: 14%;
   right: -68px;
   width: 510px;
   height: 437px;
   object-fit: contain;
   z-index: 0;
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
   @media screen and (min-height: 700px) {
     bottom: 140px;
     transform: scale(1.1);

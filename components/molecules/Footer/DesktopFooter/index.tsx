@@ -69,7 +69,7 @@ export default function DesktopFooter({
             </span>
           </div>
           <div className={styles.socialBox}>
-            <span className={styles.socialLabel}>Instgram</span>
+            <span className={styles.socialLabel}>Instagram</span>
             <span className={styles.socialValue}>
               <Link
                 href="https://www.instagram.com/curiemoney/"
