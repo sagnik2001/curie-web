@@ -1,14 +1,13 @@
 .container {
   background: #ffbb0b;
   overflow: hidden;
-  height: 110vh;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   min-height: 1000px;
-  max-height: 1200px;
-  z-index: 6;
+  max-height: 1000px;
 }
 .bg {
   height: 80%;
@@ -25,7 +24,7 @@
   font-weight: 800;
   margin-bottom: 12px;
   position: relative;
-  z-index: 4;
+  z-index: 7;
   span {
     display: block;
   }
@@ -36,7 +35,7 @@
   font-size: 32px;
   font-weight: 500;
   position: relative;
-  z-index: 4;
+  z-index: 7;
 }
 
 .box {
@@ -53,4 +52,20 @@
     transform: rotate(-5deg);
     z-index: 4;
   }
+}
+.img {
+  width: 200.366px;
+  height: 553.158px;
+  position: absolute;
+  transform: rotate(-4.961deg);
+  left: 200px;
+  z-index: 7;
+}
+.bg {
+  width: 150vw;
+  left: -420px;
+  bottom: 100px;
+  position: absolute;
+  z-index: 6;
+  aspect-ratio: 2492 / 809;
 }

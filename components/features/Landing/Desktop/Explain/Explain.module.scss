@@ -71,11 +71,11 @@ ul.para {
   &::after {
     position: absolute;
     content: "";
-    top: -150px;
-    left: 0;
-    height: 80vh;
+    top: -105px;
+    left: 50%;
+    height: 500px;
     background-color: #ffbb0b;
-    width: 150vw;
-    transform: rotate(-5deg);
+    width: 4500px;
+    transform: translateX(-50%) rotate(-5deg);
   }
 }

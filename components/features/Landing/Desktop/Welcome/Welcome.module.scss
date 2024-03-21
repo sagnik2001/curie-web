@@ -4,8 +4,8 @@
   border-bottom: 8px solid #ffca10;
   position: relative;
   background: #180036;
-  margin-bottom: 152px;
   padding-top: 200px;
+  top: -200px;
   &::after {
     content: "";
     top: 78px;
