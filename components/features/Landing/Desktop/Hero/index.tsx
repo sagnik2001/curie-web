@@ -15,7 +15,9 @@ import { useEffect, useState } from "react";
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
   useEffect(() => {
-    setLoadAnimation(true);
+    setTimeout(() => {
+      setLoadAnimation(true);
+    }, 500);
   }, []);
   return (
     <div style={{ position: "relative" }}>

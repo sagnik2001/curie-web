@@ -24,6 +24,9 @@
   letter-spacing: -2px;
   position: relative;
   z-index: 2;
+  @media screen and (max-width: 1400px) {
+    font-size: 88px;
+  }
 
   span {
     display: block;
@@ -38,6 +41,9 @@
   letter-spacing: -2px;
   position: relative;
   z-index: 2;
+  @media screen and (max-width: 1400px) {
+    font-size: 88px;
+  }
 }
 .bg {
   width: 100%;
@@ -89,6 +95,12 @@
   left: 50%;
   z-index: 2;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 116px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
   &.animateOrnament1 {
     top: -120px;
     opacity: 1;
@@ -98,6 +110,12 @@
   top: 120px;
   left: 30%;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 116px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
   &.animateOrnament2 {
     top: 20px;
     left: 20%;
@@ -108,6 +126,9 @@
   right: 450px;
   top: 60px;
   opacity: 0;
+  @media screen and (max-width: 1400px) {
+    width: 135px;
+  }
   &.animateOrnament5 {
     right: 350px;
     top: 10px;
@@ -118,6 +139,12 @@
   right: 500px;
   bottom: 100px;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 116px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
   &.animateOrnament4 {
     right: 400px;
     bottom: 50px;
@@ -128,6 +155,12 @@
   left: 500px;
   bottom: 90px;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 116px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
   &.animateOrnament3 {
     left: 400px;
     bottom: 60px;
@@ -138,6 +171,12 @@
   left: 100px;
   top: 296px;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 427.738px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 320px;
+  }
   &.animateOrnament6 {
     left: -76px;
     top: 296px;
@@ -148,6 +187,12 @@
   top: 50px;
   right: 40px;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 388px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 288px;
+  }
   &.animateOrnament7 {
     top: -51px;
     right: -86px;
@@ -158,6 +203,12 @@
   right: 50px;
   bottom: 40px;
   opacity: 0;
+  @media screen and (max-width: 1600px) {
+    width: 368.021px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 328px;
+  }
   &.animateOrnament8 {
     right: -58px;
     bottom: -28px;

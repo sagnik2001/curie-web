@@ -5,16 +5,20 @@
   position: relative;
   padding-top: 80px;
   padding-left: 100px;
-  min-height: 1000px;
-  max-height: 1000px;
+  min-height: 800px;
+  max-height: 800px;
   z-index: 7;
 }
 .bg {
-  width: 100%;
-  height: 100%;
+  width: 2103px;
+  height: 653px;
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 100px;
+  left: -30vw;
+  @media screen and (max-width: 1400px) {
+    bottom: 100px;
+    left: -30vw;
+  }
 }
 .title {
   color: #ffca10;
@@ -25,6 +29,13 @@
   position: relative;
   z-index: 4;
   padding-left: 100px;
+  @media screen and (max-width: 1600px) {
+    padding-left: 50px;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 56px;
+    padding-left: 0;
+  }
   span {
     display: block;
   }
@@ -36,6 +47,13 @@
   position: relative;
   z-index: 4;
   padding-left: 100px;
+  @media screen and (max-width: 1600px) {
+    padding-left: 50px;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 28px;
+    padding-left: 0;
+  }
 }
 .img {
   width: 508.671px;
@@ -43,6 +61,16 @@
   position: absolute;
   bottom: 300px;
   right: 300px;
+  @media screen and (max-width: 1600px) {
+    width: 484.157px;
+    height: 280.243px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 430.71px;
+    height: 249.306px;
+    right: 200px;
+    bottom: 250px;
+  }
 }
 .ornament1,
 .ornament2,
@@ -54,22 +82,69 @@
 .ornament1 {
   top: 20px;
   right: 40%;
+  @media screen and (max-width: 1600px) {
+    width: 168.377px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 149.789px;
+    height: 199.823px;
+    top: 100px;
+    right: 30%;
+  }
 }
 .ornament2 {
-  bottom: 250px;
+  bottom: 150px;
   left: 400px;
+  @media screen and (max-width: 1600px) {
+    width: 143px;
+    left: 500px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 127.783px;
+    height: 170.467px;
+    left: 450px;
+    bottom: 200px;
+  }
 }
 .ornament3 {
   bottom: 100px;
   right: 100px;
+  @media screen and (max-width: 1600px) {
+    width: 143.64px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 127.783px;
+    height: 218.504px;
+    right: 50px;
+  }
 }
 .ornament4 {
   left: 120px;
   bottom: 400px;
+  @media screen and (max-width: 1600px) {
+    width: 112px;
+    bottom: 300px;
+    left: 75px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 98.442px;
+    height: 131.324px;
+    left: 60px;
+    bottom: 350px;
+  }
 }
 .ornament5 {
   top: 200px;
   right: 100px;
+  @media screen and (max-width: 1600px) {
+    width: 143.64px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 127.784px;
+    height: 170.466px;
+    right: 50px;
+    top: 100px;
+  }
 }
 .box {
   position: relative;

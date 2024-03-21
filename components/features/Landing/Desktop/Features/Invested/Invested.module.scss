@@ -5,7 +5,7 @@
   position: relative;
   padding-left: 100px;
   z-index: 4;
-  min-height: 1000px;
+  min-height: 950px;
   max-height: 1000px;
 }
 .title {
@@ -18,6 +18,14 @@
   z-index: 100;
   padding-left: 100px;
   padding-top: 180px;
+  @media screen and (max-width: 1600px) {
+    padding-left: 50px;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 56px;
+    padding-left: 0;
+    padding-top: 250px;
+  }
   span {
     display: block;
   }
@@ -29,12 +37,23 @@
   position: relative;
   z-index: 100;
   padding-left: 100px;
+  @media screen and (max-width: 1600px) {
+    padding-left: 50px;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 28px;
+    padding-left: 0;
+  }
 }
 .bg {
-  width: 100%;
+  width: 1700px;
+  height: 896px;
   bottom: 100px;
   left: 0;
   position: absolute;
+  @media screen and (max-width: 1400px) {
+    bottom: 150px;
+  }
 }
 .img {
   width: 272.476px;
@@ -44,6 +63,16 @@
   right: 300px;
   bottom: 0;
   z-index: 5;
+  @media screen and (max-width: 1600px) {
+    width: 235.329px;
+    height: 562.638px;
+    top: 50px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 210px;
+    height: 510px;
+    top: 100px;
+  }
 }
 .box {
   position: relative;
@@ -72,6 +101,16 @@
   left: 35%;
   bottom: 300px;
   z-index: 99;
+  @media screen and (max-width: 1600px) {
+    height: 168px;
+    width: 168px;
+    left: 42%;
+    bottom: 350px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 160px;
+    height: 160px;
+  }
 }
 .ornament3 {
   width: 238.517px;
@@ -79,6 +118,17 @@
   left: 45%;
   z-index: 99;
   top: 200px;
+  @media screen and (max-width: 1600px) {
+    height: 206px;
+    width: 206px;
+    left: 50%;
+    top: 150px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 184px;
+    height: 184px;
+    top: 300px;
+  }
 }
 .ornament2 {
   width: 206.097px;
@@ -86,6 +136,14 @@
   right: 100px;
   z-index: 99;
   bottom: 500px;
+  @media screen and (max-width: 1600px) {
+    width: 178px;
+    height: 178px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 184px;
+    height: 184px;
+  }
 }
 .ornament1 {
   width: 248.715px;
@@ -93,4 +151,16 @@
   top: -100px;
   right: 100px;
   z-index: 5;
+  @media screen and (max-width: 1600px) {
+    width: 214px;
+    height: 214px;
+    right: 150px;
+    top: -50px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 192px;
+    height: 192px;
+    top: 25px;
+    right: 170px;
+  }
 }

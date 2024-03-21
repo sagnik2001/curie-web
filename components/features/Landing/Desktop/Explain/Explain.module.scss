@@ -6,7 +6,13 @@
   background-color: #ffbb0b;
   z-index: 2;
   min-height: 1000px;
-  max-height: 1200px;
+  max-height: 1000px;
+  @media screen and (max-width: 1600px) {
+    padding-left: 150px;
+  }
+  @media screen and (max-width: 1400px) {
+    padding-left: 100px;
+  }
 }
 .ornament1,
 .ornament2,
@@ -16,14 +22,32 @@
 .ornament1 {
   top: 100px;
   right: 30%;
+  @media screen and (max-width: 1600px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
 }
 .ornament3 {
   bottom: 200px;
   right: 20px;
+  @media screen and (max-width: 1600px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
 }
 .ornament2 {
   bottom: 250px;
   left: 40%;
+  @media screen and (max-width: 1600px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
 }
 .bg {
   position: absolute;
@@ -44,6 +68,7 @@
   margin-bottom: 16px;
   position: relative;
   z-index: 3;
+  margin-top: 50px;
 }
 .para {
   span {
@@ -62,8 +87,12 @@ ul.para {
   width: 886px;
   height: 793px;
   position: absolute;
-  bottom: 200px;
+  bottom: 150px;
   right: 0;
+  @media screen and (max-width: 1400px) {
+    width: 786.295px;
+    right: -50px;
+  }
 }
 .box {
   position: relative;
