@@ -1,11 +1,16 @@
 import { RefObject, useEffect, useState } from "react";
 
-export default function useOnScreen<T extends Element>(
-  ref: RefObject<T>,
-  rootMargin: string = "0px",
-  threshold: number = 1,
-  dontUpdateAfterIntersection = false
-): boolean {
+export default function useOnScreen<T extends Element>({
+  ref,
+  rootMargin = "0px",
+  threshold = 1,
+  dontUpdateAfterIntersection = false,
+}: {
+  ref: RefObject<T>;
+  rootMargin?: string;
+  threshold?: number;
+  dontUpdateAfterIntersection?: boolean;
+}): boolean {
   // State and setter for storing whether element is visible
   const [isIntersecting, setIntersecting] = useState<boolean>(false);
   useEffect(() => {

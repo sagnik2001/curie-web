@@ -18,6 +18,10 @@
 .ornament2,
 .ornament3 {
   position: absolute;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0, 0, 0.09, 0.99);
+  transition-delay: 0.4s;
+  transform: translateY(200px);
 }
 .ornament1 {
   top: 100px;
@@ -49,6 +53,12 @@
     width: 105px;
   }
 }
+.finalOrnament3,
+.finalOrnament2,
+.finalOrnament1 {
+  transform: translateY(0px);
+  opacity: 1;
+}
 .bg {
   position: absolute;
   object-fit: contain;
@@ -56,6 +66,11 @@
   right: 0;
   width: 1361px;
   height: 996px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  &.finalBg {
+    opacity: 1;
+  }
 }
 .title {
   span {
@@ -69,6 +84,12 @@
   position: relative;
   z-index: 3;
   margin-top: 50px;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.3s;
+  opacity: 0;
+  &.finalTitle {
+    opacity: 1;
+  }
 }
 .para {
   span {
@@ -79,6 +100,12 @@
   font-weight: 500;
   position: relative;
   z-index: 3;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.3s;
+  opacity: 0;
+  &.finalPara {
+    opacity: 1;
+  }
 }
 ul.para {
   padding-left: 30px;
@@ -89,6 +116,11 @@ ul.para {
   position: absolute;
   bottom: 150px;
   right: 0;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  &.finalImg {
+    opacity: 1;
+  }
   @media screen and (max-width: 1400px) {
     width: 786.295px;
     right: -50px;
