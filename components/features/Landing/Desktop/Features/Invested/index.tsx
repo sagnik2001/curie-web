@@ -3,23 +3,64 @@ import Ornament2 from "@svgs/invested-desktop/ornament2.svg";
 import Ornament3 from "@svgs/invested-desktop/ornament3.svg";
 import Ornament4 from "@svgs/invested-desktop/ornament4.svg";
 import * as styles from "./Invested.module.scss";
+import { useRef } from "react";
+import useOnScreen from "@hooks/useOnScreen";
+import clsx from "clsx";
 
 export default function Invested() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isOnScreen = useOnScreen({
+    ref,
+    threshold: 0.75,
+    dontUpdateAfterIntersection: true,
+  });
   return (
-    <div className={styles.box}>
-      <Ornament1 className={styles.ornament1} />
+    <div className={styles.box} ref={ref}>
+      <Ornament1
+        className={clsx(styles.ornament1, isOnScreen && styles.finalOrnament1)}
+      />
       <div className={styles.container}>
-        <Ornament2 className={styles.ornament2} />
-        <Ornament3 className={styles.ornament3} />
-        <Ornament4 className={styles.ornament4} />
-        <img src="/desktop/bg-invested.png" alt="" className={styles.bg} />
-        <h2 className={styles.title}>
+        <Ornament2
+          className={clsx(
+            styles.ornament2,
+            isOnScreen && styles.finalOrnament2
+          )}
+        />
+        <Ornament3
+          className={clsx(
+            styles.ornament3,
+            isOnScreen && styles.finalOrnament3
+          )}
+        />
+        <Ornament4
+          className={clsx(
+            styles.ornament4,
+            isOnScreen && styles.finalOrnament4
+          )}
+        />
+        <img
+          src="/desktop/bg-invested.png"
+          alt=""
+          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+        />
+        <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
           <span>Stay invested</span>
           <span>all the time</span>
         </h2>
-        <p className={styles.description}>with the convenience of bank</p>
+        <p
+          className={clsx(
+            styles.description,
+            isOnScreen && styles.finalDescription
+          )}
+        >
+          with the convenience of bank
+        </p>
       </div>
-      <img src="/desktop/img-invested.png" alt="" className={styles.img} />
+      <img
+        src="/desktop/img-invested.png"
+        alt=""
+        className={clsx(styles.img, isOnScreen && styles.finalImg)}
+      />
     </div>
   );
 }
