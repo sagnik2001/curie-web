@@ -68,6 +68,8 @@
   height: 996px;
   transition: all 0.3s ease-out;
   opacity: 0;
+  pointer-events: none;
+  user-select: none;
   &.finalBg {
     opacity: 1;
   }
@@ -118,6 +120,8 @@ ul.para {
   right: 0;
   transition: all 0.3s ease-out;
   opacity: 0;
+  pointer-events: none;
+  user-select: none;
   &.finalImg {
     opacity: 1;
   }

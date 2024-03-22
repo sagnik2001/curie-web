@@ -17,6 +17,8 @@
   left: -10vw;
   transition: all 0.3s ease-out;
   opacity: 0;
+  pointer-events: none;
+  user-select: none;
   &.finalBg {
     opacity: 1;
   }
@@ -80,6 +82,8 @@
   right: 300px;
   transition: all 0.3s ease-out;
   opacity: 0;
+  pointer-events: none;
+  user-select: none;
   &.finalImg {
     opacity: 1;
   }
