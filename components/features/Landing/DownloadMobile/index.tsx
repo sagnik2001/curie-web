@@ -13,14 +13,15 @@ export default function DownloadMobile() {
   }, []);
 
   return (
-    <div className={styles.btn} onClick={() => {}}>
-      {/* <a
-        href="https://play.google.com/store/apps/details?id=com.yield.curie_money"
-        target="_blank"
-        className={calson.className}
-      >
-        <span>download curie</span>
-      </a> */}
+    <div
+      className={styles.btn}
+      onClick={() =>
+        window.open(
+          "https://play.google.com/store/apps/details?id=com.yield.curie_money",
+          "_blank"
+        )
+      }
+    >
       <Lottie animationData={animationData} autoplay loop />
     </div>
   );
