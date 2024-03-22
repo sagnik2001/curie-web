@@ -3,16 +3,24 @@ import * as styles from "./Explain.module.scss";
 import Ornament1 from "@svgs/explain-desktop/ornament1.svg";
 import Ornament2 from "@svgs/explain-desktop/ornament2.svg";
 import Ornament3 from "@svgs/explain-desktop/ornament3.svg";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 export default function Explain() {
   const ref = useRef<HTMLDivElement>(null);
+  const [floatOrnaments, setFloatOrnamanents] = useState(false);
   const isOnScreen = useOnScreen({
     ref,
     threshold: 0.75,
     dontUpdateAfterIntersection: true,
   });
+  useEffect(() => {
+    if (!isOnScreen || floatOrnaments) return;
+    setTimeout(() => {
+      setFloatOrnamanents(true);
+    }, 800);
+  }, [isOnScreen, floatOrnaments]);
+
   return (
     <div className={styles.box} ref={ref}>
       <div className={styles.container}>
@@ -24,19 +32,22 @@ export default function Explain() {
         <Ornament1
           className={clsx(
             styles.ornament1,
-            isOnScreen && styles.finalOrnament1
+            isOnScreen && styles.finalOrnament1,
+            floatOrnaments && styles.float
           )}
         />
         <Ornament3
           className={clsx(
             styles.ornament3,
-            isOnScreen && styles.finalOrnament3
+            isOnScreen && styles.finalOrnament3,
+            floatOrnaments && styles.float
           )}
         />
         <Ornament2
           className={clsx(
             styles.ornament2,
-            isOnScreen && styles.finalOrnament2
+            isOnScreen && styles.finalOrnament2,
+            floatOrnaments && styles.float
           )}
         />
         <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
@@ -50,7 +61,11 @@ export default function Explain() {
         <img
           src="/explain-img-desktop.png"
           alt=""
-          className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          className={clsx(
+            styles.img,
+            isOnScreen && styles.finalImg,
+            floatOrnaments && styles.float
+          )}
         />
       </div>
     </div>
