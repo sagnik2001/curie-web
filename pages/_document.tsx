@@ -2,13 +2,13 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" id="html">
       <Head />
       <body>
         <Main />
         <NextScript />
-        <div id="portal"></div>
       </body>
+      <div id="portal"></div>
     </Html>
   );
 }

@@ -2,11 +2,19 @@ import clsx from "clsx";
 import * as styles from "./Navbar.module.scss";
 import CurieLogo from "@svgs/curie-logo.svg";
 import { calson } from "@utilities/font";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Popup from "./Popup";
 
 export default function Navbar({ className = "" }: { className?: string }) {
   const [showPopup, setShowPopup] = useState(false);
+  useEffect(() => {
+    const element = document.getElementById("html")!;
+    if (showPopup) {
+      element.style.overflow = "hidden";
+    } else {
+      element.style.overflow = "unset";
+    }
+  }, [showPopup]);
   return (
     <>
       <div className={clsx(styles.container, className)}>
