@@ -12,7 +12,7 @@ export default function Invested() {
   const [floatOrnaments, setFloatOrnamanents] = useState(false);
   const isOnScreen = useOnScreen({
     ref,
-    threshold: 0.75,
+    threshold: 0.5,
     dontUpdateAfterIntersection: true,
   });
   useEffect(() => {
