@@ -4,17 +4,14 @@
   height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
   min-height: 950px;
   max-height: 1000px;
 }
-.bg {
-  height: 80%;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  object-fit: contain;
+.contentBox {
+  margin-right: 200px;
+  margin-top: 300px;
+  flex-shrink: 0;
 }
 .title {
   color: #010101;
@@ -28,6 +25,9 @@
   span {
     display: block;
   }
+  @media screen and (max-width: 1400px) {
+    font-size: 56px;
+  }
 }
 .description {
   color: #010101;
@@ -36,6 +36,9 @@
   font-weight: 500;
   position: relative;
   z-index: 7;
+  @media screen and (max-width: 1400px) {
+    font-size: 28px;
+  }
 }
 
 .box {
@@ -60,12 +63,126 @@
   transform: rotate(-4.961deg);
   left: 200px;
   z-index: 7;
+  bottom: 250px;
+  @media screen and (max-width: 1600px) {
+    left: 150px;
+  }
+  @media screen and (max-width: 1400px) {
+    left: 100px;
+    width: 148.672px;
+    height: 410.445px;
+  }
 }
 .bg {
-  width: 150vw;
-  left: -420px;
-  bottom: 100px;
+  width: 1600px;
+  height: 700px;
+  left: 250px;
+  bottom: 200px;
   position: absolute;
   z-index: 6;
   aspect-ratio: 2492 / 809;
+  @media screen and (max-width: 1400px) {
+    left: 150px;
+  }
+}
+.ornament1,
+.ornament2,
+.ornament3,
+.ornament4,
+.ornament5,
+.ornament6,
+.ornament7,
+.ornament8,
+.ornament9 {
+  position: absolute;
+  z-index: 8;
+}
+.ornament1 {
+  left: 30%;
+  top: 80px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament4 {
+  left: 30%;
+  top: 220px;
+  @media screen and (max-width: 1600px) {
+    width: 236px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 212px;
+  }
+}
+.ornament3 {
+  bottom: 450px;
+  left: 35%;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament5 {
+  left: 25%;
+  bottom: 150px;
+  @media screen and (max-width: 1600px) {
+    width: 236px;
+    left: 30%;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 212px;
+  }
+}
+.ornament2 {
+  bottom: 100px;
+  left: 20%;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament7 {
+  left: 60%;
+  top: 100px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament6 {
+  left: 55%;
+  bottom: 400px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament9 {
+  left: 55%;
+  bottom: 200px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament8 {
+  @media screen and (max-width: 1600px) {
+    width: 236px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 212px;
+  }
 }
