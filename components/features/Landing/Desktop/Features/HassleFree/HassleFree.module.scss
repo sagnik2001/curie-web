@@ -22,6 +22,12 @@
   margin-bottom: 12px;
   position: relative;
   z-index: 7;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  opacity: 0;
+  &.finalTitle {
+    opacity: 1;
+  }
   span {
     display: block;
   }
@@ -36,6 +42,12 @@
   font-weight: 500;
   position: relative;
   z-index: 7;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  opacity: 0;
+  &.finalDescription {
+    opacity: 1;
+  }
   @media screen and (max-width: 1400px) {
     font-size: 28px;
   }
@@ -64,6 +76,13 @@
   left: 200px;
   z-index: 7;
   bottom: 250px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.finalImg {
+    opacity: 1;
+  }
   @media screen and (max-width: 1600px) {
     left: 150px;
   }
@@ -80,7 +99,13 @@
   bottom: 200px;
   position: absolute;
   z-index: 6;
-  aspect-ratio: 2492 / 809;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.finalBg {
+    opacity: 1;
+  }
   @media screen and (max-width: 1400px) {
     left: 150px;
   }
@@ -96,6 +121,21 @@
 .ornament9 {
   position: absolute;
   z-index: 8;
+  transition: all 0.6s ease-in-out;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.ornament8,
+.ornament7,
+.ornament4,
+.ornament1 {
+  transform: translate(-50px, 50px);
+}
+.ornament2,
+.ornament3,
+.ornament5,
+.ornament6 {
+  transform: translate(-50px, -50px);
 }
 .ornament1 {
   left: 30%;
@@ -185,4 +225,16 @@
   @media screen and (max-width: 1400px) {
     width: 212px;
   }
+}
+.finalOrnament9,
+.finalOrnament8,
+.finalOrnament7,
+.finalOrnament6,
+.finalOrnament5,
+.finalOrnament4,
+.finalOrnament3,
+.finalOrnament2,
+.finalOrnament1 {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }

@@ -21,19 +21,17 @@
 }
 .container {
   overflow: hidden;
-  height: 400px;
+  height: 300px;
   position: relative;
+  top: -15px;
 }
 .india {
   background: #3f008e;
   bottom: 0;
   transform: translateX(-50%) rotate(-5deg);
   left: 50%;
-  top: 224px;
+  top: 140px;
   span {
     color: #ffca10;
   }
-  // @media screen and (max-width: 1600px) {
-  //   top: 210px;
-  // }
 }
