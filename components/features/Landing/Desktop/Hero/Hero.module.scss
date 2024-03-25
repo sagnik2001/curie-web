@@ -54,6 +54,8 @@
   bottom: 0;
   right: 0;
   object-fit: cover;
+  user-select: none;
+  pointer-events: none;
 }
 .scrollBtn {
   position: absolute;

@@ -17,7 +17,7 @@ export default function HassleFree() {
   const [floatOrnaments, setFloatOrnamanents] = useState(false);
   const isOnScreen = useOnScreen({
     ref,
-    threshold: 0.5,
+    threshold: 0.35,
     dontUpdateAfterIntersection: true,
   });
   useEffect(() => {

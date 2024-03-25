@@ -12,7 +12,7 @@ export default function Safe() {
   const ref = useRef<HTMLDivElement>(null);
   const isOnScreen = useOnScreen({
     ref,
-    threshold: 0.5,
+    threshold: 0.35,
     dontUpdateAfterIntersection: true,
   });
   return (
