@@ -29,11 +29,29 @@ export default function HassleFree() {
   return (
     <div className={styles.box} ref={ref}>
       <div className={styles.container}>
-        <img
-          src="/desktop/img-hasslefree.png"
-          alt=""
-          className={clsx(styles.img, isOnScreen && styles.finalImg)}
-        />
+        <picture>
+          <source
+            srcSet="/desktop/img-hasslefree.avif"
+            type="image/avif"
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+          <source
+            srcSet="/desktop/img-hasslefree.webp"
+            type="image/webp"
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+          <source
+            src="/desktop/img-hasslefree.png"
+            type="image/png"
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+          <img
+            src="/desktop/img-hasslefree.png"
+            alt=""
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+        </picture>
+
         <Ornament1
           className={clsx(
             styles.ornament1,
@@ -112,11 +130,28 @@ export default function HassleFree() {
           </p>
         </div>
       </div>
-      <img
-        src="/desktop/bg-hasslefree.png"
-        alt=""
-        className={clsx(styles.bg, isOnScreen && styles.finalBg)}
-      />
+      <picture>
+        <source
+          srcSet="/desktop/bg-hasslefree.avif"
+          type="image/avif"
+          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+        />
+        <source
+          srcSet="/desktop/bg-hasslefree.webp"
+          type="image/webp"
+          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+        />
+        <source
+          src="/desktop/bg-hasslefree.png"
+          type="image/png"
+          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+        />
+        <img
+          src="/desktop/bg-hasslefree.png"
+          alt=""
+          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+        />
+      </picture>
     </div>
   );
 }

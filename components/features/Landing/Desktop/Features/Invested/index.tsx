@@ -52,11 +52,28 @@ export default function Invested() {
             floatOrnaments && styles.float
           )}
         />
-        <img
-          src="/desktop/bg-invested.png"
-          alt=""
-          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
-        />
+        <picture>
+          <source
+            srcSet="/desktop/bg-invested.avif"
+            type="image/avif"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <source
+            srcSet="/desktop/bg-invested.webp"
+            type="image/webp"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <source
+            src="/desktop/bg-invested.png"
+            type="image/png"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <img
+            src="/desktop/bg-invested.png"
+            alt=""
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+        </picture>
         <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
           <span>Stay invested</span>
           <span>all the time</span>
@@ -70,15 +87,44 @@ export default function Invested() {
           with the convenience of bank
         </p>
       </div>
-      <img
-        src="/desktop/img-invested.png"
-        alt=""
-        className={clsx(
-          styles.img,
-          isOnScreen && styles.finalImg,
-          floatOrnaments && styles.float
-        )}
-      />
+      <picture>
+        <source
+          srcSet="/desktop/img-invested.avif"
+          type="image/avif"
+          className={clsx(
+            styles.img,
+            isOnScreen && styles.finalImg,
+            floatOrnaments && styles.float
+          )}
+        />
+        <source
+          srcSet="/desktop/img-invested.webp"
+          type="image/webp"
+          className={clsx(
+            styles.img,
+            isOnScreen && styles.finalImg,
+            floatOrnaments && styles.float
+          )}
+        />
+        <source
+          src="/desktop/img-invested.png"
+          type="image/png"
+          className={clsx(
+            styles.img,
+            isOnScreen && styles.finalImg,
+            floatOrnaments && styles.float
+          )}
+        />
+        <img
+          src="/desktop/img-invested.png"
+          alt=""
+          className={clsx(
+            styles.img,
+            isOnScreen && styles.finalImg,
+            floatOrnaments && styles.float
+          )}
+        />
+      </picture>
     </div>
   );
 }

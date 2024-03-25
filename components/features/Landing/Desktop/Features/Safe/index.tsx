@@ -18,11 +18,28 @@ export default function Safe() {
   return (
     <div className={styles.box} ref={ref}>
       <div className={styles.container}>
-        <img
-          src="/desktop/bg-save.png"
-          alt=""
-          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
-        />
+        <picture>
+          <source
+            srcSet="/desktop/bg-save.avif"
+            type="image/avif"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <source
+            srcSet="/desktop/bg-save.webp"
+            type="image/webp"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <source
+            src="/desktop/bg-save.png"
+            type="image/png"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <img
+            src="/desktop/bg-save.png"
+            alt=""
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+        </picture>
         <Ornament1
           className={clsx(
             styles.ornament1,
@@ -65,11 +82,28 @@ export default function Safe() {
         >
           with our licensed Bank and AMC
         </p>
-        <img
-          src="/desktop/img-save.png"
-          alt=""
-          className={clsx(styles.img, isOnScreen && styles.finalImg)}
-        />
+        <picture>
+          <source
+            srcSet="/desktop/img-save.avif"
+            type="image/avif"
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+          <source
+            srcSet="/desktop/img-save.webp"
+            type="image/webp"
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+          <source
+            src="/desktop/img-save.png"
+            type="image/png"
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+          <img
+            src="/desktop/img-save.png"
+            alt=""
+            className={clsx(styles.img, isOnScreen && styles.finalImg)}
+          />
+        </picture>
       </div>
     </div>
   );

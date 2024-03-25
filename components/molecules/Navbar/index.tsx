@@ -27,6 +27,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
                 behavior: "smooth",
               })
             }
+            style={{ cursor: "pointer" }}
           >
             <CurieLogo />
           </div>

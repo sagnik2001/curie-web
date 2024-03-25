@@ -24,11 +24,28 @@ export default function Explain() {
   return (
     <div className={styles.box} ref={ref}>
       <div className={styles.container}>
-        <img
-          src="/explain-desktop.png"
-          alt=""
-          className={clsx(styles.bg, isOnScreen && styles.finalBg)}
-        />
+        <picture>
+          <source
+            srcSet="/explain-desktop.avif"
+            type="image/avif"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <source
+            srcSet="/explain-desktop.webp"
+            type="image/webp"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <source
+            srcSet="/explain-desktop.png"
+            type="image/png"
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+          <img
+            src="/explain-desktop.png"
+            alt=""
+            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
+          />
+        </picture>
         <Ornament1
           className={clsx(
             styles.ornament1,
@@ -58,15 +75,44 @@ export default function Explain() {
           <li>No hidden fees</li>
           <li>Enjoy higher returns</li>
         </ul>
-        <img
-          src="/explain-img-desktop.png"
-          alt=""
-          className={clsx(
-            styles.img,
-            isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
-          )}
-        />
+        <picture>
+          <source
+            srcSet="/explain-img-desktop.avif"
+            type="image/avif"
+            className={clsx(
+              styles.img,
+              isOnScreen && styles.finalImg,
+              floatOrnaments && styles.float
+            )}
+          />
+          <source
+            srcSet="/explain-img-desktop.webp"
+            type="image/webp"
+            className={clsx(
+              styles.img,
+              isOnScreen && styles.finalImg,
+              floatOrnaments && styles.float
+            )}
+          />
+          <source
+            src="/explain-img-desktop.png"
+            type="image/png"
+            className={clsx(
+              styles.img,
+              isOnScreen && styles.finalImg,
+              floatOrnaments && styles.float
+            )}
+          />
+          <img
+            src="/explain-img-desktop.png"
+            alt=""
+            className={clsx(
+              styles.img,
+              isOnScreen && styles.finalImg,
+              floatOrnaments && styles.float
+            )}
+          />
+        </picture>
       </div>
     </div>
   );

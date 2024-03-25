@@ -29,7 +29,24 @@ export default function Hero() {
         )}
       />
       <div className={styles.container}>
-        <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
+        <picture>
+          <source
+            srcSet="/desktop/bg-hero.avif"
+            type="image/avif"
+            className={styles.bg}
+          />
+          <source
+            srcSet="/desktop/bg-hero.webp"
+            type="image/webp"
+            className={styles.bg}
+          />
+          <source
+            srcSet="/desktop/bg-hero.png"
+            type="image/png"
+            className={styles.bg}
+          />
+          <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
+        </picture>
         <Ornament2
           className={clsx(
             styles.ornament2,
