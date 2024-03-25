@@ -24,7 +24,24 @@ function Download({ onClose }: { onClose: () => void }) {
               <li>Click on the link generated to download Curie</li>
             </ul>
           </div>
-          <img src="/download-qr.png" alt="" className={styles.img} />
+          <picture>
+            <source
+              srcSet="/download-qr.avif"
+              type="image/avif"
+              className={styles.img}
+            />
+            <source
+              srcSet="/download-qr.webp"
+              type="image/webp"
+              className={styles.img}
+            />
+            <source
+              srcSet="/download-qr.png"
+              type="image/png"
+              className={styles.img}
+            />
+            <img src="/download-qr.png" alt="" className={styles.img} />
+          </picture>
         </div>
       </div>
     </>
