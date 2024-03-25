@@ -74,13 +74,13 @@ export default function Footer({
           </span>
         </div>
         <div className={styles.links}>
-          <Link href="/about-us" className={styles.link}>
+          <Link href="/about-us" target="_blank" className={styles.link}>
             About
           </Link>
-          <Link href="/privacy-policy" className={styles.link}>
+          <Link href="/privacy-policy" target="_blank" className={styles.link}>
             Privacy Policy
           </Link>
-          <Link href="/terms" className={styles.link}>
+          <Link href="/terms" target="_blank" className={styles.link}>
             Terms and Conditions
           </Link>
         </div>
