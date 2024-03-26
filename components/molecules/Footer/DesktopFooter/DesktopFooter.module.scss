@@ -4,9 +4,6 @@
   @media #{$touch} {
     display: none;
   }
-  a {
-    text-decoration: none;
-  }
 }
 .band {
   height: 40px;
@@ -63,6 +60,9 @@
 }
 .contact {
   padding-left: 106px;
+  a {
+    text-decoration: none;
+  }
 }
 .learnInfo {
   max-width: 520px;

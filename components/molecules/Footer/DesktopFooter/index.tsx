@@ -82,6 +82,12 @@ export default function DesktopFooter({
               <span className={styles.socialValue}>@curie_money</span>
             </div>
           </Link>
+          <Link href="https://www.facebook.com/curiemoney/" target="_blank">
+            <div className={styles.socialBox}>
+              <span className={styles.socialLabel}>Facebook</span>
+              <span className={styles.socialValue}>@curiemoney</span>
+            </div>
+          </Link>
         </div>
       </div>
       <div className={styles.partnerBox}>

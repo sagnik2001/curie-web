@@ -59,13 +59,13 @@ export default function HassleFree() {
             floatOrnaments && styles.float
           )}
         />
-        <Ornament2
+        {/* <Ornament2
           className={clsx(
             styles.ornament2,
-            isOnScreen && styles.finalOrnament1,
+            isOnScreen && styles.finalOrnament2,
             floatOrnaments && styles.float
           )}
-        />
+        /> */}
         <Ornament3
           className={clsx(
             styles.ornament3,

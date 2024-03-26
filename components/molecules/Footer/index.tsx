@@ -66,10 +66,10 @@ export default function Footer({
           </span>
         </div>
         <div className={styles.socialBox}>
-          <span className={styles.socialLabel}>Youtube</span>
+          <span className={styles.socialLabel}>Facebook</span>
           <span className={styles.socialValue}>
-            <Link href="mailto:hello@curie.money" target="_blank">
-              @curie_money
+            <Link href="https://www.facebook.com/curiemoney/" target="_blank">
+              @curiemoney
             </Link>
           </span>
         </div>
