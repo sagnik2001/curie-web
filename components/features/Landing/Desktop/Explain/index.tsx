@@ -11,7 +11,7 @@ export default function Explain() {
   const [floatOrnaments, setFloatOrnamanents] = useState(false);
   const isOnScreen = useOnScreen({
     ref,
-    threshold: 0.35,
+    threshold: 0.15,
     dontUpdateAfterIntersection: true,
   });
   useEffect(() => {
