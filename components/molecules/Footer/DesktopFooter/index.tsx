@@ -28,7 +28,7 @@ export default function DesktopFooter({
             <Link href="/about-us" target="_blank" className={styles.link}>
               About
             </Link>
-            <Link href="/privacy" target="_blank" className={styles.link}>
+            <Link href="/privacy-policy" target="_blank" className={styles.link}>
               Privacy Policy
             </Link>
             <Link href="/terms" target="_blank" className={styles.link}>
