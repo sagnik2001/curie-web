@@ -28,14 +28,16 @@ export default function Landing() {
 
   return (
     <div className={styles.container}>
-      <Navbar className={styles.nav} />
-      <Hero />
-      <IntroductionBand />
-      <Explain />
-      <Features />
-      <Welcome />
-      <Footer landingPage />
-      <DownloadMobile />
+      <div style={{ overflow: "hidden" }}>
+        <Navbar className={styles.nav} />
+        <Hero />
+        <IntroductionBand />
+        <Explain />
+        <Features />
+        <Welcome />
+        <Footer landingPage />
+        <DownloadMobile />
+      </div>
     </div>
   );
 }

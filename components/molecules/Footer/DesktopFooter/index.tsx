@@ -28,11 +28,25 @@ export default function DesktopFooter({
             <Link href="/about-us" target="_blank" className={styles.link}>
               About
             </Link>
-            <Link href="/privacy-policy" target="_blank" className={styles.link}>
+            <Link
+              href="/privacy-policy"
+              target="_blank"
+              className={styles.link}
+            >
               Privacy Policy
             </Link>
             <Link href="/terms" target="_blank" className={styles.link}>
               Term and Conditions
+            </Link>
+            <Link
+              href="/cancellation-and-refund-policy"
+              target="_blank"
+              className={styles.link}
+            >
+              Refund and Cancellation Policy
+            </Link>
+            <Link href="/contact-us" target="_blank" className={styles.link}>
+              Contact Us
             </Link>
           </div>
         </div>

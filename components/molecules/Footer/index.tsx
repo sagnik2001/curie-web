@@ -83,6 +83,16 @@ export default function Footer({
           <Link href="/terms" target="_blank" className={styles.link}>
             Terms and Conditions
           </Link>
+          <Link
+            href="/cancellation-and-refund-policy"
+            target="_blank"
+            className={styles.link}
+          >
+            Refund and Cancellation Policy
+          </Link>
+          <Link href="/contact-us" target="_blank" className={styles.link}>
+            Contact Us
+          </Link>
         </div>
         <div className={styles.partnerBox}>
           <span className={styles.tag}>Our partners</span>
