@@ -4,9 +4,11 @@ import CurieLogo from "@svgs/curie-logo.svg";
 import { calson } from "@utilities/font";
 import { useEffect, useState } from "react";
 import Popup from "./Popup";
+import { useRouter } from "next/router";
 
 export default function Navbar({ className = "" }: { className?: string }) {
   const [showPopup, setShowPopup] = useState(false);
+  const router = useRouter();
   useEffect(() => {
     const element = document.getElementById("html")!;
     if (showPopup) {
@@ -20,13 +22,15 @@ export default function Navbar({ className = "" }: { className?: string }) {
       <div className={clsx(styles.container, className)}>
         <div className={styles.box}>
           <div
-            onClick={() =>
-              window.scroll({
-                top: 0,
-                left: 0,
-                behavior: "smooth",
-              })
-            }
+            onClick={() => {
+              window.location.pathname === "/"
+                ? window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth",
+                  })
+                : router.push("/");
+            }}
             style={{ cursor: "pointer" }}
           >
             <CurieLogo />
