@@ -55,52 +55,33 @@ export default function DesktopFooter({
             Learn more about Curie, chat with the team, others in the community,
             and have your say in shaping the future of banking.
           </p>
-          <div className={styles.socialBox}>
-            <span className={styles.socialLabel}>Email</span>
-            <span className={styles.socialValue}>
-              <Link href="mailto:hello@curie.money" target="_blank">
-                hello@curie.money
-              </Link>
-            </span>
-          </div>
-          <div className={styles.socialBox}>
-            <span className={styles.socialLabel}>Whatsapp</span>
-            <span className={styles.socialValue}>
-              <Link
-                href="https://chat.whatsapp.com/IvJATkpzt6uEucYWxdf6lH"
-                target="_blank"
-              >
-                @curie_community
-              </Link>
-            </span>
-          </div>
-          <div className={styles.socialBox}>
-            <span className={styles.socialLabel}>Twitter</span>
-            <span className={styles.socialValue}>
-              <Link href="https://twitter.com/CurieMoney" target="_blank">
-                @curie_money
-              </Link>
-            </span>
-          </div>
-          <div className={styles.socialBox}>
-            <span className={styles.socialLabel}>Instagram</span>
-            <span className={styles.socialValue}>
-              <Link
-                href="https://www.instagram.com/curiemoney/"
-                target="_blank"
-              >
-                @curie_money
-              </Link>
-            </span>
-          </div>
-          <div className={styles.socialBox}>
-            <span className={styles.socialLabel}>YouTube</span>
-            <span className={styles.socialValue}>
-              <Link href="mailto:hello@curie.money" target="_blank">
-                @curie_money
-              </Link>
-            </span>
-          </div>
+          <Link href="mailto:hello@curie.money" target="_blank">
+            <div className={styles.socialBox}>
+              <span className={styles.socialLabel}>Email</span>
+              <span className={styles.socialValue}>hello@curie.money</span>
+            </div>
+          </Link>
+          <Link
+            href="https://chat.whatsapp.com/IvJATkpzt6uEucYWxdf6lH"
+            target="_blank"
+          >
+            <div className={styles.socialBox}>
+              <span className={styles.socialLabel}>Whatsapp</span>
+              <span className={styles.socialValue}>@curie_community</span>
+            </div>
+          </Link>
+          <Link href="https://twitter.com/CurieMoney" target="_blank">
+            <div className={styles.socialBox}>
+              <span className={styles.socialLabel}>Twitter</span>
+              <span className={styles.socialValue}>@curie_money</span>
+            </div>
+          </Link>
+          <Link href="https://www.instagram.com/curiemoney/" target="_blank">
+            <div className={styles.socialBox}>
+              <span className={styles.socialLabel}>Instagram</span>
+              <span className={styles.socialValue}>@curie_money</span>
+            </div>
+          </Link>
         </div>
       </div>
       <div className={styles.partnerBox}>

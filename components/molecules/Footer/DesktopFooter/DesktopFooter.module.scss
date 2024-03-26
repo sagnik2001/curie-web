@@ -4,6 +4,9 @@
   @media #{$touch} {
     display: none;
   }
+  a {
+    text-decoration: none;
+  }
 }
 .band {
   height: 40px;

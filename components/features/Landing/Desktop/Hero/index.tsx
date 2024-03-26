@@ -15,25 +15,9 @@ import usePauseAnimation from "@hooks/usePauseAnimation";
 
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
-  const ornament1Ref = useRef<HTMLElement>(null);
-  const ornament2Ref = useRef<HTMLElement>(null);
-  const ornament3Ref = useRef<HTMLElement>(null);
-  const ornament4Ref = useRef<HTMLElement>(null);
-  const ornament5Ref = useRef<HTMLElement>(null);
-  const ornament6Ref = useRef<HTMLElement>(null);
-  const ornament7Ref = useRef<HTMLElement>(null);
-  const ornament8Ref = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLSourceElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
   const paraRef = useRef<HTMLParagraphElement>(null);
-  usePauseAnimation(ornament1Ref);
-  usePauseAnimation(ornament2Ref);
-  usePauseAnimation(ornament3Ref);
-  usePauseAnimation(ornament4Ref);
-  usePauseAnimation(ornament5Ref);
-  usePauseAnimation(ornament6Ref);
-  usePauseAnimation(ornament7Ref);
-  usePauseAnimation(ornament8Ref);
   usePauseAnimation(bgRef);
   usePauseAnimation(textRef);
   usePauseAnimation(paraRef);
@@ -42,6 +26,35 @@ export default function Hero() {
     setTimeout(() => {
       setLoadAnimation(true);
     }, 500);
+    const ornament1 = document.getElementById("hero-desktop-ornament1");
+    const ornament2 = document.getElementById("hero-desktop-ornament2");
+    const ornament3 = document.getElementById("hero-desktop-ornament3");
+    const ornament4 = document.getElementById("hero-desktop-ornament4");
+    const ornament5 = document.getElementById("hero-desktop-ornament5");
+    const ornament6 = document.getElementById("hero-desktop-ornament6");
+    const ornament7 = document.getElementById("hero-desktop-ornament7");
+    const ornament8 = document.getElementById("hero-desktop-ornament8");
+    window.addEventListener("focus", () => {
+      if (ornament1) ornament1.style.animationPlayState = "paused";
+      if (ornament2) ornament2.style.animationPlayState = "paused";
+      if (ornament3) ornament3.style.animationPlayState = "paused";
+      if (ornament4) ornament4.style.animationPlayState = "paused";
+      if (ornament5) ornament5.style.animationPlayState = "paused";
+      if (ornament6) ornament6.style.animationPlayState = "paused";
+      if (ornament7) ornament7.style.animationPlayState = "paused";
+      if (ornament8) ornament8.style.animationPlayState = "paused";
+    });
+
+    window.addEventListener("blur", () => {
+      if (ornament1) ornament1.style.animationPlayState = "running";
+      if (ornament2) ornament2.style.animationPlayState = "running";
+      if (ornament3) ornament3.style.animationPlayState = "running";
+      if (ornament4) ornament4.style.animationPlayState = "running";
+      if (ornament5) ornament5.style.animationPlayState = "running";
+      if (ornament6) ornament6.style.animationPlayState = "running";
+      if (ornament7) ornament7.style.animationPlayState = "running";
+      if (ornament8) ornament8.style.animationPlayState = "running";
+    });
   }, []);
   return (
     <div style={{ position: "relative" }}>
@@ -51,7 +64,7 @@ export default function Hero() {
           loadAnimation && styles.float,
           loadAnimation && styles.animateOrnament1
         )}
-        ref={ornament1Ref}
+        id="hero-desktop-ornament1"
       />
       <div className={styles.container}>
         <picture>
@@ -79,7 +92,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament2
           )}
-          ref={ornament2Ref}
+          id="hero-desktop-ornament2"
         />
         <Ornament3
           className={clsx(
@@ -87,7 +100,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament3
           )}
-          ref={ornament3Ref}
+          id="hero-desktop-ornament3"
         />
         <Ornament5
           className={clsx(
@@ -95,7 +108,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament5
           )}
-          ref={ornament5Ref}
+          id="hero-desktop-ornament5"
         />
         <Ornament4
           className={clsx(
@@ -103,7 +116,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament4
           )}
-          ref={ornament4Ref}
+          id="hero-desktop-ornament4"
         />
         <Ornament6
           className={clsx(
@@ -111,7 +124,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament6
           )}
-          ref={ornament6Ref}
+          id="hero-desktop-ornament6"
         />
         <Ornament7
           className={clsx(
@@ -119,7 +132,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament7
           )}
-          ref={ornament7Ref}
+          id="hero-desktop-ornament7"
         />
         <Ornament8
           className={clsx(
@@ -127,7 +140,7 @@ export default function Hero() {
             loadAnimation && styles.float,
             loadAnimation && styles.animateOrnament8
           )}
-          ref={ornament8Ref}
+          id="hero-desktop-ornament8"
         />
         <div
           className={clsx(styles.titleBox, loadAnimation && styles.animatedBox)}
