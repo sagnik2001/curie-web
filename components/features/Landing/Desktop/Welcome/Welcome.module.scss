@@ -39,23 +39,40 @@
   top: 300px;
   width: 100%;
   text-align: center;
-  text-shadow: 2px 1px 0px #000;
 
   span {
     display: block;
   }
   .imp {
-    color: #5209af;
+    color: #1a6d87;
     text-align: center;
     font-size: 110px;
     font-weight: 700;
   }
   .content {
-    color: #5209af;
+    color: #1a6d87;
     font-size: 110px;
     text-align: center;
     font-style: italic;
     font-weight: 400;
     letter-spacing: -0.96px;
+  }
+  @media screen and (max-width: 1600px) {
+    .imp {
+      font-size: 88px;
+    }
+    .center {
+      font-size: 88px;
+      letter-spacing: -1.76px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .imp {
+      font-size: 78px;
+    }
+    .center {
+      font-size: 78px;
+      letter-spacing: -1.562px;
+    }
   }
 }
