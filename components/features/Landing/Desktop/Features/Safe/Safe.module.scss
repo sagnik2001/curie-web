@@ -183,11 +183,11 @@
     position: absolute;
     content: "";
     top: -150px;
-    left: 0;
-    height: 80vh;
+    left: 50%;
+    height: 500px;
     background-color: #180036;
     width: 150vw;
-    transform: rotate(-5deg);
+    transform: translateX(-50%)  rotate(-5deg);
     z-index: 8;
   }
 }
