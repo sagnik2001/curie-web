@@ -232,3 +232,18 @@
     opacity: 1;
   }
 }
+.nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 99;
+  height: 64px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 3.72%,
+    rgba(0, 0, 0, 0) 94.33%
+  );
+}
+.box {
+  position: relative;
+  padding-top: 80px;
+}

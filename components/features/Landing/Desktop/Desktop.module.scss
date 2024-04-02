@@ -6,18 +6,3 @@
   margin-right: auto;
   overflow: hidden;
 }
-.nav.nav {
-  position: fixed;
-  width: 100vw;
-  max-width: 1700px;
-  z-index: 99;
-  height: 64px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 3.72%,
-    rgba(0, 0, 0, 0) 94.33%
-  );
-  @media screen and (min-width: 1700px) {
-    margin-left: calc((100% - 1700px) / 2);
-  }
-}
