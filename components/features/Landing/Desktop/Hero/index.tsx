@@ -12,6 +12,8 @@ import Ornament7 from "@svgs/desktop-hero/ornament7.svg";
 import Ornament8 from "@svgs/desktop-hero/ornament8.svg";
 import { useEffect, useRef, useState } from "react";
 import usePauseAnimation from "@hooks/usePauseAnimation";
+import IntroductionBanner from "./IntroductionBanner";
+import Navbar from "@molecules/Navbar";
 
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
@@ -57,7 +59,27 @@ export default function Hero() {
     });
   }, []);
   return (
-    <div style={{ position: "relative" }}>
+    <div className={styles.box}>
+            <Navbar className={styles.nav} />
+      <picture>
+        <source
+          srcSet="/desktop/bg-hero.avif"
+          type="image/avif"
+          className={styles.bg}
+          ref={bgRef}
+        />
+        <source
+          srcSet="/desktop/bg-hero.webp"
+          type="image/webp"
+          className={styles.bg}
+        />
+        <source
+          srcSet="/desktop/bg-hero.png"
+          type="image/png"
+          className={styles.bg}
+        />
+        <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
+      </picture>
       <Ornament1
         className={clsx(
           styles.ornament1,
@@ -67,25 +89,6 @@ export default function Hero() {
         id="hero-desktop-ornament1"
       />
       <div className={styles.container}>
-        <picture>
-          <source
-            srcSet="/desktop/bg-hero.avif"
-            type="image/avif"
-            className={styles.bg}
-            ref={bgRef}
-          />
-          <source
-            srcSet="/desktop/bg-hero.webp"
-            type="image/webp"
-            className={styles.bg}
-          />
-          <source
-            srcSet="/desktop/bg-hero.png"
-            type="image/png"
-            className={styles.bg}
-          />
-          <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
-        </picture>
         <Ornament2
           className={clsx(
             styles.ornament2,
@@ -158,6 +161,7 @@ export default function Hero() {
           <div className={clsx(calson.className, styles.text)}>scroll</div>
         </div>
       </div>
+      <IntroductionBanner />
     </div>
   );
 }
