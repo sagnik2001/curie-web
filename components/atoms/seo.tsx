@@ -4,7 +4,7 @@ export default function Seo() {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Curie Money</title>
+      <title>Curie Money - India's First High Yield Savings Account</title>
       <meta
         name="description"
         content={`Curie Money brings India's first high yield savings bank account. 
