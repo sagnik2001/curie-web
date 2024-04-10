@@ -62,7 +62,7 @@ export default function Hero() {
     <div className={styles.box}>
             <Navbar className={styles.nav} />
       <picture>
-        {/* <source
+        <source
           srcSet="/desktop/bg-hero.avif"
           type="image/avif"
           className={styles.bg}
@@ -77,7 +77,7 @@ export default function Hero() {
           srcSet="/desktop/bg-hero.png"
           type="image/png"
           className={styles.bg}
-        /> */}
+        />
         <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
       </picture>
       <Ornament1
