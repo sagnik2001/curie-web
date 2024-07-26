@@ -308,60 +308,105 @@ export default function Privacy() {
         <h2 className={styles.header}>9. UPI</h2>
         <p className={styles.para}>
           A. What is NPCI?
+          <br />
           NPCI is an authorized payment system operator by RBI.  NPCI owns and operates UPI payment system.
-
+          <br />
+          <br />
           B. What is a PSP bank?
+          <br />
           PSP is the banking company authorized to act as a Payment Service Provider (PSP) under the UPI framework. PSP engages the TPAP to provide UPI services to the end-user customers.
-
+          <br />
+          <br />
           C. What are TPAPs?
+          <br />
           Third Party Application Provider (TPAP) is an entity that provides the UPI compliant app(s) to the end-user customers to facilitate UPI based payment transactions. 
-
+          <br />
+          <br />
           D. What is a Customer's Bank?  
+          <br />
           The Bank where the end-user customer maintains his/her account that has been linked for the purpose of debiting/crediting the payment transactions made through UPI.
-
+          <br />
+          <br />
           E. Who is an End User Customer?
+          <br />
           The end-user customer is the individual who uses UPI payment facility to send and receive payments.
-
+          <br />
+          <br />
           F. We hereby confirm that:
+          <br />
           * We Yield Technologies Private Limited are a TPAP authorized by NPCI to facilitate payments through PSP Bank(s) namely Yes Bank Limited. We are a service provider and we participate in UPI through the PSP Bank.
+          <br />
           * We are bound by the tripartite agreement entered with the sponsor PSP Bank Yes Bank Limited and NPCI. We are responsible for facilitating grievances / complaints resolution of the customers on-boarded on our UPI application.
+          <br />
           * We shall be the first point of contact for all UPI related grievances/complaints for customers on-boarded by us.  In case the complaint/grievance remains unresolved, the next level for escalation will be the PSP Bank, followed by the bank (where you maintain the account) and NPCI in the same order. After exercising these options you can approach the Banking Ombudsman and / or the Ombudsman for Digital Complaints, as the case may be.
-
+          <br /><br />
           G. Roles & Responsibilities of NPCI:
+          <br />
           * NPCI owns and operates the Unified Payments Interface (UPI) platform
+          <br />
           * NPCI prescribes rules, regulations, guidelines, and the respective roles, responsibilities and liabilities of the participants, with respect to UPI. This also includes transaction processing and settlement, dispute management and clearing cut-offs for settlement 
+          <br />
           * NPCI approves the participation of Issuer Banks, PSP Banks, Third Party Application Providers (TPAP) and Prepaid Payment Instrument issuers (PPIs) in UPI
+          <br />
           * NPCI provides a safe, secure and efficient UPI system and network
+          <br />
           * NPCI provides online transaction routing, processing and settlement services to members participating in UPI
+          <br />
           * NPCI can, either directly or through a third party, conduct audit on UPI participants and call for data, information and records, in relation to their participation in UPI
+          <br />
           * NPCI provides the banks participating in UPI access to system where they can download reports, raise chargebacks, update the status of UPI transactions etc. 
+          <br /><br />
 
           H. Roles & responsibilities of PSP Bank:
+          <br />
           * PSP Bank is a member of UPI and connects to the UPI platform for availing UPI payment facility and providing the same to the TPAP which in turn enables the end-user customers / merchants to make and accept UPI payments
+          <br />
           * PSP Bank, either through its own app or TPAP’s app, on-boards and registers the end-user customers on UPI and links their bank accounts to their respective UPI ID. 
+          <br />
           * PSP Bank is responsible for authentication of the end-user customer at the time of registration of such customer, either through its own app or TPAP’s app 
+          <br />
           * PSP Bank engages and on-boards the TPAPs to make the TPAP’s UPI app available to the end-user customers  
+          <br />
           * PSP Bank has to ensure that TPAP and its systems are adequately secure to function on UPI platform
+          <br />
           * PSP Bank is responsible to ensure that UPI app and systems of TPAP are audited to safeguard security and integrity of the data and information of the end-user customer including UPI transaction data as well as UPI app security 
+          <br />
           * PSP Bank has to store all the payments data including UPI Transaction Data collected for the purpose of facilitating UPI transactions, only in India
+          <br />
           * PSP Bank is responsible to give all UPI customers an option to choose any bank account from the list of Banks available on UPI platform for linking with the customer’s UPI ID.
+          <br />
           * PSP Bank is responsible to put in place a grievance redressal mechanism for resolving complaints and disputes raised by the end-user customer 
+          <br /><br />
 
-          I. Roles & responsibilities of TPAP
+          I. Roles & responsibilities of TPAP:
+          <br />
           * TPAP is a service provider and participates in UPI through PSP Bank
+          <br />
           * TPAP is responsible to comply with all the requirements prescribed by PSP Bank and NPCI in relation to TPAP’s participation in UPI 
+          <br />
           * TPAP is responsible to ensure that its systems are adequately secure to function on the UPI platform
+          <br />
           * TPAP is responsible to comply with all applicable laws, rules, regulations and guidelines etc. prescribed by any statutory or regulatory authority in relation to UPI and TPAP’s participation on the UPI platform including all circulars and guidelines issued by NPCI in this regard 
+          <br />
           * TPAP has to store all the payments data including UPI Transaction Data collected by TPAP for the purpose of facilitating UPI transactions, only in India 
+          <br />
           * TPAP is responsible to facilitate RBI, NPCI and other agencies nominated by RBI/ NPCI, to access the data, information, systems of TPAP related to UPI and carry out audits of TPAP, as and when required by RBI and NPCI
+          <br />
           * TPAP shall facilitate the end-user customer with an option to raise grievance through the TPAP’s grievance redressal facility made available through TPAP’s UPI app or website and such other channels as may be deemed appropriate by the TPAP like email, messaging platform, IVR etc. 
-
+          <br /><br />
           J. Dispute Redressal Mechanism:
+          <br />
           * Every end-user customer can raise a complaint with respect to a UPI transaction, on the PSP app / TPAP app. 
+          <br />
           * End-user customer can select the relevant UPI transaction and raise a complaint in relation thereto
+          <br />
+          <br />
           * A complaint shall be first raised with the relevant TPAP in respect to all UPI related grievances / complaints of the end-user customers on-boarded by the PSP Bank / TPAP (if the UPI transaction is made through TPAP app). In case the complaint / grievance remains unresolved, the next level for escalation will be the PSP Bank, followed by the bank (where the end-user customer maintains its account) and NPCI, in the same order. After exercising these options, the end-user customer can approach the Banking Ombudsman and / or the Ombudsman for Digital Complaints, as the case may be.
+          <br />
           * The complaint can be raised for both the types of transactions i.e. fund transfer and merchant transactions
+          <br />
           * The end-user customer shall be kept communicated by the PSP / TPAP by means of updating the status of such end-user customer’s complaint on the relevant app itself 
+          <br /><br />
         </p>
         <h2 className={styles.header}>10. Confidentiality Obligation</h2>
         <p className={styles.para}>
