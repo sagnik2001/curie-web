@@ -93,6 +93,9 @@ export default function Footer({
           <Link href="/contact-us" target="_blank" className={styles.link}>
             Contact Us
           </Link>
+          <Link href="/investor-charter" target="_blank" className={styles.link}>
+            Investor Charter
+          </Link>
         </div>
         <div className={styles.partnerBox}>
           <span className={styles.tag}>Our partners</span>
