@@ -14,7 +14,7 @@ const GrievanceData = () => {
                         <th>Received</th>
                         <th>Resolved*</th>
                         <th>Total Pending#</th>
-                        <th>Pending complaints > 3 months</th>
+                        <th>Pending complaints &gt; 3 months</th>
                         <th>Average Resolution time^ (in days)</th>
                     </tr>
                 </thead>
