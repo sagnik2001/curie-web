@@ -1,8 +1,13 @@
 import React from 'react';
+import * as styles from "./GrievanceData.module.scss";
+import StickiedNavbar from '@molecules/StickiedNavbar';
 
-const GrievanceData = () => {
+
+export default function GrievanceData() { 
     return (
-        <div>
+        <>
+            <StickiedNavbar />
+            <div className={styles.container}>
             <h1>Grievance Data</h1>
             <h2>Data for the month ending - <strong>July 2024</strong></h2>
             <table>
@@ -137,7 +142,7 @@ const GrievanceData = () => {
 
             <p>You can submit your grievance/complaints at <a href="mailto:support@curie.money">support@curie.money</a></p>
         </div>
-    );
-};
+    </>
+  );
+}
 
-export default GrievanceData;
