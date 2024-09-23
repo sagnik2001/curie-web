@@ -9,11 +9,12 @@
 .dataTable {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; // Space between tables
+  border: 1px solid #fff;
 
   th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #fff;
+    padding: 12px;
     text-align: left;
     color: #fff; // Ensure table text is also readable
   }
@@ -24,6 +25,15 @@
   }
 
   tr:nth-child(even) {
-    background-color: #444; // Darker background for even rows
+    background-color: #222; // Darker background for even rows
   }
+
+  tr:last-child {
+    font-weight: bold;
+    background-color: #444; // Darker background for the last row
+  }
+}
+
+.tableContainer {
+  margin-bottom: 3rem; // Additional space between table sections
 }
