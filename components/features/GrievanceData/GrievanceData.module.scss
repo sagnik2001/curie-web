@@ -1,6 +1,7 @@
 .container {
   padding: 2rem;
-  color: #333; // Adjust this color as needed
+  color: #fff; // Changed to white for better readability
+  background-color: #000; // Set background to black for contrast
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -14,14 +15,15 @@
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    color: #fff; // Ensure table text is also readable
   }
 
   th {
-    background-color: #f2f2f2;
+    background-color: #333; // Darker background for table headers
     font-weight: bold;
   }
 
   tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #444; // Darker background for even rows
   }
 }
