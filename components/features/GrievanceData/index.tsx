@@ -56,7 +56,7 @@ export default function GrievanceData() {
                             </tr>
                             <tr>
                                 <td>Grand Total</td>
-                                <td>0</td>
+                                <td></td>
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
@@ -100,7 +100,7 @@ export default function GrievanceData() {
                             </tr>
                             <tr>
                                 <td>Grand Total</td>
-                                <td>0</td>
+                                <td></td>
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>

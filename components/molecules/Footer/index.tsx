@@ -96,6 +96,9 @@ export default function Footer({
           <Link href="/investor-charter" target="_blank" className={styles.link}>
             Investor Charter
           </Link>
+          <Link href="/grievance-data" target="_blank" className={styles.link}>
+            Grievance Data
+          </Link>
         </div>
         <div className={styles.partnerBox}>
           <span className={styles.tag}>Our partners</span>

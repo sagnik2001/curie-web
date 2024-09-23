@@ -48,6 +48,12 @@ export default function DesktopFooter({
             <Link href="/contact-us" target="_blank" className={styles.link}>
               Contact Us
             </Link>
+            <Link href="/investor-charter" target="_blank" className={styles.link}>
+              Investor Charter
+            </Link>
+            <Link href="/grievance-data" target="_blank" className={styles.link}>
+              Grievance Data
+            </Link>
           </div>
         </div>
         <div className={styles.contact}>
