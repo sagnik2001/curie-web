@@ -7,6 +7,7 @@ import Welcome from "./Welcome";
 import Features from "./Features";
 import { useEffect, useState } from "react";
 import DesktopLanding from "./Desktop";
+import Marquee from "./Desktop/Marquee";
 
 type ScreenSize = "unknown" | "mobile" | "not-mobile";
 
@@ -28,9 +29,10 @@ export default function Landing() {
     <div className={styles.container}>
       <div style={{ overflow: "hidden" }}>
         <Hero />
-        <Explain />
+        {/* <Explain />
         <Features />
-        <Welcome />
+        <Welcome /> */}
+        <Marquee isMobile={screenSize}/>
         <Footer landingPage />
         <DownloadMobile />
       </div>

@@ -20,47 +20,16 @@ export default function DesktopFooter({
         <div className={styles.join}>
           <div className={styles.msgBox}>
             <h4 className={styles.msg}>
-              <span>Join the</span>
-              <span>community</span>
+              <span>Join our</span>
+              <span>beta program</span>
             </h4>
           </div>
-          <div className={styles.linkRow}>
-            <Link href="/about-us" target="_blank" className={styles.link}>
-              About
-            </Link>
-            <Link
-              href="/privacy-policy"
-              target="_blank"
-              className={styles.link}
-            >
-              Privacy Policy
-            </Link>
-            <Link href="/terms" target="_blank" className={styles.link}>
-              Term and Conditions
-            </Link>
-            <Link
-              href="/cancellation-and-refund-policy"
-              target="_blank"
-              className={styles.link}
-            >
-              Refund and Cancellation Policy
-            </Link>
-            <Link href="/contact-us" target="_blank" className={styles.link}>
-              Contact Us
-            </Link>
-            <Link href="/investor-charter" target="_blank" className={styles.link}>
-              Investor Charter
-            </Link>
-            <Link href="/grievance-data" target="_blank" className={styles.link}>
-              Grievance Data
-            </Link>
+          <div className={styles.footerTxt}>
+          Test our beta app, and have your say in shaping the future of banking.
           </div>
+      
         </div>
         <div className={styles.contact}>
-          <p className={styles.learnInfo}>
-            Learn more about Curie, chat with the team, others in the community,
-            and have your say in shaping the future of banking.
-          </p>
           <Link href="mailto:hello@curie.money" target="_blank">
             <div className={styles.socialBox}>
               <span className={styles.socialLabel}>Email</span>
@@ -110,6 +79,37 @@ export default function DesktopFooter({
           </div>
         </div>
       </div>
+          <div className={styles.linkRow}>
+            <Link href="/about-us" target="_blank" className={styles.link}>
+              About
+            </Link>
+            <Link
+              href="/privacy-policy"
+              target="_blank"
+              className={styles.link}
+            >
+              Privacy Policy
+            </Link>
+            <Link href="/terms" target="_blank" className={styles.link}>
+              Term and Conditions
+            </Link>
+            <Link
+              href="/cancellation-and-refund-policy"
+              target="_blank"
+              className={styles.link}
+            >
+              Refund and Cancellation Policy
+            </Link>
+            <Link href="/contact-us" target="_blank" className={styles.link}>
+              Contact Us
+            </Link>
+            <Link href="/investor-charter" target="_blank" className={styles.link}>
+              Investor Charter
+            </Link>
+            <Link href="/grievance-data" target="_blank" className={styles.link}>
+              Grievance Data
+            </Link>
+          </div>
     </div>
   );
 }
