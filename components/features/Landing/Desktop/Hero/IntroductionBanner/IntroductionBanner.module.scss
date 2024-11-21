@@ -1,38 +1,32 @@
-.baseBand {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 46px;
-  height: 72px;
-  position: absolute;
-  top: 40px;
+.container{
+  border-radius: 12px 12px 0px 0px;
+  border-top: 1px solid #13E764;
+  background: linear-gradient(0deg, rgba(13, 12, 14, 0.30) -6.86%, rgba(37, 37, 41, 0.30) 100%);
+  backdrop-filter: blur(24px);
+  text-align: center;
+  .headingImg{
+    height: 104px;
+    width: 427px;
+    object-fit: cover;
+  }
+  .curieGraph{
+    width: 452px;
+    height: 236px;
+    object-fit: cover;
+  }
+  .subHeading{
+    color: #FAFAFF;
+text-align: center;
+font-size: 37px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.5px;
+margin-bottom: 12px;
+  }
+}
 
-  span {
-    font-size: 44px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 1px;
-    flex-shrink: 0;
-    display: block;
-    top: 4px;
-    position: relative;
-  }
-}
-.container {
-  overflow: hidden;
-  height: 300px;
-  position: relative;
-  bottom: 15px;
-  width: 100%;
-}
-.india {
-  background: #3f008e;
-  bottom: 0;
-  transform: translateX(-50%) rotate(-5deg);
-  left: 50%;
-  top: 140px;
-  span {
-    color: #ffca10;
-  }
+.ctnBg{
+  background: linear-gradient(180deg, #070608 0%, #180036 29.5%, #180036 70%, #0C0C0D 100%);
+  padding-top: 33px;
 }

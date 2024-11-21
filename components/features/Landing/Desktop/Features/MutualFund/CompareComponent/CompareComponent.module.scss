@@ -1,0 +1,36 @@
+.container{
+    border-radius: 16px;
+border: 1px solid #D9D9D9;
+background: rgba(14, 14, 15, 0.40);
+backdrop-filter: blur(8px);
+height: 100%;
+max-height: 80px;
+left: 108px;
+right: 108px;
+padding-top: 24px;
+padding-bottom: 24px;
+padding-left: 32px;
+padding-right: 18px;
+position: absolute;
+bottom: 150px;
+width: calc(100% - 216px);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.containerHeading{
+    color: #FFCA10;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+span{
+    color: #FFCA10;
+font-family: "Caslon 3 LT Std";
+font-size: 23px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+}
+}

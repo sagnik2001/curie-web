@@ -61,7 +61,7 @@ export default function Hero() {
   return (
     <div className={styles.box}>
             <Navbar className={styles.nav} />
-      <picture>
+      {/* <picture>
         <source
           srcSet="/desktop/bg-hero.avif"
           type="image/avif"
@@ -77,17 +77,17 @@ export default function Hero() {
           srcSet="/desktop/bg-hero.png"
           type="image/png"
           className={styles.bg}
-        />
+        /> */}
         <img src="/desktop/bg-hero.png" alt="" className={styles.bg} />
-      </picture>
-      <Ornament1
+      {/* </picture> */}
+      {/* <Ornament1
         className={clsx(
           styles.ornament1,
           loadAnimation && styles.float,
           loadAnimation && styles.animateOrnament1
         )}
         id="hero-desktop-ornament1"
-      />
+      /> */}
       <div className={styles.container}>
         <Ornament2
           className={clsx(
@@ -145,23 +145,48 @@ export default function Hero() {
           )}
           id="hero-desktop-ornament8"
         />
+        <div className={clsx(styles.buttonBox, loadAnimation && styles.animatedBox)}>
+            <button>
+            Earn upto
+              </button>   
+        </div>
         <div
           className={clsx(styles.titleBox, loadAnimation && styles.animatedBox)}
         >
-          <h1 className={styles.title} ref={textRef}>
+          {/* <h1 className={styles.title} ref={textRef}>
             <span>Spend</span>
             <span>while your</span>
           </h1>
           <p className={styles.para} ref={paraRef}>
             money multiplies
-          </p>
-        </div>
-        <div className={styles.scrollBtn}>
-          <ScrollSvg />
-          <div className={clsx(calson.className, styles.text)}>scroll</div>
+          </p> */}
+          <img src="/hero.png" alt="hero-img" />
+          <h1 className={styles.title} ref={textRef}>
+            <span>Our</span>
+            <span>C
+              <span className={styles.highlightedSpan}>
+                ompund
+              </span>
+            </span>
+            <span>A
+              <span className={styles.highlightedSpan}>
+                nnual
+              </span>
+            </span>
+            <span>G
+              <span className={styles.highlightedSpan}>
+                rowth
+              </span>
+            </span>
+            <span>R
+              <span className={styles.highlightedSpan}>
+                ate
+              </span>
+            </span>
+            <span>(CAGR)</span>
+          </h1>
         </div>
       </div>
-      <IntroductionBanner />
     </div>
   );
 }

@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <div className={styles.box}>
       <Navbar className={styles.nav} />
-      <picture>
+      {/* <picture>
         <source
           srcSet="/bg-top-1.avif"
           type="image/avif"
@@ -34,9 +34,9 @@ export default function Hero() {
           type="image/webp"
           className={styles.bg}
         />
-        <source srcSet="/bg-top-1.png" type="image/png" className={styles.bg} />
+        <source srcSet="/bg-top-1.png" type="image/png" className={styles.bg} /> */}
         <img src="/bg-top-1.png" alt="" className={styles.bg} />
-      </picture>
+      {/* </picture> */}
       <div className={styles.container}>
         <Ornament1
           className={clsx(
@@ -87,7 +87,7 @@ export default function Hero() {
             loadAnimation && styles.float
           )}
         />
-        <h1
+        {/* <h1
           className={clsx(
             styles.heading,
             loadAnimation && styles.animateHeading
@@ -96,13 +96,12 @@ export default function Hero() {
           <span className={styles.first}>Spend</span>
           <span className={styles.first}> while your</span>
           <span className={styles.second}>money multiplies</span>
-        </h1>
-        <div className={styles.scrollBtn}>
+        </h1> */}
+        {/* <div className={styles.scrollBtn}>
           <ScrollSvg />
           <div className={clsx(calson.className, styles.text)}>scroll</div>
-        </div>
+        </div> */}
       </div>
-      <IntroductionBand />
     </div>
   );
 }

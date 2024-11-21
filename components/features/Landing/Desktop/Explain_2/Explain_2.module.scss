@@ -1,0 +1,33 @@
+.container{
+    margin-top: 21px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 748px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.txt{
+    color: var(--card-surface, #F8F7FE);
+text-align: center;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: 44px;
+opacity: 0.7;
+}
+
+.txtCtn{
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+
+.bankImg{
+    display: flex;
+    gap: 56px;
+    align-items: center;
+}

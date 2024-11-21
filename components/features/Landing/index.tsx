@@ -29,11 +29,11 @@ export default function Landing() {
     <div className={styles.container}>
       <div style={{ overflow: "hidden" }}>
         <Hero />
+        {/* <Features /> */}
         {/* <Explain />
-        <Features />
         <Welcome /> */}
-        <Marquee isMobile={screenSize}/>
-        <Footer landingPage />
+        {/* <Marquee isMobile={screenSize}/>
+        <Footer landingPage /> */}
         <DownloadMobile />
       </div>
     </div>

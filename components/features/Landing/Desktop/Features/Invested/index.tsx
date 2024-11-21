@@ -23,35 +23,8 @@ export default function Invested() {
   }, [isOnScreen, floatOrnaments]);
   return (
     <div className={styles.box} ref={ref}>
-      <Ornament1
-        className={clsx(
-          styles.ornament1,
-          isOnScreen && styles.finalOrnament1,
-          floatOrnaments && styles.float
-        )}
-      />
+   
       <div className={styles.container}>
-        <Ornament2
-          className={clsx(
-            styles.ornament2,
-            isOnScreen && styles.finalOrnament2,
-            floatOrnaments && styles.float
-          )}
-        />
-        <Ornament3
-          className={clsx(
-            styles.ornament3,
-            isOnScreen && styles.finalOrnament3,
-            floatOrnaments && styles.float
-          )}
-        />
-        <Ornament4
-          className={clsx(
-            styles.ornament4,
-            isOnScreen && styles.finalOrnament4,
-            floatOrnaments && styles.float
-          )}
-        />
         <picture>
           <source
             srcSet="/desktop/bg-invested.avif"
@@ -74,22 +47,10 @@ export default function Invested() {
             className={clsx(styles.bg, isOnScreen && styles.finalBg)}
           />
         </picture>
-        <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
-          <span>Stay invested</span>
-          <span>all the time</span>
-        </h2>
-        <p
-          className={clsx(
-            styles.description,
-            isOnScreen && styles.finalDescription
-          )}
-        >
-          with the convenience of bank
-        </p>
-      </div>
-      <picture>
+        <div className={styles.contentContainer}>
+        <picture>
         <source
-          srcSet="/desktop/img-invested.avif"
+          srcSet="/desktop/invested.avif"
           type="image/avif"
           className={clsx(
             styles.img,
@@ -98,7 +59,7 @@ export default function Invested() {
           )}
         />
         <source
-          srcSet="/desktop/img-invested.webp"
+          srcSet="/desktop/invested.webp"
           type="image/webp"
           className={clsx(
             styles.img,
@@ -107,7 +68,7 @@ export default function Invested() {
           )}
         />
         <source
-          src="/desktop/img-invested.png"
+          src="/desktop/invested.png"
           type="image/png"
           className={clsx(
             styles.img,
@@ -116,7 +77,7 @@ export default function Invested() {
           )}
         />
         <img
-          src="/desktop/img-invested.png"
+          src="/desktop/invested.png"
           alt=""
           className={clsx(
             styles.img,
@@ -125,6 +86,27 @@ export default function Invested() {
           )}
         />
       </picture>
+      <div className={styles.titleContainer}>
+        <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
+          <span>Instant UPI on
+          </span>
+          <span>mutual funds</span>
+        </h2>
+        <p
+          className={clsx(
+            styles.description,
+            isOnScreen && styles.finalDescription
+          )}
+        >
+         Scan & Pay to your nearest merchant
+        </p>
+        <div>
+          <img src="/desktop/bank.png" alt="bank" />
+        </div>
+        </div>
+      </div>
+     
+      </div>
     </div>
   );
 }

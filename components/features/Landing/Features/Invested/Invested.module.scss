@@ -51,16 +51,4 @@
 .box {
   position: relative;
   width: 100%;
-  &::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    height: 90vh;
-    min-height: 680px;
-    max-height: 700px;
-    background-color: #180036;
-    width: 150vw;
-    transform: rotate(-8deg) translateY(-10%);
-    z-index: 2;
-  }
 }
