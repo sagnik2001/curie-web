@@ -1,5 +1,5 @@
 import styles from "./CompareComponent.module.scss"
-import buttonStyles from "../../../../../../molecules/Navbar/Navbar.module.scss"
+import buttonStyles from "@molecules/Navbar/Navbar.module.scss"
 import { calson } from "@utilities/font"
 const CompareComponent = () => {
     return(

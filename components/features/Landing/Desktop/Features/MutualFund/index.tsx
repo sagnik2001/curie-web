@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import useOnScreen from "@hooks/useOnScreen";
 import clsx from "clsx";
 import CompareComponent from "./CompareComponent";
+import { calson } from "@utilities/font";
 
 export default function MutualFund() {
   const ref = useRef<HTMLDivElement>(null);
@@ -47,7 +48,11 @@ export default function MutualFund() {
             alt=""
             className={clsx(styles.bg, isOnScreen && styles.finalBg)}
           />
+        
         </picture>
+        <div className={styles.graphContent}>
+          You started your <span className={calson.className}>curie</span> journey
+          </div>
         <div className={styles.contentContainer}>
      
       <div className={styles.titleContainer}>

@@ -30,7 +30,7 @@
     @media screen and (max-width: 1400px) {
       font-size: 56px;
       padding-left: 0;
-      padding-top: 250px;
+      padding-top: 0px;
     }
     span {
       display: block;
@@ -76,6 +76,28 @@
       bottom: 150px;
     }
   }
+  .graphContent{
+    position: absolute;
+    bottom: 46%;
+    left: 188px;
+    color: #FFF;
+font-size: 25px;
+font-style: italic;
+font-weight: 400;
+line-height: normal;
+    span{
+      color: #9EFF53;
+font-family: "Caslon 3 LT Std";
+font-size: 25px;
+font-style: italic;
+font-weight: 400;
+line-height: normal;
+    }
+   
+  @media screen and (max-width: 1400px) {
+    bottom: 52%;
+  }
+  }
   .img {
     width: 361px;
     height: 562px;
@@ -96,10 +118,11 @@
         height: 562px;
       top: -120px;
     }
-    @media screen and (max-width: 1400px) {
-        width: 361px;
-        height: 562px;
-      top: -120px;
+    @media screen and (max-width: 1350px) {
+        width: 301px;
+        height: 482px;
+        right: 40px;
+      top: -40px;
     }
   }
   .box {
@@ -174,9 +197,11 @@
       top: 160px;
       right: 450px;
     }
-    @media screen and (max-width: 1400px) {
-      width: 119px;
-      height: 119px;
+    @media screen and (max-width: 1350px) {
+      width: 99px;
+      height: 99px;
+      right: 350px;
+      top: 250px;
     }
   }
   .ornament1 {
@@ -192,10 +217,11 @@
       right: 20px;
       z-index: 1;
     }
-    @media screen and (max-width: 1400px) {
-      width: 139px;
-      height: 139px;
-      top: 25px;
+    @media screen and (max-width: 1350px) {
+      width: 99px;
+      height: 99px;
+      top: -10px;
+      right: 10px;
     }
   }
   

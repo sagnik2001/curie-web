@@ -1,0 +1,198 @@
+.container{
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    z-index: 4;
+    min-height: 650px;
+    max-height: 700px;
+   
+}
+
+.finalOrnament1,.finalOrnament2,.finalOrnament3,.finalOrnament4,.finalOrnament5,.finalOrnament6 {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .float {
+    animation-name: Floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.9s;
+  }
+
+  @keyframes Floating {
+    from {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 40px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
+
+  .ornament1 {
+    width: 240px;
+    height: 200px;
+    position: absolute;
+   bottom: 32px;
+   left: 132px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 200px;
+        left: 32px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 200px;
+        height: 160px;
+    
+    }
+  }
+
+  .ornament2 {
+    width: 240px;
+    height: 200px;
+    position: absolute;
+   bottom: 50%;
+   transform: translateY(50%);
+   left: 282px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 200px;
+        left: 150px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 200px;
+        height: 160px;
+        left: 100px;
+    
+    }
+  }
+
+  .ornament3 {
+    width: 240px;
+    height: 200px;
+    position: absolute;
+   top: 32px;
+   left: 132px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 200px;
+        left: 32px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 200px;
+        height: 160px;
+    
+    }
+  }
+
+  .ornament6 {
+    width: 240px;
+    height: 200px;
+    position: absolute;
+   bottom: 32px;
+   right: 132px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+        width: 240px;
+    height: 200px;
+     right: 32px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 200px;
+        height: 160px;
+    
+    }
+  }
+
+  .ornament5 {
+    width: 240px;
+    height: 200px;
+    position: absolute;
+   bottom: 50%;
+   transform: translateY(50%);
+   right: 282px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 200px;
+      right: 150px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 200px;
+        height: 160px;
+        right: 100px;
+
+    
+    }
+  }
+
+  .ornament4 {
+    width: 240px;
+    height: 200px;
+    position: absolute;
+   top: 32px;
+   right: 132px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+        width: 240px;
+        height: 200px;
+        right: 32px;
+     
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+        width: 200px;
+        height: 160px;
+    
+    }
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    max-width: 445px;
+    width: 100%;
+    margin: '0 auto';
+    text-align: center;
+  
+    h1{
+        text-align: center;
+text-shadow: 0px 1px 8px rgba(27, 219, 101, 0.40);
+font-size: 64px;
+font-style: italic;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 2px;
+background: linear-gradient(92deg, #00F05C 2.88%, #AEFF51 58.68%, #00FF62 99.09%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+    }
+    span{
+        color: var(--shadow-00, #FFF);
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+  }
+
+ 
