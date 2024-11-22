@@ -120,7 +120,6 @@ export default function MutualFund() {
          <span>savings account</span>
         </p>
         </div>
-     {/* <CompareComponent/> */}
       </div>
     </div>
   );

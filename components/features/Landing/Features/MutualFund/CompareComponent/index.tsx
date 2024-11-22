@@ -1,5 +1,4 @@
 import styles from "./CompareComponent.module.scss"
-import buttonStyles from "@molecules/Navbar/Navbar.module.scss"
 import { calson } from "@utilities/font"
 const CompareComponent = () => {
     return(
@@ -7,7 +6,7 @@ const CompareComponent = () => {
             <div className={styles.containerHeading}>
             Compare how much you would have earned last year with <span>curie save</span>.
                 </div>   
-                <div className={buttonStyles.btn}>
+                <div className={styles.btn}>
             <a className={calson.className}>
               <span>Compare Now!</span>
             </a>
