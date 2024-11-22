@@ -1,9 +1,23 @@
+import clsx from "clsx";
 import * as styles from "./Invested.module.scss";
 
 export default function Invested() {
   return (
     <div className={styles.box}>
       <div className={styles.container}>
+      <picture>
+          
+          <source
+            src="BG.png"
+            type="image/png"
+            className={clsx(styles.bg)}
+          />
+          <img
+            src="BG.png"
+            alt=""
+            className={clsx(styles.bg)}
+          />
+        </picture>
         <picture>
           <source
             srcSet="/invested.avif"
@@ -22,11 +36,23 @@ export default function Invested() {
           />
           <img src="/invested.png" alt="" className={styles.img} />
         </picture>
-        <h2 className={styles.title}>
-          <span>Stay invested</span>
-          <span>all the time</span>
+        <div className={styles.titleContainer}>
+        <h2 className={clsx(styles.title)}>
+          <span>Instant UPI on
+          </span>
+          <span>mutual funds</span>
         </h2>
-        <p className={styles.description}>with the convenience of bank</p>
+        <p
+          className={clsx(
+            styles.description,
+          )}
+        >
+         Scan & Pay to your nearest merchant
+        </p>
+        <div className={styles.bankImg}>
+          <img src="/bank.png" alt="bank" />
+        </div>
+        </div>
       </div>
     </div>
   );
