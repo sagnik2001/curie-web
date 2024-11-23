@@ -6,11 +6,13 @@ import Explain_Comp from "../../Explain_2";
 export default function IntroductionBanner() {
   return (
     <div className={styles.container}>
+      <div className={styles.animationContent}>
       <img className={styles.headingImg} src="/desktop/curie_save.png" alt="curie-save"/>
       <div className={styles.subHeading}>
         <span>
         The supercharged savings account
         </span>
+        </div>
         </div>
         <div className={styles.ctnBg}>  
           <img className={styles.curieGraph} src="/desktop/curie-graph.png" alt="curie-graph"/>

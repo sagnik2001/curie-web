@@ -195,4 +195,104 @@ line-height: normal;
     }
   }
 
- 
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,50%);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,50%);
+      opacity: 1;
+    }
+  }
+  .slideRight{
+    transform: translate(100%,50%); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-right 1s ease-in-out forwards; /* Trigger animation */
+  }
+  .slideIn {
+    transform: translate(-100%,50%); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-in 1s ease-in-out forwards; /* Trigger animation */
+  }
+
+  .slideRightWithDelay{
+    transform: translate(100%,0px); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-right-with-delay 1s ease-in-out forwards; /* Trigger animation */
+    animation-delay: 0.5s;
+  }
+  .slideInWithDelay {
+    transform: translate(-100%,0px); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-in-with-delay 1s ease-in-out forwards; /* Trigger animation */
+    animation-delay: 0.5s;
+  }
+
+
+  @keyframes slide-in-with-delay {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-right-with-delay {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+
+  .slideUp{
+    transform: translateY(100%);
+  opacity: 0; 
+  animation: slide-up 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideUpWithDelay{
+  transform: translateY(100%);
+opacity: 0; 
+animation: slide-up 0.5s ease-out forwards;
+animation-delay: 1.5s;
+}
+
+@keyframes slide-up {
+0% {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}

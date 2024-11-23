@@ -146,9 +146,9 @@ export default function Hero() {
           id="hero-desktop-ornament8"
         />
         <div className={clsx(styles.buttonBox, loadAnimation && styles.animatedBox)}>
-            <button>
+            <div>
             Earn upto
-              </button>   
+              </div>   
         </div>
         <div
           className={clsx(styles.titleBox, loadAnimation && styles.animatedBox)}

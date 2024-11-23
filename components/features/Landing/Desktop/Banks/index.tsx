@@ -11,11 +11,12 @@ import useOnScreen from "@hooks/useOnScreen";
 
 const Banks = () => {
     const ref = useRef<HTMLDivElement>(null);
+    const [animate, setAnimate] = useState(false); 
     const [floatOrnaments, setFloatOrnamanents] = useState(false);
     const isOnScreen = useOnScreen({
       ref,
       threshold: 0.15,
-      dontUpdateAfterIntersection: true,
+      dontUpdateAfterIntersection: false,
     });
     useEffect(() => {
       if (!isOnScreen || floatOrnaments) return;
@@ -23,43 +24,44 @@ const Banks = () => {
         setFloatOrnamanents(true);
       }, 800);
     }, [isOnScreen, floatOrnaments]);
+    useEffect(() => {
+      if (isOnScreen) {
+        setAnimate(true); 
+      } else {
+        setAnimate(false); 
+      }
+    }, [isOnScreen]);
     return(
-      <div className={styles.container}>
+      <div ref={ref} className={styles.container}>
         <PCIBank  className={clsx(
             styles.ornament1,
-            isOnScreen && styles.finalOrnament1,
-            floatOrnaments && styles.float
+            animate && styles.slideInWithDelay
           )}/>
         <NPCLBank className={clsx(
             styles.ornament2,
-            isOnScreen && styles.finalOrnament2,
-            floatOrnaments && styles.float
+            animate && styles.slideIn
           )}/>
         <YESBank className={clsx(
             styles.ornament3,
-            isOnScreen && styles.finalOrnament3,
-            floatOrnaments && styles.float
+            animate && styles.slideInWithDelay
           )}/>
         <ICICIBank className={clsx(
             styles.ornament4,
-            isOnScreen && styles.finalOrnament4,
-            floatOrnaments && styles.float
+            animate && styles.slideRightWithDelay
           )}/>
         <SEBIBank className={clsx(
             styles.ornament5,
-            isOnScreen && styles.finalOrnament5,
-            floatOrnaments && styles.float
+            animate && styles.slideRight
           )}/>
         <AMFEBank className={clsx(
             styles.ornament6,
-            isOnScreen && styles.finalOrnament6,
-            floatOrnaments && styles.float
+            animate && styles.slideRightWithDelay
           )}/>
         <div className={styles.content}>
-        <h1>Your money is
+        <h1 className={animate && styles.slideUp}>Your money is
         always safe 
         </h1>
-        <span>
+        <span className={animate && styles.slideUpWithDelay}>
         with our licensed Bank and AMC
         </span>
         </div>

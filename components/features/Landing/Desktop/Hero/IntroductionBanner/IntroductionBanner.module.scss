@@ -30,3 +30,22 @@ margin-bottom: 12px;
   background: linear-gradient(180deg, #070608 0%, #180036 29.5%, #180036 70%, #0C0C0D 100%);
   padding-top: 33px;
 }
+
+.animationContent{
+  position: relative;
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0; 
+  animation: slide-up 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

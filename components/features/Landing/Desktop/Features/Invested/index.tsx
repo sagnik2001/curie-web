@@ -10,10 +10,11 @@ import clsx from "clsx";
 export default function Invested() {
   const ref = useRef<HTMLDivElement>(null);
   const [floatOrnaments, setFloatOrnamanents] = useState(false);
+  const [animate, setAnimate] = useState(false); 
   const isOnScreen = useOnScreen({
     ref,
     threshold: 0.15,
-    dontUpdateAfterIntersection: true,
+    dontUpdateAfterIntersection: false,
   });
   useEffect(() => {
     if (!isOnScreen || floatOrnaments) return;
@@ -21,6 +22,14 @@ export default function Invested() {
       setFloatOrnamanents(true);
     }, 800);
   }, [isOnScreen, floatOrnaments]);
+  useEffect(() => {
+    if (isOnScreen) {
+      setAnimate(true); 
+    } else {
+      setAnimate(false); 
+    }
+  }, [isOnScreen]);
+  console.log(animate)
   return (
     <div className={styles.box} ref={ref}>
    
@@ -55,7 +64,8 @@ export default function Invested() {
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
         <source
@@ -64,7 +74,8 @@ export default function Invested() {
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
         <source
@@ -73,7 +84,8 @@ export default function Invested() {
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
         <img
@@ -82,12 +94,13 @@ export default function Invested() {
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
       </picture>
-      <div className={styles.titleContainer}>
-        <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
+      <div className={clsx(isOnScreen && styles.slideRight, styles.titleContainer)}>
+        <h2 className={clsx(styles.title)}>
           <span>Instant UPI on
           </span>
           <span>mutual funds</span>
@@ -95,7 +108,6 @@ export default function Invested() {
         <p
           className={clsx(
             styles.description,
-            isOnScreen && styles.finalDescription
           )}
         >
          Scan & Pay to your nearest merchant

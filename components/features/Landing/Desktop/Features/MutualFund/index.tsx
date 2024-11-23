@@ -12,10 +12,11 @@ import { calson } from "@utilities/font";
 export default function MutualFund() {
   const ref = useRef<HTMLDivElement>(null);
   const [floatOrnaments, setFloatOrnamanents] = useState(false);
+  const [animate, setAnimate] = useState(false); 
   const isOnScreen = useOnScreen({
     ref,
     threshold: 0.15,
-    dontUpdateAfterIntersection: true,
+    dontUpdateAfterIntersection: false,
   });
   useEffect(() => {
     if (!isOnScreen || floatOrnaments) return;
@@ -23,6 +24,13 @@ export default function MutualFund() {
       setFloatOrnamanents(true);
     }, 800);
   }, [isOnScreen, floatOrnaments]);
+  useEffect(() => {
+    if (isOnScreen) {
+      setAnimate(true); 
+    } else {
+      setAnimate(false); 
+    }
+  }, [isOnScreen]);
   return (
     <div className={styles.box} ref={ref}>
    
@@ -55,7 +63,9 @@ export default function MutualFund() {
           </div>
         <div className={styles.contentContainer}>
      
-      <div className={styles.titleContainer}>
+      <div className={clsx(styles.titleContainer,
+        animate && styles.slideIn
+      )}>
         <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
           <span>Make your money
           </span>
@@ -75,31 +85,15 @@ export default function MutualFund() {
         <div>
         <picture>
         
-        <source
-          srcSet="/desktop/mutualFund.avif"
-          type="image/avif"
-          className={clsx(
-            styles.img,
-            isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
-          )}
-        />
-        <source
-          srcSet="/desktop/mutualFund.webp"
-          type="image/webp"
-          className={clsx(
-            styles.img,
-            isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
-          )}
-        />
+      
         <source
           src="/desktop/mutualFund.png"
           type="image/png"
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideRight
           )}
         />
         <img
@@ -108,24 +102,12 @@ export default function MutualFund() {
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideRight
           )}
         />
       </picture>
-      <Ornament1
-          className={clsx(
-            styles.ornament1,
-            isOnScreen && styles.finalOrnament1,
-            floatOrnaments && styles.float
-          )}
-        />
-        <Ornament2
-          className={clsx(
-            styles.ornament2,
-            isOnScreen && styles.finalOrnament2,
-            floatOrnaments && styles.float
-          )}
-        />
+    
         </div>
       </div>
      <CompareComponent/>
