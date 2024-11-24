@@ -253,6 +253,13 @@
   opacity: 0;
   transition: all 0.2s ease-out;
   transition-delay: 0.45s;
+  position: relative;
+  z-index: 10;
+  img{
+    width: 259px;
+    height: 254px;
+    object-fit: cover;
+  }
   &.animatedBox {
     opacity: 1;
   }

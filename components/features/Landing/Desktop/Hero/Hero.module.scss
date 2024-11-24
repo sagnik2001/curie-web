@@ -16,6 +16,15 @@
   opacity: 0;
   transition: all 0.2s ease-out;
   transition-delay: 0.45s;
+  margin-top: 118px;
+  @media screen and (min-width:1800px) {
+    margin-top: 0px;
+  }
+  img{
+    width: 730px;
+    height: 423px;
+    object-fit: cover;
+  }
   &.animatedBox {
     opacity: 1;
   }

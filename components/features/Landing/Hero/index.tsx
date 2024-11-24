@@ -91,54 +91,13 @@ export default function Hero() {
           )}
         />
          
-        <div className={clsx(styles.buttonBox, loadAnimation && styles.animatedBox)}>
-            <button>
-            Earn upto
-              </button>   
-        </div>
+     
         <div
           className={clsx(styles.titleBox, loadAnimation && styles.animatedBox)}
         >
           <img src="/hero-mobile.png" alt="hero-img" />
-          <h1 className={styles.title} ref={textRef}>
-            <span>Our</span>
-            <span>C
-              <span className={styles.highlightedSpan}>
-                ompund
-              </span>
-            </span>
-            <span>A
-              <span className={styles.highlightedSpan}>
-                nnual
-              </span>
-            </span>
-            <span>G
-              <span className={styles.highlightedSpan}>
-                rowth
-              </span>
-            </span>
-            <span>R
-              <span className={styles.highlightedSpan}>
-                ate
-              </span>
-            </span>
-            <span>(CAGR)</span>
-          </h1>
         </div>
-        {/* <h1
-          className={clsx(
-            styles.heading,
-            loadAnimation && styles.animateHeading
-          )}
-        >
-          <span className={styles.first}>Spend</span>
-          <span className={styles.first}> while your</span>
-          <span className={styles.second}>money multiplies</span>
-        </h1> */}
-        {/* <div className={styles.scrollBtn}>
-          <ScrollSvg />
-          <div className={clsx(calson.className, styles.text)}>scroll</div>
-        </div> */}
+      
       </div>
     </div>
   );

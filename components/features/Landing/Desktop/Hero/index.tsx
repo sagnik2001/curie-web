@@ -145,46 +145,13 @@ export default function Hero() {
           )}
           id="hero-desktop-ornament8"
         />
-        <div className={clsx(styles.buttonBox, loadAnimation && styles.animatedBox)}>
-            <div>
-            Earn upto
-              </div>   
-        </div>
+    
         <div
           className={clsx(styles.titleBox, loadAnimation && styles.animatedBox)}
         >
-          {/* <h1 className={styles.title} ref={textRef}>
-            <span>Spend</span>
-            <span>while your</span>
-          </h1>
-          <p className={styles.para} ref={paraRef}>
-            money multiplies
-          </p> */}
+        
           <img src="/hero.png" alt="hero-img" />
-          <h1 className={styles.title} ref={textRef}>
-            <span>Our</span>
-            <span>C
-              <span className={styles.highlightedSpan}>
-                ompund
-              </span>
-            </span>
-            <span>A
-              <span className={styles.highlightedSpan}>
-                nnual
-              </span>
-            </span>
-            <span>G
-              <span className={styles.highlightedSpan}>
-                rowth
-              </span>
-            </span>
-            <span>R
-              <span className={styles.highlightedSpan}>
-                ate
-              </span>
-            </span>
-            <span>(CAGR)</span>
-          </h1>
+        
         </div>
       </div>
     </div>

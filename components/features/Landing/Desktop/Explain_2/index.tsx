@@ -1,6 +1,7 @@
 import styles from "./Explain_2.module.scss"
 import ICICIBANK from "@svgs/explain-desktop/iciciBank.svg"
 import YESBANK from "@svgs/explain-desktop/yesBank.svg"
+import NPCLBANK from "@svgs/explain-desktop/npcl.svg"
 import Features from "../Features"
 
 const Explain_Comp = () => {
@@ -18,7 +19,7 @@ const Explain_Comp = () => {
          <div className={styles.bankImg}>
            <YESBANK/>
            <ICICIBANK/>
-           <YESBANK/>
+           <NPCLBANK/>
          </div>
        </div>
        <Features/>
