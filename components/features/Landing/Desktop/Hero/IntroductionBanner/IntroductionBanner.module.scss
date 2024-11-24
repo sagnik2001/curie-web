@@ -4,6 +4,7 @@
   background: linear-gradient(0deg, rgba(13, 12, 14, 0.30) -6.86%, rgba(37, 37, 41, 0.30) 100%);
   backdrop-filter: blur(24px);
   text-align: center;
+
   .headingImg{
     height: 104px;
     width: 427px;
@@ -31,9 +32,13 @@ margin-bottom: 12px;
   padding-top: 33px;
 }
 
-.animationContent{
+.normalContent{
   position: relative;
   display: inline-block;
+}
+
+.animationContent{
+
   transform: translateY(100%);
   opacity: 0; 
   animation: slide-up 1s ease-out forwards;
@@ -48,4 +53,10 @@ margin-bottom: 12px;
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.box{
+  position: relative;
+  z-index: 1; /* Ensure child elements remain in the same position */
+  transform: none; /* Prevent child elements from inheriting movement */
 }
