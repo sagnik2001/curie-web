@@ -26,7 +26,7 @@ export default function Footer({
           </h4>
           <p className={styles.paraText}>
             <span>Test our beta app, and have your say in</span>
-            <span>haping the future of banking.</span>
+            <span>shaping the future of banking.</span>
           </p>
         </div>
         <div className={styles.socialBox}>

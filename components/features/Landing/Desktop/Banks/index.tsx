@@ -62,7 +62,7 @@ const Banks = () => {
         always safe 
         </h1>
         <span className={animate && styles.slideUpWithDelay}>
-        with our licensed Bank and AMC
+        with our  partnered Bank and AMC
         </span>
         </div>
       </div>

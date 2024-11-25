@@ -10,10 +10,10 @@ const Explain_Comp = () => {
        <div className={styles.container}>
         <div className={styles.txtCtn}>
          <div className={styles.txt}>
-         Curie save is a high-yield bank account which combines the flexibility of a bank and the growth from mutual funds. Money stays in mutual fund, while you spend directly from UPI or debit card.
+         It’s India's first <span>high-yield neo-bank</span> that helps you earn more returns than a traditional bank account by keeping your<span> money invested in fixed income Mutual Funds.</span>
          </div>
          <div className={styles.txt}>
-         Let your money work for you!
+         And the best part is you can<span> spend it anytime via UPI on Curie</span> directly.
          </div>
          </div>
          <div className={styles.bankImg}>

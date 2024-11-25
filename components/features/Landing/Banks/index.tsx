@@ -51,7 +51,7 @@ const Banks = () => {
         always safe 
         </h1>
         <span>
-        with our licensed Bank and AMC
+        with our  partnered Bank and AMC
         </span>
         </div>
         <SEBIBank className={clsx(
