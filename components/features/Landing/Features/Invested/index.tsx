@@ -1,10 +1,26 @@
 import clsx from "clsx";
 import * as styles from "./Invested.module.scss";
+import useOnScreen from "@hooks/useOnScreen";
+import { useEffect, useRef, useState } from "react";
 
 export default function Invested() {
-  
+  const ref = useRef<HTMLDivElement>(null);
+  const [animate, setAnimate] = useState(false); 
+  const isOnScreen = useOnScreen({
+    ref,
+    threshold: 0.15,
+    dontUpdateAfterIntersection: false,
+  });
+
+  useEffect(() => {
+    if (isOnScreen) {
+      setAnimate(true); 
+    } else {
+      setAnimate(false); 
+    }
+  }, [isOnScreen]);
   return (
-    <div className={styles.box}>
+    <div ref={ref} className={styles.box}>
       <div className={styles.container}>
       <picture>
           
@@ -23,21 +39,22 @@ export default function Invested() {
           <source
             srcSet="/invested.avif"
             type="image/avif"
-            className={styles.img}
+            className={clsx(styles.img,animate && styles.slideIn)}
           />
           <source
             srcSet="/invested.webp"
             type="image/webp"
-            className={styles.img}
+            className={clsx(styles.img,animate && styles.slideIn)}
           />
           <source
             srcSet="/invested.png"
             type="image/png"
-            className={styles.img}
+            className={clsx(styles.img,animate && styles.slideIn)}
           />
-          <img src="/invested.png" alt="" className={styles.img} />
+          <img src="/invested.png" alt="" className={clsx(styles.img,animate && styles.slideIn)}
+ />
         </picture>
-        <div className={styles.titleContainer}>
+        <div className={clsx(styles.titleContainer, animate && styles.slideRight)}>
         <h2 className={clsx(styles.title)}>
           <span>Instant UPI on
           </span>

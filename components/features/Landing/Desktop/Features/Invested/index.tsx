@@ -29,7 +29,6 @@ export default function Invested() {
       setAnimate(false); 
     }
   }, [isOnScreen]);
-  console.log(animate)
   return (
     <div className={styles.box} ref={ref}>
    
