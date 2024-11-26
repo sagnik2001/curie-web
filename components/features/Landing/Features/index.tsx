@@ -7,7 +7,7 @@ export default function Features() {
     <>
       <Invested />
       <MutualFund/>
-      <CompareComponent/>
+      {/* <CompareComponent/> */}
     </>
   );
 }
