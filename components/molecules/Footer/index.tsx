@@ -25,7 +25,7 @@ export default function Footer({
           <span>beta program</span>
           </h4>
           <p className={styles.paraText}>
-            <span>Test our beta app, and have your say in</span>
+            <span>Try our beta app, and have your say in</span>
             <span>shaping the future of banking.</span>
           </p>
         </div>

@@ -17,7 +17,7 @@ export default function DownloadMobile() {
       className={styles.btn}
       onClick={() =>
         window.open(
-          "https://play.google.com/store/apps/details?id=com.yield.curie_money",
+          "https://app.curie.money",
           "_blank"
         )
       }
