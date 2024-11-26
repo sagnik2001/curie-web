@@ -110,7 +110,7 @@ export default function MutualFund() {
     
         </div>
       </div>
-     <CompareComponent/>
+     {/* <CompareComponent/> */}
       </div>
     </div>
   );
