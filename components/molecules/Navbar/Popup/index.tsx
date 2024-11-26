@@ -27,19 +27,22 @@ function Download({ onClose }: { onClose: () => void }) {
             <div className={styles.downloadTxt}>
               Once downloaded get your invite code
             </div>
-            <div className={styles.btn}>
-              <a
-                className={calson.className}
-                href="https://chat.whatsapp.com/Lj9reYKGt8079JRTDhmHLi"
-                target="_blank"
-              >
+            <div
+              className={styles.btn}
+              onClick={() =>
+                window.open(
+                  "https://chat.whatsapp.com/Lj9reYKGt8079JRTDhmHLi",
+                  "_blank"
+                )
+              }
+            >
+              <a className={calson.className} target="_blank">
                 <WhatsappIcon />
                 <span>Get invite code</span>
               </a>
             </div>
           </div>
           <picture>
-           
             <source
               srcSet="/download-qr.png"
               type="image/png"
