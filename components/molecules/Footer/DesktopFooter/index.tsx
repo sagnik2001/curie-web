@@ -25,7 +25,7 @@ export default function DesktopFooter({
             </h4>
           </div>
           <div className={styles.footerTxt}>
-          Test our beta app, and have your say in shaping the future of banking.
+          Try our beta app, and have your say in shaping the future of banking.
           </div>
       
         </div>
