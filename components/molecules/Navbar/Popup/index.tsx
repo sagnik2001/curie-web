@@ -2,7 +2,8 @@ import { createPortal } from "react-dom";
 import * as styles from "./Popup.module.scss";
 import clsx from "clsx";
 import CloseSvg from "@svgs/close.svg";
-import { figtree } from "@utilities/font";
+import { calson, figtree } from "@utilities/font";
+import WhatsappIcon from "@svgs/whatsappIcon.svg"
 
 function Download({ onClose }: { onClose: () => void }) {
   return (
@@ -18,11 +19,20 @@ function Download({ onClose }: { onClose: () => void }) {
               <img src="/play-logo.png" alt="" />
               <img src="/apple-logo.png" alt="" />
             </div>
-            <h2 className={styles.title}>Scan this QR code</h2>
+            <h2 className={styles.title}>Download & join our beta</h2>
             <ul className={styles.para}>
               <li>Scan the QR code using your phone camera</li>
               <li>Click on the link generated to download Curie</li>
             </ul>
+            <div className={styles.downloadTxt}>
+            Once downloaded get your invite code
+            </div>
+            <div className={styles.btn}>
+            <a className={calson.className}>
+              <WhatsappIcon/>
+              <span>Get invite code</span>
+            </a>
+          </div>
           </div>
           <picture>
             <source

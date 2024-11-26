@@ -10,10 +10,11 @@ import clsx from "clsx";
 export default function Invested() {
   const ref = useRef<HTMLDivElement>(null);
   const [floatOrnaments, setFloatOrnamanents] = useState(false);
+  const [animate, setAnimate] = useState(false); 
   const isOnScreen = useOnScreen({
     ref,
     threshold: 0.15,
-    dontUpdateAfterIntersection: true,
+    dontUpdateAfterIntersection: false,
   });
   useEffect(() => {
     if (!isOnScreen || floatOrnaments) return;
@@ -21,37 +22,17 @@ export default function Invested() {
       setFloatOrnamanents(true);
     }, 800);
   }, [isOnScreen, floatOrnaments]);
+  useEffect(() => {
+    if (isOnScreen) {
+      setAnimate(true); 
+    } else {
+      setAnimate(false); 
+    }
+  }, [isOnScreen]);
   return (
     <div className={styles.box} ref={ref}>
-      <Ornament1
-        className={clsx(
-          styles.ornament1,
-          isOnScreen && styles.finalOrnament1,
-          floatOrnaments && styles.float
-        )}
-      />
+   
       <div className={styles.container}>
-        <Ornament2
-          className={clsx(
-            styles.ornament2,
-            isOnScreen && styles.finalOrnament2,
-            floatOrnaments && styles.float
-          )}
-        />
-        <Ornament3
-          className={clsx(
-            styles.ornament3,
-            isOnScreen && styles.finalOrnament3,
-            floatOrnaments && styles.float
-          )}
-        />
-        <Ornament4
-          className={clsx(
-            styles.ornament4,
-            isOnScreen && styles.finalOrnament4,
-            floatOrnaments && styles.float
-          )}
-        />
         <picture>
           <source
             srcSet="/desktop/bg-invested.avif"
@@ -74,57 +55,69 @@ export default function Invested() {
             className={clsx(styles.bg, isOnScreen && styles.finalBg)}
           />
         </picture>
-        <h2 className={clsx(styles.title, isOnScreen && styles.finalTitle)}>
-          <span>Stay invested</span>
-          <span>all the time</span>
-        </h2>
-        <p
-          className={clsx(
-            styles.description,
-            isOnScreen && styles.finalDescription
-          )}
-        >
-          with the convenience of bank
-        </p>
-      </div>
-      <picture>
+        <div className={styles.contentContainer}>
+        <picture>
         <source
-          srcSet="/desktop/img-invested.avif"
+          srcSet="/desktop/invested.avif"
           type="image/avif"
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
         <source
-          srcSet="/desktop/img-invested.webp"
+          srcSet="/desktop/invested.webp"
           type="image/webp"
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
         <source
-          src="/desktop/img-invested.png"
+          src="/desktop/invested.png"
           type="image/png"
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
         <img
-          src="/desktop/img-invested.png"
+          src="/desktop/invested.png"
           alt=""
           className={clsx(
             styles.img,
             isOnScreen && styles.finalImg,
-            floatOrnaments && styles.float
+            floatOrnaments && styles.float,
+            animate && styles.slideIn
           )}
         />
       </picture>
+      <div className={clsx(isOnScreen && styles.slideRight, styles.titleContainer)}>
+        <h2 className={clsx(styles.title)}>
+          <span>Instant UPI on
+          </span>
+          <span>mutual funds</span>
+        </h2>
+        <p
+          className={clsx(
+            styles.description,
+          )}
+        >
+         Scan & Pay to your nearest merchant
+        </p>
+        <div>
+          <img src="/desktop/bank.png" alt="bank" />
+        </div>
+        </div>
+      </div>
+     
+      </div>
     </div>
   );
 }

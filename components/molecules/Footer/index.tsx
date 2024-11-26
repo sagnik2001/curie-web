@@ -21,13 +21,12 @@ export default function Footer({
         {!landingPage && <div className={styles.band}></div>}
         <div className={styles.join}>
           <h4 className={styles.joinText}>
-            <span>Join the</span>
-            <span>community</span>
+          <span>Join our</span>
+          <span>beta program</span>
           </h4>
           <p className={styles.paraText}>
-            <span>Learn more about Curie,</span>
-            <span>chat with the team, others in the community,</span>
-            <span>& have your say in shaping the future of banking.</span>
+            <span>Test our beta app, and have your say in</span>
+            <span>shaping the future of banking.</span>
           </p>
         </div>
         <div className={styles.socialBox}>
@@ -73,6 +72,23 @@ export default function Footer({
             </Link>
           </span>
         </div>
+    
+        <div className={styles.partnerBox}>
+          <span className={styles.tag}>Our partners</span>
+          <div>
+            <div className={styles.bankBox}>
+              <YesBankSvg />
+              <IciciBankSvg />
+              <NpciSvg />
+            </div>
+            <div className={styles.regulatorBox}>
+              <RupaySvg />
+              <PciSvg />
+              <AmfiSvg />
+              <SebiSvg />
+            </div>
+          </div>
+        </div>
         <div className={styles.links}>
           <Link href="/about-us" target="_blank" className={styles.link}>
             About
@@ -99,23 +115,7 @@ export default function Footer({
           <Link href="/grievance-data" target="_blank" className={styles.link}>
             Grievance Data
           </Link>
-        </div>
-        <div className={styles.partnerBox}>
-          <span className={styles.tag}>Our partners</span>
-          <div>
-            <div className={styles.bankBox}>
-              <YesBankSvg />
-              <IciciBankSvg />
-              <NpciSvg />
-            </div>
-            <div className={styles.regulatorBox}>
-              <RupaySvg />
-              <PciSvg />
-              <AmfiSvg />
-              <SebiSvg />
-            </div>
-          </div>
-        </div>
+        </div> 
       </div>
     </>
   );

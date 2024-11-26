@@ -4,15 +4,20 @@ import Explain from "./Explain";
 import Features from "./Features";
 import Welcome from "./Welcome";
 import * as styles from "./Desktop.module.scss";
+import Marquee from "./Marquee";
+import IntroductionBanner from "./Hero/IntroductionBanner";
+import Banks from "./Banks";
 
 export default function DesktopLanding() {
   return (
     <div className={styles.container}>
       <Hero />
-      <Explain />
-      <Features />
-      <Welcome />
-      <Footer landingPage />
+      <IntroductionBanner/>
+      <Banks/>
+      {/* <Explain /> */}
+      {/* <Welcome /> */}
+      <Marquee/>
+     <Footer landingPage />
     </div>
   );
 }

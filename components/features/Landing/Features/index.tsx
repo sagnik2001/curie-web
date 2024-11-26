@@ -1,13 +1,13 @@
-import HassleFree from "./HassleFree";
 import Invested from "./Invested";
-import Safe from "./Safe";
+import MutualFund from "./MutualFund";
+import CompareComponent from "./MutualFund/CompareComponent";
 
 export default function Features() {
   return (
     <>
       <Invested />
-      <HassleFree />
-      <Safe />
+      <MutualFund/>
+      <CompareComponent/>
     </>
   );
 }

@@ -13,34 +13,41 @@
 }
 .container {
   display: flex;
+  align-items: flex-start;
+  gap: 106px;
 }
 .join {
   width: 50%;
 }
 .linkRow {
   margin-left: auto;
-  margin-right: 0;
+  margin-right: auto;
   display: flex;
-  gap: 40px;
+  gap: 35px;
   width: fit-content;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  max-width: 600px;
+  justify-content: center;
+  max-width: 700px;
+  margin-bottom: 175px;
   .link {
     color: #ffca10;
     text-decoration-color: #ffca10;
     font-size: 16px;
     font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0.15px;
+    line-height: 21px;
+    letter-spacing: 0.13px;
   }
 }
 .msg {
-  color: #ffca10;
+  background: linear-gradient(90deg, #00F05C 0%, #AEFF51 100%,#00FF62 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
   text-align: right;
-  font-size: 88px;
+  font-size: 80px;
   font-weight: 700;
-  margin-bottom: 60px;
+  line-height: 100px;
+  margin-bottom: 26px;
 
   span {
     display: block;
@@ -53,13 +60,15 @@
     top: 48px;
     left: 0;
     width: calc(100% - 340px);
-    height: 4px;
+    height: 10px;
     position: absolute;
-    background-color: #ffca10;
+    background: linear-gradient(90deg, #00F05C 0%, #AEFF51 100%,#00FF62 100%);
   }
 }
 .contact {
-  padding-left: 106px;
+  max-width: 520px;
+  width: 100%;
+  margin-top: 32px;
   a {
     text-decoration: none;
   }
@@ -79,21 +88,21 @@
   justify-content: space-between;
   margin-bottom: 24px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #664e12;
+  border-bottom: 1px solid #9B9B9B;
 }
 .socialLabel {
-  color: #ffca10;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0.15px;
+  line-height: 21px;
+  letter-spacing: 0.133px;
 }
 .socialValue {
-  color: #664e12;
+  color: #9B9B9B;
   text-align: right;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 15px;
   letter-spacing: 0.2px;
 
   a {
@@ -106,19 +115,19 @@
   }
 }
 .partnerBox {
-  border-radius: 12px;
-  border: 1px solid #ffca10;
-  padding: 24px 28px 16px;
-  margin: 0 24px 60px;
+  border-radius: 10px;
+  border: 1px solid #9B9B9B;
+  padding: 28px 52px;
+  margin: 0 24px 88px;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
-  margin-top: 116px;
+  margin-top: 68px;
 
   .tag {
     position: absolute;
-    color: #ffca10;
+    color: #9B9B9B;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.15px;
@@ -133,5 +142,15 @@
 .bankBox {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: 56px;
+}
+
+.footerTxt{
+  color: #fff;
+text-align: right;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px;
+letter-spacing: 0.15px;
 }
