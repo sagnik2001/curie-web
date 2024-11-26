@@ -39,16 +39,7 @@ function Download({ onClose }: { onClose: () => void }) {
             </div>
           </div>
           <picture>
-            <source
-              srcSet="/download-qr.avif"
-              type="image/avif"
-              className={styles.img}
-            />
-            <source
-              srcSet="/download-qr.webp"
-              type="image/webp"
-              className={styles.img}
-            />
+           
             <source
               srcSet="/download-qr.png"
               type="image/png"
