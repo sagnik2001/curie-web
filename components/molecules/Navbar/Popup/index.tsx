@@ -3,7 +3,7 @@ import * as styles from "./Popup.module.scss";
 import clsx from "clsx";
 import CloseSvg from "@svgs/close.svg";
 import { calson, figtree } from "@utilities/font";
-import WhatsappIcon from "@svgs/whatsappIcon.svg"
+import WhatsappIcon from "@svgs/whatsappIcon.svg";
 
 function Download({ onClose }: { onClose: () => void }) {
   return (
@@ -25,26 +25,24 @@ function Download({ onClose }: { onClose: () => void }) {
               <li>Click on the link generated to download Curie</li>
             </ul>
             <div className={styles.downloadTxt}>
-            Once downloaded get your invite code
+              Once downloaded get your invite code
             </div>
-            <div className={styles.btn}>
-            <a className={calson.className}>
-              <WhatsappIcon/>
-              <span>Get invite code</span>
-            </a>
-          </div>
+            <div
+              className={styles.btn}
+              onClick={() =>
+                window.open(
+                  "https://chat.whatsapp.com/Lj9reYKGt8079JRTDhmHLi",
+                  "_blank"
+                )
+              }
+            >
+              <a className={calson.className} target="_blank">
+                <WhatsappIcon />
+                <span>Get invite code</span>
+              </a>
+            </div>
           </div>
           <picture>
-            <source
-              srcSet="/download-qr.avif"
-              type="image/avif"
-              className={styles.img}
-            />
-            <source
-              srcSet="/download-qr.webp"
-              type="image/webp"
-              className={styles.img}
-            />
             <source
               srcSet="/download-qr.png"
               type="image/png"
