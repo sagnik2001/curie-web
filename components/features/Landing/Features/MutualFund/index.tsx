@@ -22,7 +22,7 @@ export default function MutualFund() {
     if (!isOnScreen || floatOrnaments) return;
     setTimeout(() => {
       setFloatOrnamanents(true);
-    }, 800);
+    }, 800)
   }, [isOnScreen, floatOrnaments]);
   useEffect(() => {
     if (isOnScreen) {

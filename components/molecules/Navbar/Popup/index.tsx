@@ -36,7 +36,7 @@ function Download({ onClose }: { onClose: () => void }) {
                 )
               }
             >
-              <a className={calson.className} target="_blank">
+              <a target="_blank">
                 <WhatsappIcon />
                 <span>Get invite code</span>
               </a>

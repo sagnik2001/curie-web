@@ -37,16 +37,6 @@ export default function MutualFund() {
       <div className={styles.container}>
         <picture>
           <source
-            srcSet="/desktop/graph.avif"
-            type="image/avif"
-            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
-          />
-          <source
-            srcSet="/desktop/graph.webp"
-            type="image/webp"
-            className={clsx(styles.bg, isOnScreen && styles.finalBg)}
-          />
-          <source
             src="/desktop/graph.png"
             type="image/png"
             className={clsx(styles.bg, isOnScreen && styles.finalBg)}
