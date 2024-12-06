@@ -1,51 +1,42 @@
 @import "@styles/vars.scss";
 
 .container {
-  position: relative;
-  padding: 0 24px 48px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  @media #{$not-touch} {
-    padding: 0 64px 48px;
-  }
+  padding: 2rem;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
 .title {
+  color: #FFCA10;
   font-size: 40px;
-  color: #ffca10;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  @media #{$not-touch} {
-    font-size: 88px;
-    margin-top: 60px;
-    margin-bottom: 72px;
-  }
+  margin-bottom: 2rem;
 }
+
+.header {
+  color: #FFCA10;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.subheader {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
 .para {
-  color: white;
+  color: #fff;
   font-size: 16px;
-  font-weight: 500;
-  line-height: 1.75;
-  margin-bottom: 32px;
-  @media #{$not-touch} {
-    font-size: 20px;
-    margin-bottom: 48px;
-  }
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
+
 ul.para {
   padding-left: 16px;
   li {
     margin-bottom: 8px;
-  }
-}
-.header {
-  margin-top: 12px;
-  color: white;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  margin-bottom: 12px;
-  @media #{$not-touch} {
-    font-size: 28px;
   }
 }
