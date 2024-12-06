@@ -8,7 +8,7 @@ export default function GrievanceData() {
             <StickiedNavbar />
             <div className={styles.container}>
                 <h1>Grievance Data</h1>
-                <h2>Data for the month ending - <strong>August 2024</strong></h2>
+                <h2>Data for the month ending - <strong>November 2024</strong></h2>
                 <div className={styles.tableContainer}>
                     <table className={styles.dataTable}>
                         <thead>
@@ -84,7 +84,7 @@ export default function GrievanceData() {
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>August, 2024</td>
+                                <td>November, 2024</td>
                                 <td>0</td>
                                 <td>0</td>
                                 <td>0</td>
@@ -92,6 +92,30 @@ export default function GrievanceData() {
                             </tr>
                             <tr>
                                 <td>2</td>
+                                <td>October, 2024</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>September, 2024</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>August, 2024</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
                                 <td>July, 2024</td>
                                 <td>0</td>
                                 <td>0</td>

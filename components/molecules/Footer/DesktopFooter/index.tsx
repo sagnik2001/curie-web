@@ -91,7 +91,7 @@ export default function DesktopFooter({
               Privacy Policy
             </Link>
             <Link href="/terms" target="_blank" className={styles.link}>
-              Term and Conditions
+              Terms and Conditions
             </Link>
             <Link
               href="/cancellation-and-refund-policy"
@@ -108,6 +108,9 @@ export default function DesktopFooter({
             </Link>
             <Link href="/grievance-data" target="_blank" className={styles.link}>
               Grievance Data
+            </Link>
+            <Link href="/mutual-fund-terms" target="_blank" className={styles.link}>
+              Mutual Fund Terms and conditions
             </Link>
           </div>
     </div>

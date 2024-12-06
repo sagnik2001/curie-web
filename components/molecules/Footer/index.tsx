@@ -115,6 +115,9 @@ export default function Footer({
           <Link href="/grievance-data" target="_blank" className={styles.link}>
             Grievance Data
           </Link>
+          <Link href="/mutual-fund-terms" target="_blank" className={styles.link}>
+            Mutual Fund Terms and conditions
+          </Link>
         </div> 
       </div>
     </>
