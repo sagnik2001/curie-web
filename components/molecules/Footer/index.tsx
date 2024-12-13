@@ -32,8 +32,8 @@ export default function Footer({
         <div className={styles.socialBox}>
           <span className={styles.socialLabel}>Email</span>
           <span className={styles.socialValue}>
-            <Link href="mailto:hello@curie.money" target="_blank">
-              hello@curie.money
+            <Link href="mailto:support@curie.money" target="_blank">
+              support@curie.money
             </Link>
           </span>
         </div>

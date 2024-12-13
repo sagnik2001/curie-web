@@ -30,10 +30,10 @@ export default function DesktopFooter({
       
         </div>
         <div className={styles.contact}>
-          <Link href="mailto:hello@curie.money" target="_blank">
+          <Link href="mailto:support@curie.money" target="_blank">
             <div className={styles.socialBox}>
               <span className={styles.socialLabel}>Email</span>
-              <span className={styles.socialValue}>hello@curie.money</span>
+              <span className={styles.socialValue}>support@curie.money</span>
             </div>
           </Link>
           <Link

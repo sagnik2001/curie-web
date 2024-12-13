@@ -153,7 +153,12 @@ export default function MutualFundTerms() {
         <p className={styles.para}>
           The Services contains an in-app support channel that is capable of resolving most queries and requests. In the uncommon scenario where your concern still remains unresolved, you can escalate your concern by registering a complaint via the Help Section. The Help Section can be accessed through your profile page.
         </p>
-        
+
+        <h3 className={styles.subheader}>What are the various charges of investing in the mutual fund?:</h3>
+        <p className={styles.para}>
+          The given mutual fund has an expense ratio of 0.29% inclusive of GST, plus the stamp duty of .005%. While spending the exit load of 0.0070% if redeemed within 1 day, 0.0065% if redeemed within 2 days, 0.0060% if redeemed within 3 days, 0.0055% if redeemed within 4 days, 0.0050% if redeemed within 5 days, 0.0045% if redeemed within 6 days is charged. No exit load charged if redeemed after 7 days. The stamp duty of 0.005% is charged on every purchase.
+        </p>
+
         <p className={styles.para}>
           Once Yield Technologies Private Limited receives a complaint and a registration number is allotted, you can expect our first response within 24 (twenty four) hours and will endeavour to resolve your complaint within 3 (three) business days of registering the complaint. However, resolution of your complaint maybe delayed due to delays at the AMC's end or other operational and technical reasons. In cases of such delays We will endeavour to inform you of the revised resolution timelines. If your queries pertain directly to your investment such as NAV applied to a subscribed Scheme, delays in processing of redemption or switch requests, the resolution might take longer since Yield Technologies Private Limited is dependent on feedback received from the AMC.
         </p>
