@@ -72,6 +72,14 @@ export default function Footer({
             </Link>
           </span>
         </div>
+        <div className={styles.socialBox}>
+          <span className={styles.socialLabel}>Youtube</span>
+          <span className={styles.socialValue}>
+            <Link href="https://www.youtube.com/@curiemoney" target="_blank">
+              @curiemoney
+            </Link>
+          </span>
+        </div>
     
         <div className={styles.partnerBox}>
           <span className={styles.tag}>Our partners</span>
