@@ -7,6 +7,7 @@ import * as styles from "./Desktop.module.scss";
 import Marquee from "./Marquee";
 import IntroductionBanner from "./Hero/IntroductionBanner";
 import Banks from "./Banks";
+import FAQComp from "./Faqs";
 
 export default function DesktopLanding() {
   return (
@@ -14,6 +15,7 @@ export default function DesktopLanding() {
       <Hero />
       <IntroductionBanner/>
       <Banks/>
+      <FAQComp/>
       {/* <Explain /> */}
       {/* <Welcome /> */}
       <Marquee/>
