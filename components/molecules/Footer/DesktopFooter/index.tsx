@@ -118,6 +118,9 @@ export default function DesktopFooter({
             <Link href="/mutual-fund-terms" target="_blank" className={styles.link}>
               Mutual Fund Terms and conditions
             </Link>
+            <Link href="/upi-lite-terms" target="_blank" className={styles.link}>
+              UPI Lite Terms and conditions
+            </Link>
           </div>
     </div>
   );
