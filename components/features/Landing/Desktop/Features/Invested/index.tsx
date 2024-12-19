@@ -100,7 +100,7 @@ export default function Invested() {
       </picture>
       <div className={clsx(isOnScreen && styles.slideRight, styles.titleContainer)}>
         <h2 className={clsx(styles.title)}>
-          <span>Instant UPI on
+          <span>Instant payments on
           </span>
           <span>mutual funds</span>
         </h2>

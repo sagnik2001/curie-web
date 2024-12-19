@@ -56,7 +56,7 @@ export default function Invested() {
         </picture>
         <div className={clsx(styles.titleContainer, animate && styles.slideRight)}>
         <h2 className={clsx(styles.title)}>
-          <span>Instant UPI on
+          <span>Instant payments on
           </span>
           <span>mutual funds</span>
         </h2>
