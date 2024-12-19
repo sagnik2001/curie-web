@@ -2,6 +2,9 @@ import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import styles from "./styles.module.scss"
 import CloseDownIcon from "@svgs/closedState.svg"
 import OpenDownIcon from "@svgs/openState.svg"
+import clsx from "clsx";
+import { figtree } from '@utilities/font';
+
 
 const OpenIcon = () => <span>
     <CloseDownIcon />
@@ -13,7 +16,7 @@ const CloseIcon = () => <span>
 const FAQComp = () => {
     return (
         <div>
-            <div className={styles.appbar}>
+            <div className={clsx(styles.appbar,figtree.className)}>
             Frequently asked question
             </div>
         <div className={styles.container}>
