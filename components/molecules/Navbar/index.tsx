@@ -5,23 +5,9 @@ import { calson } from "@utilities/font";
 import { useEffect, useState } from "react";
 import Popup from "./Popup";
 import { useRouter } from "next/router";
-import MarqueeHeader from "@features/Landing/Desktop/MarqueeHeader";
-
-type ScreenSize = "unknown" | "mobile" | "not-mobile";
-
 
 export default function Navbar({ className = "" }: { className?: string }) {
   const [showPopup, setShowPopup] = useState(false);
-    const [screenSize, setScreenSize] = useState<ScreenSize>("unknown");
-    useEffect(() => {
-      const handleScreenSize = () => {
-        const screenSize = window.screen.width > 767 ? "not-mobile" : "mobile";
-        setScreenSize(screenSize);
-      };
-      handleScreenSize();
-      window.addEventListener("resize", handleScreenSize);
-      return () => window.removeEventListener("resize", handleScreenSize);
-    }, []);
   const router = useRouter();
   useEffect(() => {
     const element = document.getElementById("html")!;
@@ -32,9 +18,8 @@ export default function Navbar({ className = "" }: { className?: string }) {
     }
   }, [showPopup]);
   return (
-    <div className={clsx(className,styles.test)}>
-      <MarqueeHeader isMobile={screenSize==="mobile"}/>
-      <div className={clsx(styles.container)}>
+    <>
+      <div className={clsx(styles.container, className)}>
         <div className={styles.box}>
           <div
             onClick={() => {
@@ -58,6 +43,6 @@ export default function Navbar({ className = "" }: { className?: string }) {
         </div>
       </div>
       {showPopup && <Popup onClose={() => setShowPopup(false)} />}
-    </div>
+    </>
   );
 }

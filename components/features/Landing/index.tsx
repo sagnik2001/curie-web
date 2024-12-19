@@ -10,7 +10,6 @@ import DesktopLanding from "./Desktop";
 import Marquee from "./Desktop/Marquee";
 import IntroductionBanner from "./Hero/IntroductionBand";
 import Banks from "./Banks";
-import FAQComp from "./Faqs";
 
 type ScreenSize = "unknown" | "mobile" | "not-mobile";
 
@@ -37,7 +36,6 @@ export default function Landing() {
         {/* <Explain />
         <Welcome /> */}
         <Banks/>
-        <FAQComp/>
         <Marquee isMobile={screenSize}/>
         <Footer landingPage />
         <DownloadMobile />
