@@ -25,7 +25,7 @@ const MarqueeHeader : React.FC<MarqueeHeaderProps> = ({isMobile=""}) => {
         <div className={`${isMobile!=="mobile" ? styles.marqueeContainer : styles.mobileMarqueeContainer}`} >
     <div className={ `${isMobile!=='mobile' ? styles.marqueeContent : styles.mobileMarqueeContent} ${calson.className}`}>
  
-   <div className={`${isMobile==='mobile' ? styles.marqueeMobileInnerContent : styles.marqueeInnerContent}`}>
+   <a  href="https://entrackr.com/snippets/fintech-startup-curie-money-raises-12-mn-in-seed-round-8495734" target="_blank" className={`${isMobile==='mobile' ? styles.marqueeMobileInnerContent : styles.marqueeInnerContent}`}>
                   
               
                 {isClient && <HorizontalTicker duration={100000}>
@@ -38,7 +38,7 @@ const MarqueeHeader : React.FC<MarqueeHeaderProps> = ({isMobile=""}) => {
                     <span>We announced our funding!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     <span>We announced our funding!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
       </HorizontalTicker>}
-      </div>
+      </a>
     </div>
     
   </div>
