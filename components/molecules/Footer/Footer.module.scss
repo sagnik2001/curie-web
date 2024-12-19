@@ -139,3 +139,16 @@
   margin-right: auto;
   width: fit-content;
 }
+
+.footertxt{
+  color: var(--neutral-300, #BEBEC2);
+text-align: left;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.2px;
+margin-left: 12px;
+margin-right: 12px;
+margin-top: 12px;
+}

@@ -129,7 +129,11 @@ export default function Footer({
           <Link href="/upi-lite-terms" target="_blank" className={styles.link}>
             UPI Lite Terms and conditions
           </Link>
-        </div> 
+               <div className={styles.footertxt}>
+                    *Based on past 1 yr historical data. Mutual Fund investments are subject to market risks, please read all scheme related documents carefully. The NAVs of the schemes may go up or down depending upon the factors and forces affecting the securities market including the fluctuations in the interest rates. The past performance of the mutual funds is not necessarily indicative of future performance of the schemes.
+                    </div>
+        </div>
+         
       </div>
     </>
   );
