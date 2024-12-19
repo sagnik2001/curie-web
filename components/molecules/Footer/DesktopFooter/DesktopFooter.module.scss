@@ -28,7 +28,7 @@
   flex-wrap: wrap;
   justify-content: center;
   max-width: 700px;
-  margin-bottom: 175px;
+  margin-bottom: 76px;
   .link {
     color: #ffca10;
     text-decoration-color: #ffca10;
@@ -153,4 +153,17 @@ font-style: normal;
 font-weight: 600;
 line-height: 22px;
 letter-spacing: 0.15px;
+}
+
+.footertxt{
+  color: var(--neutral-300, #BEBEC2);
+text-align: center;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.2px;
+margin-bottom: 24px;
+margin-left: 56px;
+margin-right: 56px;
 }
