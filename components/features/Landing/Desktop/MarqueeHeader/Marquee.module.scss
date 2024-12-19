@@ -61,6 +61,21 @@ letter-spacing: 0.89px;
     }
   }
 
+
+.marqueeInnerContent {
+  display: flex;
+  gap: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.marqueeMobileInnerContent{
+  display: flex;
+  gap: 160px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
   @keyframes marquee {
     0% {
         transform: translateX(0);

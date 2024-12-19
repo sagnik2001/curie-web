@@ -74,14 +74,14 @@ margin-bottom: 16px;
   }
 
   .accordionContent {
-    max-height: 100px;
+    max-height: 2000px;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out, padding 0.25s ease-out;
     padding: 0;
   }
   
   .accordianItem[aria-expanded='true'] .accordionContent {
-    max-height: 100px;
+    max-height: 2000px;
     padding: 16px 0; /* Add padding for open state */
   }
 
