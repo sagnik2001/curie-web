@@ -33,7 +33,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
   }, [showPopup]);
   return (
     <div className={clsx(className,styles.test)}>
-      <MarqueeHeader isMobile={screenSize==="mobile"}/>
+      <MarqueeHeader isMobile={screenSize}/>
       <div className={clsx(styles.container)}>
         <div className={styles.box}>
           <div
