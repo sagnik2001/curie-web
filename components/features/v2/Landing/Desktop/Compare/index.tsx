@@ -1,11 +1,14 @@
 
-import Lottie from "lottie-react";
 import styles from "./Compare.module.scss"
 import clsx from "clsx";
 import { calson, secondaryFont } from "@utilities/font";
 import CompareHighlighter from "@svgs/compare/Highlighter.svg"
 import RebitSvg from "@svgs/compare/Rebit.svg"
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
 
 const CompareComp = () => {
    const [animationData, setAnimationData] = useState(null);
@@ -62,3 +65,9 @@ const CompareComp = () => {
 }
 
 export default CompareComp;
+
+
+
+
+
+

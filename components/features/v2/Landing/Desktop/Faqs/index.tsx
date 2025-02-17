@@ -4,8 +4,11 @@ import CloseDownIcon from "@svgs/closedState.svg"
 import OpenDownIcon from "@svgs/openState.svg"
 import clsx from "clsx";
 import { figtree, secondaryFont } from '@utilities/font';
-import Lottie from 'lottie-react';
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
 
 
 const OpenIcon = () => <span>

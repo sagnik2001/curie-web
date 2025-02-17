@@ -2,8 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Banks.module.scss";
 import clsx from "clsx";
 import useOnScreen from "@hooks/useOnScreen";
-import Lottie from "lottie-react";
 import { secondaryFont } from "@utilities/font";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
 
 const Banks = () => {
     const ref = useRef<HTMLDivElement>(null);
