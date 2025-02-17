@@ -9,7 +9,6 @@ import YESBank from "@lottiebanks/yesbank.json"
 import clsx from "clsx";
 import useOnScreen from "@hooks/useOnScreen";
 import Lottie from "lottie-react";
-import SecuredJson from "@lottiesecured.json"
 import { secondaryFont } from "@utilities/font";
 
 const Banks = () => {
@@ -34,6 +33,12 @@ const Banks = () => {
         setAnimate(false); 
       }
     }, [isOnScreen]);
+    const [SecuredJson, setAnimationData] = useState(null);
+    useEffect(() => {
+      fetch("/compare.json")
+        .then((response) => response.json())
+        .then((data) => setAnimationData(data));
+    }, []);
     return(
       <div ref={ref} className={styles.container}>
         <div className={styles.animatingHeading}>

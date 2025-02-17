@@ -4,8 +4,8 @@ import CloseDownIcon from "@svgs/closedState.svg"
 import OpenDownIcon from "@svgs/openState.svg"
 import clsx from "clsx";
 import { figtree, secondaryFont } from '@utilities/font';
-import curie_us_animation from "../../../../../../lottie/curie_us.json"
 import Lottie from 'lottie-react';
+import { useEffect, useState } from 'react';
 
 
 const OpenIcon = () => <span>
@@ -16,10 +16,16 @@ const CloseIcon = () => <span>
 </span>;
 
 const FAQComp = () => {
+    const [animationData, setAnimationData] = useState(null);
+        useEffect(() => {
+          fetch("/curie_us.json")
+            .then((response) => response.json())
+            .then((data) => setAnimationData(data));
+        }, []);
     return (
         <div className={styles.wrapper}>
                   <div className={styles.animation}>
-                  <Lottie animationData={curie_us_animation} autoplay loop />
+                  <Lottie animationData={animationData} autoplay loop />
                   </div>
             <div className={clsx(styles.appbar,secondaryFont.className)}>
             Most asked questions

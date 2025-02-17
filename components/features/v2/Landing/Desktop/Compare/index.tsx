@@ -1,16 +1,23 @@
-import CompareJson from "@lottiecompare.json"
+
 import Lottie from "lottie-react";
 import styles from "./Compare.module.scss"
 import clsx from "clsx";
 import { calson, secondaryFont } from "@utilities/font";
 import CompareHighlighter from "@svgs/compare/Highlighter.svg"
 import RebitSvg from "@svgs/compare/Rebit.svg"
+import { useEffect, useState } from "react";
 
 const CompareComp = () => {
+   const [animationData, setAnimationData] = useState(null);
+    useEffect(() => {
+      fetch("/compare.json")
+        .then((response) => response.json())
+        .then((data) => setAnimationData(data));
+    }, []);
     return (
        <div className={styles.wrapper}>
         <div className={styles.animation}>
-         <Lottie animationData={CompareJson} />
+         <Lottie animationData={animationData} />
          </div>
          <div className={clsx(styles.textField,secondaryFont.className)}>
            <span>
