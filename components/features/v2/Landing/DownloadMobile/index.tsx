@@ -1,8 +1,11 @@
 import clsx from "clsx";
 import * as styles from "./DownloadMobile.module.scss";
 import { calson } from "@utilities/font";
-import Lottie from "lottie-react";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
 
 export default function DownloadMobile() {
   const [animationData, setAnimationData] = useState(null);
