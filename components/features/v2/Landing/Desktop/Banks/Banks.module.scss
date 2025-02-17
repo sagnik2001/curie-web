@@ -1,0 +1,334 @@
+.container{
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    z-index: 4;
+    min-height: 650px;
+    // max-height: 700px;
+    background-color: #FFF;
+}
+
+.finalOrnament1,.finalOrnament2,.finalOrnament3,.finalOrnament4,.finalOrnament5,.finalOrnament6 {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  .float {
+    animation-name: Floating;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.9s;
+  }
+
+  @keyframes Floating {
+    from {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 40px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
+
+  .ornament1 {
+    width: 180px;
+height: 185px;
+    position: absolute;
+   bottom: 65%;
+   left: 132px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+        left: 82px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+      bottom: 55%;
+    }
+  }
+
+  .ornament2 {
+    width: 180px;
+    height: 185px;
+    position: absolute;
+   bottom: 40%;
+   transform: translateY(50%);
+   left: 332px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+        left: 200px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+    
+    }
+  }
+
+  .ornament3 {
+    width: 180px;
+    height: 185px;
+    position: absolute;
+   bottom: 72px;
+   left: 35%;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+      z-index: 1;
+      left: 27%;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+    
+    }
+  }
+
+  .ornament6 {
+    width: 180px;
+    height: 185px;
+    position: absolute;
+    bottom: 72px;
+    right: 27%;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+    
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+    
+    }
+  }
+
+  .ornament5 {
+    width: 180px;
+    height: 185px;
+    position: absolute;
+   bottom: 40%;
+   transform: translateY(50%);
+   right: 302px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+      right: 200px;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+
+    
+    }
+  }
+
+  .ornament4 {
+    width: 180px;
+    height: 185px;
+        position: absolute;
+       right: 132px;
+       bottom: 65%;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+        right: 82px;
+     
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+    height: 185px;
+    bottom: 55%;
+
+    }
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%,50%);
+    max-width: 445px;
+    width: 100%;
+    margin: '0 auto';
+    text-align: center;
+  
+    h1{
+        text-align: center;
+text-shadow: 0px 1px 8px rgba(27, 219, 101, 0.40);
+font-size: 64px;
+font-style: italic;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 2px;
+background: linear-gradient(92deg, #00F05C 2.88%, #AEFF51 58.68%, #00FF62 99.09%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+    }
+    span{
+        color: var(--shadow-00, #FFF);
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,50%);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,50%);
+      opacity: 1;
+    }
+  }
+  .slideRight{
+    transform: translate(100%,50%); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-right 1s ease-in-out forwards; /* Trigger animation */
+  }
+  .slideIn {
+    transform: translate(-100%,50%); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-in 1s ease-in-out forwards; /* Trigger animation */
+  }
+
+  .slideRightWithDelay{
+    transform: translate(100%,0px); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-right-with-delay 1s ease-in-out forwards; /* Trigger animation */
+    animation-delay: 0.5s;
+  }
+  .slideInWithDelay {
+    transform: translate(-100%,0px); /* Initial state for slide-in */
+    opacity: 0;
+    animation: slide-in-with-delay 1s ease-in-out forwards; /* Trigger animation */
+    animation-delay: 0.5s;
+  }
+
+
+  @keyframes slide-in-with-delay {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-right-with-delay {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0,0);
+      opacity: 1;
+    }
+  }
+
+  .slideUp{
+    transform: translateY(100%);
+  opacity: 0; 
+  animation: slide-up 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideUpWithDelay{
+  transform: translateY(100%);
+opacity: 0; 
+animation: slide-up 0.5s ease-out forwards;
+animation-delay: 1.5s;
+}
+
+@keyframes slide-up {
+0% {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+100% {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
+.animatingHeading {
+  width: 180px;
+  height: 79px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 111px;
+}
+
+.newContent span {
+  color: #000;
+text-align: center;
+font-size: 104px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: -2.08px;
+display: flex;
+flex-direction: column;
+}
+
+.subContent{
+   text-align: center;
+   color: #000;
+text-align: center;
+font-size: 40px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+letter-spacing: -0.8px;
+}
+
+.bank{
+  width: 180px;
+height: 185px;
+}

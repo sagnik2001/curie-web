@@ -1,0 +1,109 @@
+.container {
+  background: #180036;
+  overflow: hidden;
+  position: relative;
+  height: 90vh;
+  min-height: 680px;
+  max-height: 800px;
+  padding-top: 64px;
+  z-index: 3;
+}
+.title {
+  background: linear-gradient(92deg, #00F05C 2.88%, #AEFF51 58.68%, #00FF62 99.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 800;
+  position: relative;
+  z-index: 100;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  text-align: left;
+  margin-left: 32px;
+  span {
+    display: block;
+  }
+}
+.img {
+  height: 363px;
+  width: 248px;
+  position: absolute;
+  top: 50px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  left: 50%;
+  transform: translateX(-50%);  
+}
+.description {
+  color: #fff;
+  text-align: left;
+  margin-left: 32px;
+  margin-top: 4px;  
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  z-index: 4;
+}
+.bankImg{
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  margin-left: 32px;
+}
+.box {
+  position: relative;
+  width: 100%;
+}
+
+.bg {
+  width: 730px;
+  height: 400px;
+  left: -73px;
+  position: absolute;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
+  user-select: none;
+
+}
+
+.titleContainer{
+  position: absolute;
+  bottom: 120px;
+}
+
+.slideIn {
+  transform: translateX(-100%); /* Initial state for slide-in */
+  opacity: 0;
+  animation: slide-in 1s ease-in-out forwards; /* Trigger animation */
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideRight{
+  transform: translateX(100%); /* Initial state for slide-in */
+  opacity: 0;
+  animation: slide-right 1s ease-in-out forwards; /* Trigger animation */
+}

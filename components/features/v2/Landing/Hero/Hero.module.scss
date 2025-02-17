@@ -1,0 +1,325 @@
+.container {
+  height: calc(100vh - 220px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+.heading {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  position: relative;
+  top: -20px;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.1, 0.7, 1, 0.1);
+  transition-delay: 0.65s;
+  span {
+    display: block;
+  }
+  .first {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+  }
+  .second {
+    font-style: italic;
+    font-weight: 800;
+    color: #ffca10;
+  }
+  &.animateHeading {
+    opacity: 1;
+  }
+}
+.scrollBtn {
+  position: absolute;
+  bottom: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  .text {
+    color: #ffca10;
+    line-height: 1;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: -1.333px;
+  }
+}
+.ornament1,
+.ornament2,
+.ornament3,
+.ornament4,
+.ornament5,
+.ornament6,
+.ornament7 {
+  position: absolute;
+  transition: all 0.6s cubic-bezier(0, 0, 0.09, 0.99);
+  transition-delay: 0.1s;
+}
+.ornament1 {
+  top: 80px;
+  left: 90px;
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 68px;
+    height: unset;
+  }
+  &.animateOrnament1 {
+    top: -50px;
+    left: 90px;
+    opacity: 1;
+  }
+}
+.float {
+  animation-name: Floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.9s;
+}
+
+@keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}
+.ornament2 {
+  top: 80px;
+  left: 45%;
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 89px;
+    height: 90px;
+  }
+  &.animateOrnament2 {
+    top: -50px;
+    left: 50%;
+    opacity: 1;
+  }
+}
+.ornament3 {
+  top: 90px;
+  right: 60px;
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 225.284px;
+    height: 184.255px;
+    top: 150px;
+  }
+  &.animateOrnament3 {
+    top: 32px;
+    right: -90px;
+    opacity: 1;
+    @media screen and (min-height: 700px) {
+      top: 50px;
+      right: -60px;
+    }
+  }
+}
+.ornament4 {
+  top: 120px;
+  left: -0px;
+  transform: scale(0.9);
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 240px;
+    height: unset;
+  }
+  &.animateOrnament4 {
+    top: 120px;
+    left: -66px;
+    opacity: 1;
+  }
+}
+.ornamentfloat4 {
+  animation-name: Floating4;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.9s;
+}
+@keyframes Floating4 {
+  from {
+    transform: scale(0.9) translate(0, 0px);
+  }
+  50% {
+    transform: scale(0.9) translate(0, 20px);
+  }
+  to {
+    transform: scale(0.9) translate(0, -0px);
+  }
+}
+.ornament5 {
+  right: 40px;
+  bottom: 160px;
+  transform: scale(0.9);
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 180px;
+    height: unset;
+  }
+  &.animateOrnament5 {
+    right: -28px;
+    bottom: -44px;
+    opacity: 1;
+  }
+}
+.ornamentfloat5 {
+  animation-name: Floating5;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.4s;
+}
+@keyframes Floating5 {
+  from {
+    transform: scale(0.9) translate(0, 0px);
+  }
+  50% {
+    transform: scale(0.9) translate(0, 20px);
+  }
+  to {
+    transform: scale(0.9) translate(0, -0px);
+  }
+}
+
+.ornament6 {
+  bottom: 240px;
+  left: 40%;
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 73px;
+    height: unset;
+  }
+  &.animateOrnament6 {
+    bottom: -20px;
+    left: 20%;
+    opacity: 1;
+  }
+}
+.ornament7 {
+  bottom: 240px;
+  left: 40px;
+  opacity: 0;
+  @media screen and (min-height: 700px) {
+    width: 73px;
+    height: unset;
+  }
+  &.animateOrnament7 {
+    bottom: 100px;
+    left: -32px;
+    opacity: 1;
+  }
+}
+.nav {
+  position: fixed;
+  width: 100vw;
+  z-index: 99;
+  height: 64px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 3.72%,
+    rgba(0, 0, 0, 0) 94.33%
+  );
+}
+.box {
+  position: relative;
+}
+
+.titleBox {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  transition-delay: 0.45s;
+  position: relative;
+  z-index: 10;
+  img{
+    width: 337px;
+    height: 302px;
+    object-fit: cover;
+  }
+  &.animatedBox {
+    opacity: 1;
+  }
+}
+
+.buttonBox {
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-out;
+  transition-delay: 0.45s;
+  position: relative;
+  // top: -43px;
+  margin-bottom: 19px;
+  @media screen and (min-width:1800px) {
+    margin-top: 0px;
+  }
+  &.animatedBox {
+    opacity: 1;
+  }
+  button{
+    border-radius: 8px;
+border: 1px solid #D9D9D9;
+background: #0E0E0F;
+box-shadow: 0px 0px 8px 0px #000;
+display: inline-flex;
+padding: 4px 12px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+color: #9B9B9B;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+  }
+}
+
+
+.title {
+  color: #fafaff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-right: 15px;
+  margin-top: 12px;
+
+
+  span {
+    display: flex;
+  }
+  .highlightedSpan{
+    color: #7D7D85;
+  }
+}

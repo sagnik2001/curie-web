@@ -1,0 +1,59 @@
+.container {
+  height: 660px;
+  margin-bottom: 76px;
+  border-bottom: 8px solid #ffca10;
+  position: relative;
+  background: #180036;
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    background: #180036;
+    width: 150vw;
+    height: 10%;
+    position: absolute;
+    transform: rotate(-8deg) translateY(-74%);
+    z-index: 4;
+  }
+}
+.imgBox {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.img {
+  position: absolute;
+  top: 20px;
+  left: -342px;
+  object-fit: cover;
+  aspect-ratio: 168 / 103;
+  width: 882px;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+.title {
+  position: absolute;
+  z-index: 10;
+  top: 120px;
+  width: 100%;
+  text-align: center;
+  span {
+    display: block;
+  }
+  .imp {
+    color: #5209af;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .content {
+    color: #5209af;
+    font-size: 44px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.96px;
+  }
+}

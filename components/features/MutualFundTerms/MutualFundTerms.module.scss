@@ -1,0 +1,42 @@
+@import "@styles/vars.scss";
+
+.container {
+  padding: 2rem;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #FFCA10;
+  font-size: 40px;
+  margin-bottom: 2rem;
+}
+
+.header {
+  color: #FFCA10;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.subheader {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+.para {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+ul.para {
+  padding-left: 16px;
+  li {
+    margin-bottom: 8px;
+  }
+}

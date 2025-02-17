@@ -1,0 +1,165 @@
+.container {
+  height: 110vh;
+  overflow: hidden;
+  position: relative;
+  padding-left: 100px;
+  background-color: #ffbb0b;
+  z-index: 2;
+  min-height: 1100px;
+  max-height: 1100px;
+  @media screen and (max-width: 1600px) {
+    padding-left: 150px;
+  }
+  @media screen and (max-width: 1400px) {
+    padding-left: 100px;
+  }
+}
+.ornament1,
+.ornament2,
+.ornament3 {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0, 0, 0.09, 0.99);
+  transition-delay: 0.3s;
+  transform: translateY(200px);
+}
+.ornament1 {
+  top: 100px;
+  right: 30%;
+  @media screen and (max-width: 1600px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
+}
+.ornament3 {
+  bottom: 200px;
+  right: 20px;
+  @media screen and (max-width: 1600px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
+}
+.ornament2 {
+  bottom: 250px;
+  left: 40%;
+  @media screen and (max-width: 1600px) {
+    width: 120px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 105px;
+  }
+}
+.finalOrnament3,
+.finalOrnament2,
+.finalOrnament1 {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.bg {
+  position: absolute;
+  object-fit: contain;
+  bottom: 100px;
+  right: 0;
+  width: 1361px;
+  height: 996px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.finalBg {
+    opacity: 1;
+  }
+}
+.title {
+  span {
+    display: block;
+  }
+  color: #010101;
+  font-size: 76px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 3;
+  margin-top: 50px;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  opacity: 0;
+  &.finalTitle {
+    opacity: 1;
+  }
+}
+.para {
+  span {
+    display: block;
+  }
+  color: #010101;
+  font-size: 28px;
+  font-weight: 500;
+  position: relative;
+  z-index: 3;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  opacity: 0;
+  &.finalPara {
+    opacity: 1;
+  }
+}
+ul.para {
+  padding-left: 30px;
+}
+.img {
+  width: 886px;
+  height: 793px;
+  position: absolute;
+  bottom: 150px;
+  right: 0;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.finalImg {
+    opacity: 1;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 786.295px;
+    right: -50px;
+  }
+}
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -105px;
+    left: 50%;
+    height: 500px;
+    background-color: #ffbb0b;
+    width: 4500px;
+    transform: translateX(-50%) rotate(-5deg);
+  }
+}
+.float {
+  animation-name: Floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.9s;
+}
+
+@keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 40px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}

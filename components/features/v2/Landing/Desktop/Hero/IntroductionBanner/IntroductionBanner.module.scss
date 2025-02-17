@@ -1,0 +1,62 @@
+.container{
+  border-radius: 12px 12px 0px 0px;
+  border-top: 1px solid #13E764;
+  background: linear-gradient(0deg, rgba(13, 12, 14, 0.30) -6.86%, rgba(37, 37, 41, 0.30) 100%);
+  backdrop-filter: blur(24px);
+  text-align: center;
+
+  .headingImg{
+    height: 104px;
+    width: 427px;
+    object-fit: cover;
+  }
+  .curieGraph{
+    width: 452px;
+    height: 236px;
+    object-fit: cover;
+  }
+  .subHeading{
+    color: #FAFAFF;
+text-align: center;
+font-size: 37px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.5px;
+margin-bottom: 12px;
+  }
+}
+
+.ctnBg{
+  background: linear-gradient(180deg, #070608 0%, #180036 29.5%, #180036 70%, #0C0C0D 100%);
+  padding-top: 33px;
+}
+
+.normalContent{
+  position: relative;
+  display: inline-block;
+}
+
+.animationContent{
+
+  transform: translateY(100%);
+  opacity: 0; 
+  animation: slide-up 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.box{
+  position: relative;
+  z-index: 1; /* Ensure child elements remain in the same position */
+  transform: none; /* Prevent child elements from inheriting movement */
+}

@@ -1,0 +1,259 @@
+.container {
+  background: #ffbb0b;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  min-height: 950px;
+  max-height: 1000px;
+}
+.contentBox {
+  margin-right: 200px;
+  margin-top: 300px;
+  flex-shrink: 0;
+}
+.title {
+  color: #010101;
+  text-align: right;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 800;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 7;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  opacity: 0;
+  &.finalTitle {
+    opacity: 1;
+  }
+  span {
+    display: block;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 56px;
+  }
+}
+.description {
+  color: #010101;
+  text-align: right;
+  font-size: 32px;
+  font-weight: 500;
+  position: relative;
+  z-index: 7;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.7s;
+  opacity: 0;
+  &.finalDescription {
+    opacity: 1;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 28px;
+  }
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  &::after {
+    position: absolute;
+    content: "";
+    top: -150px;
+    left: 50%;
+    height: 500px;
+    background-color: #ffbb0b;
+    width: 150vw;
+    transform: translateX(-50%) rotate(-5deg);
+    z-index: 4;
+  }
+}
+.img {
+  width: 200.366px;
+  height: 553.158px;
+  position: absolute;
+  transform: rotate(-4.961deg);
+  left: 200px;
+  z-index: 7;
+  bottom: 250px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.finalImg {
+    opacity: 1;
+  }
+  @media screen and (max-width: 1600px) {
+    left: 150px;
+  }
+  @media screen and (max-width: 1400px) {
+    left: 100px;
+    width: 148.672px;
+    height: 410.445px;
+  }
+}
+.bg {
+  width: 1600px;
+  height: 700px;
+  left: 250px;
+  bottom: 200px;
+  position: absolute;
+  z-index: 6;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.finalBg {
+    opacity: 1;
+  }
+  @media screen and (max-width: 1400px) {
+    left: 150px;
+  }
+}
+.ornament1,
+.ornament2,
+.ornament3,
+.ornament4,
+.ornament5,
+.ornament6,
+.ornament7,
+.ornament8,
+.ornament9 {
+  position: absolute;
+  z-index: 8;
+  transition: all 0.6s ease-in-out;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.ornament8,
+.ornament7,
+.ornament4,
+.ornament1 {
+  transform: translate(-50px, 50px);
+}
+.ornament2,
+.ornament3,
+.ornament5,
+.ornament6 {
+  transform: translate(-50px, -50px);
+}
+.ornament1 {
+  left: 30%;
+  top: 80px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament4 {
+  left: 30%;
+  top: 220px;
+  @media screen and (max-width: 1600px) {
+    width: 236px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 212px;
+  }
+}
+.ornament3 {
+  bottom: 450px;
+  left: 35%;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament5 {
+  left: 25%;
+  bottom: 150px;
+  @media screen and (max-width: 1600px) {
+    width: 236px;
+    left: 30%;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 212px;
+  }
+}
+.ornament2 {
+  bottom: 100px;
+  left: 20%;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament7 {
+  left: 60%;
+  top: 100px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament6 {
+  left: 55%;
+  bottom: 400px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament9 {
+  left: 55%;
+  bottom: 200px;
+  @media screen and (max-width: 1600px) {
+    width: 74px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 64px;
+  }
+}
+.ornament8 {
+  @media screen and (max-width: 1600px) {
+    width: 236px;
+  }
+  @media screen and (max-width: 1400px) {
+    width: 212px;
+  }
+}
+.finalOrnament9,
+.finalOrnament8,
+.finalOrnament7,
+.finalOrnament6,
+.finalOrnament5,
+.finalOrnament4,
+.finalOrnament3,
+.finalOrnament2,
+.finalOrnament1 {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.float {
+  animation-name: Floating;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.9s;
+}
+
+@keyframes Floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 40px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
+}

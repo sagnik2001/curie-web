@@ -1,0 +1,87 @@
+.container{
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.accordianHeader{
+    color: #FFF;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 142.857% */
+    letter-spacing: 0.2px;
+}
+
+.accordianItem{
+    color: var(--neutral-400, #9E9EA3);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 141.667% */
+    letter-spacing: 0.2px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    border-bottom: 2px solid #38383D;
+}
+
+.header{
+
+}
+
+.itemBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 40px; /* 142.857% */
+letter-spacing: 0.2px;
+  }
+
+  .itemBtnExpanded{
+    margin-bottom: 12px;
+  }
+
+  .accordionItemHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .appbar{
+    background: linear-gradient(92deg, #00F05C 2.88%, #AEFF51 58.68%, #00FF62 99.09%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0px 1px 8px rgba(27, 219, 101, 0.40);
+font-size: 64px;
+font-style: italic;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 1px;
+text-align: center;
+margin-top: 131px;
+margin-bottom: 16px;
+  }
+
+  .accordionContent {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out, padding 0.25s ease-out;
+    padding: 0;
+  }
+  
+  .accordianItem[aria-expanded='true'] .accordionContent {
+    max-height: 2000px;
+    padding: 16px 0; /* Add padding for open state */
+  }
+

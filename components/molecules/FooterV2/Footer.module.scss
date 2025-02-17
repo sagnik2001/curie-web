@@ -1,0 +1,165 @@
+@import "@styles/vars.scss";
+
+.footer {
+  padding-bottom: 20px;
+  @media #{$not-touch} {
+    display: none;
+  }
+}
+.band {
+  height: 40px;
+  width: 100%;
+  background: #ffca10;
+  margin-bottom: 64px;
+}
+.join {
+  padding: 0 24px 0 0;
+  margin-bottom: 18px;
+  position: relative;
+  &::after {
+    content: "";
+    top: 24px;
+    left: 0;
+    width: calc(100% - 224px);
+    background: #252529;
+    height: 4px;
+    position: absolute;
+  }
+}
+.joinText {
+  text-align: right;
+  background: #252529;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  
+
+  font-weight: 700;
+  margin-bottom: 26px;
+  span {
+    display: block;
+  }
+}
+.paraText {
+  text-align: right;
+  color: #252529;
+  
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.1px;
+  margin-bottom: 32px;
+  span {
+    display: block;
+  }
+}
+.socialBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 24px 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #9B9B9B;
+}
+.socialLabel {
+  color: #252529;
+  
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.1px;
+}
+.socialValue {
+  color: #9B9B9B;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+  width: fit-content;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover,
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+.links {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 24px;
+
+  .link {
+    color: #252529;
+    text-decoration-color: #252529;
+    
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+    text-decoration-line: underline;
+    width: fit-content;
+  }
+}
+.partnerBox {
+  border-radius: 12px;
+  border: 1px solid #252529;
+  padding: 24px 28px 16px;
+  margin: 48px 24px 0px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+
+  .tag {
+    position: absolute;
+    color: #252529;
+    
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+    top: -10px;
+    background-color: #FFF7DF;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 0 6px;
+  }
+}
+.bankBox {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.regulatorBox {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.footertxt{
+  color: var(--neutral-300, #665601);
+  
+text-align: left;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: 0.2px;
+padding: 15px 24px 17px;
+background-color: #FFECB4;
+margin-bottom: 127px;
+margin-top: 31px;
+}
