@@ -10,12 +10,15 @@ import Banks from "./Banks";
 import FAQComp from "./Faqs";
 import FooterV2 from "@molecules/FooterV2";
 import CompareComp from "./Compare";
+import BannerComp from "./Banner";
+import MidBanner from "./MidBanner";
 
 export default function DesktopLanding() {
   return (
     <div className={styles.container}>
       <Hero />
-      <IntroductionBanner/>
+      <BannerComp/>
+      <MidBanner/>
       <Banks/>
       <FAQComp/>
       <CompareComp/>

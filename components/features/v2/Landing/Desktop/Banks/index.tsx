@@ -70,6 +70,8 @@ const Banks = () => {
 
     return (
       <div ref={ref} className={styles.container}>
+     <img src="/desktop/banks_bg.png" alt="" className={styles.bg} />
+      
         <div className={styles.animatingHeading}>
           {lottieData.secured && <Lottie autoPlay animationData={lottieData.secured} />}
         </div>

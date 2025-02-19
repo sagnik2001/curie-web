@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import * as styles from "./Navbar.module.scss";
-import CurieLogo from "@svgs/curie-logo.svg";
+import CurieLogo from "@svgs/curie-logo-new.svg";
 import { calson } from "@utilities/font";
 import { useEffect, useState } from "react";
 import Popup from "./Popup";
@@ -33,7 +33,6 @@ export default function Navbar({ className = "" }: { className?: string }) {
   }, [showPopup]);
   return (
     <div className={clsx(className,styles.test)}>
-      <MarqueeHeader isMobile={screenSize}/>
       <div className={clsx(styles.container)}>
         <div className={styles.box}>
           <div
@@ -48,11 +47,11 @@ export default function Navbar({ className = "" }: { className?: string }) {
             }}
             style={{ cursor: "pointer" }}
           >
-            <CurieLogo />
+            <CurieLogo className={styles.newLogo} />
           </div>
           <div className={styles.btn} onClick={() => setShowPopup(true)}>
             <a className={calson.className}>
-              <span>download curie</span>
+              <span>download curie app</span>
             </a>
           </div>
         </div>

@@ -1,0 +1,92 @@
+@import "@styles/vars.scss";
+
+.container{
+    padding: 64px 116px 77px;
+    min-height: 616px;
+    position: relative;
+    z-index: 10;
+    background-color: #FFF7DF;
+
+    @media #{$xs-xl}{
+        padding: 64px 32px 77px;
+    }
+}
+
+.animation{
+    width: 114px;
+    height: 79px;
+}
+
+.heading{
+    color: #000;
+font-size: 96px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -1.92px;
+}
+
+.imgContainer{
+    margin-top: 48px;
+    display: flex;
+    gap: 75px;
+    @media #{$xs-lg} {
+        gap: 32px;
+    }
+}
+
+.box{
+    border-radius: 32px;
+border: 2px solid #FCD253;
+background: var(--shadow-00, #FFF);
+max-height: 560px;
+overflow: hidden;
+@media #{$xs-lg} {
+   max-height: 420px;
+}
+}
+
+.header{
+    margin: 24px 32px;
+    color: #000;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -1.12px;
+@media #{$xs-lg} {
+  font-size: 32px;
+ }
+}
+
+.imgCtn{
+    width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+.subHeading{
+    margin-top: 26px;
+    color: #000;
+font-size: 40px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+position: relative;
+}
+
+.highlighter{
+    left: 32%;
+    position: absolute;
+    width: fit-content;
+    @media screen and (max-width: 1600px) {
+        left: 38%;
+    }
+    @media screen and (max-width: 1200px) {
+        left: 50%;
+    }
+    @media screen and (max-width: 990px) {
+        left: 60%;
+        
+    }
+}
