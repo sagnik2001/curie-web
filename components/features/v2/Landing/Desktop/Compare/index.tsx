@@ -4,23 +4,30 @@ import clsx from "clsx";
 import { calson, secondaryFont } from "@utilities/font";
 import CompareHighlighter from "@svgs/compare/Highlighter.svg"
 import RebitSvg from "@svgs/compare/Rebit.svg"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import useOnScreen from "@hooks/useOnScreen";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 
 const CompareComp = () => {
    const [animationData, setAnimationData] = useState(null);
+       const ref = useRef<HTMLDivElement>(null);
+    const isOnScreen = useOnScreen({
+         ref,
+         threshold: 0.15,
+         dontUpdateAfterIntersection: false,
+       });
     useEffect(() => {
       fetch("/compare.json")
         .then((response) => response.json())
         .then((data) => setAnimationData(data));
     }, []);
     return (
-       <div className={styles.wrapper}>
+       <div ref={ref} className={styles.wrapper}>
         <div className={styles.animation}>
-         <Lottie animationData={animationData} />
+         {isOnScreen && <Lottie animationData={animationData} />}
          </div>
          <div className={clsx(styles.textField,secondaryFont.className)}>
            <span>

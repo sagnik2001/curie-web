@@ -1,9 +1,10 @@
 import dynamic from "next/dynamic";
 import styles from "./MidBanner.module.scss"
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { secondaryFont } from "@utilities/font";
 import clsx from "clsx";
 import CompareHighlighter from "@svgs/compare/Highlighter.svg"
+import useOnScreen from "@hooks/useOnScreen";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -38,15 +39,21 @@ const content = [
 const MidBanner = () => {
 
      const [animationData, setAnimationData] = useState(null);
+      const ref = useRef<HTMLDivElement>(null);
+             const isOnScreen = useOnScreen({
+                  ref,
+                  threshold: 0.15,
+                  dontUpdateAfterIntersection: false,
+                });
         useEffect(() => {
           fetch("/ta_da.json")
             .then((response) => response.json())
             .then((data) => setAnimationData(data));
         }, []);
     return(
-       <div className={styles.container}>
+       <div ref={ref} className={styles.container}>
           <div className={styles.animation}>
-                   <Lottie loop autoPlay animationData={animationData} />
+                   {isOnScreen && <Lottie loop autoPlay animationData={animationData} />}
                    </div>
                    <div className={clsx(styles.content,secondaryFont.className)}>
                       <div className={styles.heading}>

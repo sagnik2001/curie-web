@@ -2,11 +2,19 @@ import RivePage from "@molecules/RivFiles";
 import styles from "./Banner.module.scss"
 import { secondaryFont } from "@utilities/font";
 import clsx from "clsx";
+import useOnScreen from "@hooks/useOnScreen";
+import { useRef } from "react";
 
 const BannerComp = () => {
+     const ref = useRef<HTMLDivElement>(null);
+        const isOnScreen = useOnScreen({
+             ref,
+             threshold: 0.15,
+             dontUpdateAfterIntersection: false,
+           });
     return (
-      <div className={styles.container}>
-       <RivePage file="/how.riv" customStyles={{ width: '110px', height: '79px' }}/>
+      <div ref={ref} className={styles.container}>
+       {isOnScreen && <RivePage file="/how.riv" customStyles={{ width: '110px', height: '79px' }}/>}
        <div className={clsx(styles.content,secondaryFont.className)}>
             <div className={styles.heading}>
                 <span>Your bank balance</span>

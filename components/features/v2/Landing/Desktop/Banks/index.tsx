@@ -73,7 +73,7 @@ const Banks = () => {
      <img src="/desktop/banks_bg.png" alt="" className={styles.bg} />
       
         <div className={styles.animatingHeading}>
-          {lottieData.secured && <Lottie autoPlay animationData={lottieData.secured} />}
+          {isOnScreen && lottieData.secured && <Lottie autoPlay animationData={lottieData.secured} />}
         </div>
         <div>
           <div className={clsx(styles.newContent, secondaryFont.className)}>
