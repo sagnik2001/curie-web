@@ -23,8 +23,7 @@ export default function FooterV2({
         {!landingPage && <div className={styles.band}></div>}
         <div className={styles.join}>
           <h4 className={styles.joinText}>
-          <span>Join our</span>
-          <span>beta program</span>
+          <span>Download our app!</span>
           </h4>
           <p className={styles.paraText}>
             <span>We are shaping the future of banking</span>

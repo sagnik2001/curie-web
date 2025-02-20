@@ -12,11 +12,13 @@ import FooterV2 from "@molecules/FooterV2";
 import CompareComp from "./Compare";
 import BannerComp from "./Banner";
 import MidBanner from "./MidBanner";
+import BenefitsComp from "./Benefits";
 
 export default function DesktopLanding() {
   return (
     <div className={styles.container}>
       <Hero />
+      <BenefitsComp/>
       <BannerComp/>
       <MidBanner/>
       <Banks/>

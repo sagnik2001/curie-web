@@ -12,6 +12,7 @@ import IntroductionBanner from "./Hero/IntroductionBand";
 import Banks from "./Banks";
 import FAQComp from "./Faqs";
 import FooterV2 from "@molecules/FooterV2";
+import BenefitsComp from "./Desktop/Benefits";
 
 type ScreenSize = "unknown" | "mobile" | "not-mobile";
 
@@ -33,13 +34,8 @@ export default function LandingV2() {
     <div className={styles.container}>
       <div style={{ overflow: "hidden" }}>
         <Hero />
-        <IntroductionBanner/>
-        {/* <Features /> */}
-        {/* <Explain />
-        <Welcome /> */}
-        <Banks/>
+        <BenefitsComp/>
         <FAQComp/>
-        <Marquee isMobile={screenSize}/>
         <FooterV2 landingPage />
         <DownloadMobile />
       </div>

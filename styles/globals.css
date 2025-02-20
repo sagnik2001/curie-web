@@ -38,3 +38,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #aaa;
 }
+
+.szh-accordion__item{
+  transition: height 0.25s cubic-bezier(0, 0, 0, 1) !important;
+}

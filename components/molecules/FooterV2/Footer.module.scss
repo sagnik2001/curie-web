@@ -2,6 +2,7 @@
 
 .footer {
   padding-bottom: 20px;
+  background-color: #FFF7DF;
   @media #{$not-touch} {
     display: none;
   }
@@ -20,7 +21,7 @@
     content: "";
     top: 24px;
     left: 0;
-    width: calc(100% - 224px);
+    width: calc(100% - 364px);
     background: #252529;
     height: 4px;
     position: absolute;

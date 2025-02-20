@@ -1,3 +1,4 @@
+@import '@styles/vars.scss';
 .container {
   position: relative;
   // display: flex;
@@ -413,9 +414,9 @@
   max-width: 1700px;
   z-index: 99;
   height: 64px;
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0.5) 3.72%,
-      rgba(0, 0, 0, 0) 94.33%);
+  // background: linear-gradient(180deg,
+  //     rgba(0, 0, 0, 0.5) 3.72%,
+  //     rgba(0, 0, 0, 0) 94.33%);
 
   @media screen and (min-width: 1700px) {
     margin-left: calc((100% - 1700px) / 2);
@@ -458,7 +459,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   position: relative;
 }
 
@@ -468,10 +468,34 @@
   // max-width: 1600px;
   // max-height: 958px;
   object-fit: cover; /* Change to 'cover' if you want it to fill completely */
+  outline: none;
+  border: none;
+  display: block;
 }
 
 .leftCloudStyles1{
   position: absolute;
-  top:-15%;
+  top:-30%;
   left: -20%;
+  @media #{$xs-xl} {
+    left: -30%;
+  }
 }
+
+.rightCloudStyles1{
+  position: absolute;
+  top:-18%;
+  right: -20%;
+  @media #{$xs-xl} {
+    right: -30%;
+  }
+}
+
+.cloud1,.cloud2{
+  @media #{$xs-lg} {
+    width: 500px;
+    height: 400px;
+    
+  }
+}
+

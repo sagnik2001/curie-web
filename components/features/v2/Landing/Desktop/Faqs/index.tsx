@@ -7,6 +7,7 @@ import { figtree, secondaryFont } from '@utilities/font';
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import useOnScreen from '@hooks/useOnScreen';
+import RivePage from '@molecules/RivFiles';
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -49,7 +50,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={styles.accordionItemHeader}>
                             What is Curie Save?
-                            {!state?.isEnter ? <CloseIcon /> : <OpenIcon />}
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -63,7 +64,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={styles.accordionItemHeader}>
                             Is my money kept in the Yes Bank account or invested in a Mutual Fund plan?
-                            {!state?.isEnter ? <CloseIcon /> : <OpenIcon />}
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -77,7 +78,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={styles.accordionItemHeader}>
                             What are the risks associated with liquid mutual funds?
-                            {!state?.isEnter ? <CloseIcon /> : <OpenIcon />}
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -91,7 +92,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={styles.accordionItemHeader}>
                             How do the returns of Curie compare to a traditional bank account?
-                            {!state?.isEnter ? <CloseIcon /> : <OpenIcon />}
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} playOnClick />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -104,7 +105,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={styles.accordionItemHeader}>
                             How can I use my money added to Curie Save?
-                            {!state?.isEnter ? <CloseIcon /> : <OpenIcon />}
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -116,7 +117,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={styles.accordionItemHeader}>
                             What are the various charges of investing in the mutual fund?
-                            {!state?.isEnter ? <CloseIcon /> : <OpenIcon />}
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>

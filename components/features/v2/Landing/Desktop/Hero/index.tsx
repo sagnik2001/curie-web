@@ -120,12 +120,12 @@ export default function Hero() {
           </div>
           <div className={styles.videoContainer}>
               <div className={styles.leftCloudStyles1}>
-              <Cloud1/>
+              <Cloud1 className={styles.cloud1}/>
               </div>
-              {/* <div>
-                <Cloud2/>
-              </div> */}
-            <video muted autoPlay loop playsInline className={styles.video}>
+              <div className={styles.rightCloudStyles1}>
+                <Cloud2 className={styles.cloud2}/>
+              </div>
+            <video muted autoPlay loop  className={styles.video}>
               <source src="/desktop/hero_bg.mp4" type="video/mp4" />
               <source src="/desktop/hero_bg.webm" type="video/webm" />
             </video>
