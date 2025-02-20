@@ -83,10 +83,10 @@ top: 10%;
     width: 1160px;
 height: 994px;
 position: absolute;
-bottom: 60%;
+bottom: 58%;
     left: 50%;
     transform: translateX(-50%);
     @media #{$xs-xl} {
-        bottom: 60%;
+        bottom: 55%;
     }
 }

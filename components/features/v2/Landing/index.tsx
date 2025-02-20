@@ -12,7 +12,10 @@ import IntroductionBanner from "./Hero/IntroductionBand";
 import Banks from "./Banks";
 import FAQComp from "./Faqs";
 import FooterV2 from "@molecules/FooterV2";
-import BenefitsComp from "./Desktop/Benefits";
+import BenefitsComp from "./Benefits";
+import BannerComp from "./Banner";
+import MidBanner from "./MidBanner";
+import CompareComp from "./Compare";
 
 type ScreenSize = "unknown" | "mobile" | "not-mobile";
 
@@ -35,7 +38,11 @@ export default function LandingV2() {
       <div style={{ overflow: "hidden" }}>
         <Hero />
         <BenefitsComp/>
+        <BannerComp/>
+        <MidBanner/>
+        <Banks/>
         <FAQComp/>
+        <CompareComp/>
         <FooterV2 landingPage />
         <DownloadMobile />
       </div>

@@ -19,7 +19,7 @@ const BenefitsComp = () => {
     const isOnScreen = useOnScreen({
         ref,
         threshold: 0.15,
-        dontUpdateAfterIntersection: false,
+        dontUpdateAfterIntersection: true,
     });
 
     useEffect(() => {
@@ -54,7 +54,7 @@ const BenefitsComp = () => {
             gsap.fromTo(
                 ".progress-container",
                 { width: "0%" }, // Starts from zero width
-                { width: "720px", duration: 1.5, ease: "power2.out" , onUpdate: () => {
+                { width: "281px", duration: 1.5, ease: "power2.out" , onUpdate: () => {
                     gsap.set(".inflation", { clearProps: "all" }); // Keeps inflation unaffected
                 }}
             );
@@ -66,7 +66,7 @@ const BenefitsComp = () => {
             gsap.fromTo(
                 ".progress-img-container",
                 { width: "0%" }, // Starts from zero width
-                { width: "720px", duration: 1.5, ease: "power2.out" }
+                { width: "281px", duration: 1.5, ease: "power2.out" }
             );
         }
     }, [isOnScreen]);
@@ -76,7 +76,7 @@ const BenefitsComp = () => {
             gsap.fromTo(
                 ".progress-container-2",
                 { width: "0%" }, // Starts from zero width
-                { width: "250px", duration: 1.5, ease: "power2.out"}
+                { width: "102px", duration: 1.5, ease: "power2.out"}
             );
         }
     }, [isOnScreen]);
@@ -86,7 +86,7 @@ const BenefitsComp = () => {
             gsap.fromTo(
                 ".progress-img-container-2",
                 { width: "0%" }, // Starts from zero width
-                { width: "250px", duration: 1.5, ease: "power2.out" }
+                { width: "102px", duration: 1.5, ease: "power2.out" }
             );
         }
     }, [isOnScreen]);
@@ -94,23 +94,7 @@ const BenefitsComp = () => {
     return (
         <div ref={ref} className={styles.container}>
             <div className={styles.hideBorder} />
-            <Ornament2
-          className={clsx(
-            styles.ornament2,
-            loadAnimation && styles.float,
-            loadAnimation && styles.animateOrnament2
-          )}
-          id="hero-desktop-ornament2"
-        />
-
-        <Ornament5
-          className={clsx(
-            styles.ornament5,
-            loadAnimation && styles.float,
-            loadAnimation && styles.animateOrnament5
-          )}
-          id="hero-desktop-ornament5"
-        />
+            
             <div className={styles.mainContent}>
                 <div className={styles.animation}>
                     {isOnScreen && <Lottie animationData={animationData} />}

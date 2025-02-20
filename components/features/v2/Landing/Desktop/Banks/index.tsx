@@ -68,6 +68,8 @@ const Banks = () => {
       loadLotties();
     }, []);
 
+    console.log(animate,'anim')
+
     return (
       <div ref={ref} className={styles.container}>
      <img src="/desktop/banks_bg.png" alt="" className={styles.bg} />
@@ -87,7 +89,7 @@ const Banks = () => {
         <div>
           <div className={styles.bankContainer}>
             {lottieData.icici && (
-              <div className={clsx(styles.ornament2, animate && styles.animate)}>
+              <div className={clsx(styles.ornament2, animate && styles.animateOrnament2)}>
                 <Lottie animationData={lottieData.icici} />
               </div>
             )}

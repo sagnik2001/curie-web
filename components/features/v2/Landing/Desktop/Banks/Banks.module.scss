@@ -38,6 +38,36 @@
     width: 180px;
 height: 185px;
     position: absolute;
+   bottom: 58%;
+   left: 132px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+        left: 10%;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+      bottom: 55%;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 180px;
+      height: 185px;
+      bottom: 60%;
+      left: 52px;
+    }
+    @media screen and (max-width: 900px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .animateOrnament1 {
+    width: 180px;
+height: 185px;
+    position: absolute;
    bottom: 55%;
    left: 132px;
     z-index: 1;
@@ -64,7 +94,41 @@ height: 185px;
     }
   }
 
-  .ornament2 {
+ 
+
+  .ornament2{
+    width: 180px;
+    height: 185px;
+    position: absolute;
+   bottom: 40%;
+   transform: translateY(50%);
+   left: 332px;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+        left: 16%;
+        bottom: 48%;
+      z-index: 1;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 180px;
+      height: 185px;
+      bottom: 50%;
+      left: 130px;
+    }
+    @media screen and (max-width: 900px) {
+      width: 120px;
+      height: 120px;
+      left: 102px;
+    }
+  }
+
+  .animateOrnament2 {
     width: 180px;
     height: 185px;
     position: absolute;

@@ -1,0 +1,76 @@
+@import "@styles/vars.scss";
+.container{
+     min-height: 560px;
+        max-height: 632px;
+background: #18181A;
+padding: 64px 24px 0px; 
+display: flex;
+align-items: center;
+flex-direction: column;
+overflow: hidden;
+}
+
+.heading{
+    color: var(--shadow-00, #FFF);
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8px;
+display: flex;
+flex-direction: column;
+margin-bottom: 8px;
+
+}
+
+.subContent{
+    color: var(--neutral-200, #DFDFE0);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+   margin-top: 80px;
+   position: relative;
+   z-index: 20;
+}
+
+.img1{
+    width: 154.325px;
+    height: 315.428px;
+    position: relative;
+    z-index: 10;
+   
+}
+.img2{
+    width: 115.32px;
+    height: 284.548px;
+position: relative;
+left: 10%;
+top: 10%;
+
+}
+.img3{
+    width: 115.32px;
+    height: 284.548px;
+    position: relative;
+right: 10%;
+top: 10%;
+
+}
+
+.img4{
+    width: 397.419px;
+    height: 340.547px;
+position: absolute;
+bottom: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}

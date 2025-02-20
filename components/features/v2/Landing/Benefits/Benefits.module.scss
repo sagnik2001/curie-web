@@ -1,36 +1,30 @@
 @import "@styles/vars.scss";
 
 .animation {
-    width: 180px;
-    height: 79px;
+    width: 83px;
+    height: 40px;
 }
 
 .mainContent{
-    padding: 0px 108px;
-    @media #{$xs-xl} {
-        padding: 0px 24px 80px;
-      }
+    padding: 0px 24px;
 }
 
 
 .container{
     background-color: #6C63FF;
     height: 100%;
-    padding: 56px 0px 205px;
+    padding: 56px 0px 83px;
     display: block;
     position: relative;
-    @media #{$xs-xl} {
-        padding: 0px 0px 80px;
-      }
 }
 
 .heading{
     color: var(--card-surface, #F8F7FE);
-font-size: 96px;
+font-size: 40px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-letter-spacing: -1.92px;
+letter-spacing: -0.8px;
 display: flex;
 flex-direction: column;
 margin-bottom: 21px;
@@ -40,11 +34,11 @@ z-index: 2;
 
 .subContent{
     color: var(--shadow-00, #FFF);
-font-size: 40px;
+font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-margin-bottom: 43px;
+margin-bottom: 21px;
 position: relative;
 z-index: 2;
 }
@@ -58,19 +52,19 @@ z-index: 2;
 }
 
 .progress_image{
-    width: 790px;
-    height: 88px;
+    width: 281px;
+    height: 46px;
 }
 
 .number{
     color: #000;
-font-size: 40px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 position: absolute;
-top: 10px;
-right: 30px;
+top: 15%;
+right: 10px;
 }
 
 .progress_bar_container{
@@ -78,25 +72,25 @@ right: 30px;
 }
 
 .inflation_img{
-    width: 128px;
-height: 285px;
+    width: 64px;
+height: 142px;
 }
 
 .inflation{
     position: absolute;
     top: 0px;
-    right: 40px;
+    right: 20px;
 }
 
 .banner_2{
-    margin-top: 45px;
+    margin-top: 21px;
     display: flex;
     align-items: flex-start;
 }
 
 .progress_image{
     width: 250px;
-height: 88px;
+height: 46px;
 }
 
 .progress_bar_container_2{
@@ -109,8 +103,8 @@ height: 88px;
 border: 3px dashed #4C43FF;
 opacity: 0.3;
 background: #726AFF;
-width: 470px;
-height: 72px;
+width: 178px;
+height: 36px;
 flex-shrink: 0;
 }
 

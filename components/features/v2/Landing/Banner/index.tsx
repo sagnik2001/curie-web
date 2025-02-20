@@ -19,14 +19,14 @@ const BannerComp = () => {
            
                    // Animate img1 first (moves up from translateY)
                    tl.fromTo(
-                       ".Banner_img1__zFmiA",
+                       ".Banner_img1__wRtU7",
                        { y: "100%" }, // Starts 100% below
                        { y: "0%", duration: 1.5, ease: "power2.out" }
                    );
            
                    // Animate img2 & img3 together with a slight delay
                    tl.fromTo(
-                       [".Banner_img2__3aYBB", ".Banner_img3__nYF47"],
+                       [".Banner_img2__CM2uG", ".Banner_img3__fuVzX"],
                        { y: "100%" }, // Starts 100% below
                        { y: "0%", duration: 1.5, ease: "power2.out", stagger: 0.2 }
                    );
@@ -35,7 +35,7 @@ const BannerComp = () => {
            
     return (
       <div ref={ref} className={styles.container}>
-       {isOnScreen && <RivePage file="/how.riv" customStyles={{ width: '110px', height: '79px' }}/>}
+       {isOnScreen && <RivePage file="/how.riv" customStyles={{ width: '55px', height: '40px' }}/>}
        <div className={clsx(styles.content,secondaryFont.className)}>
             <div className={styles.heading}>
                 <span>Your bank balance</span>

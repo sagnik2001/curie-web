@@ -125,7 +125,7 @@ export default function Hero() {
               <div className={styles.rightCloudStyles1}>
                 <Cloud2 className={styles.cloud2}/>
               </div>
-            <video muted autoPlay loop  className={styles.video}>
+            <video muted autoPlay loop  playsInline className={styles.video}>
               <source src="/desktop/hero_bg.mp4" type="video/mp4" />
               <source src="/desktop/hero_bg.webm" type="video/webm" />
             </video>
