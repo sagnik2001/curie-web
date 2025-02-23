@@ -9,6 +9,10 @@
 .newLogo{
   width: 149.2px;
 height: 46px;
+@media #{$xsmall}  {
+  width: 88px;
+  height: 28px;
+}
 }
 
 .container {
