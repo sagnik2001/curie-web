@@ -48,7 +48,7 @@ const FAQComp = () => {
             className={styles.accordianHeader}
            >
                     <AccordionItem header={({ state }) => (
-                        <div className={styles.accordionItemHeader}>
+                        <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What is Curie Save?
                             <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
@@ -56,13 +56,13 @@ const FAQComp = () => {
                         className: ({ isEnter }) =>
                             `${styles.itemBtn} ${isEnter && styles.itemBtnExpanded}`,
                     }} className={styles.accordianItem}  initialEntered>
-                         <div className={styles.accordionContent}>
+                         <div className={clsx(styles.accordionContent,secondaryFont.className)}>
                         Curie Save combines the best of banking with the power of mutual funds. Unlike traditional bank accounts, where your money mostly sits idle, Curie Save allows you to grow your savings by investing them in mutual funds. You can still access and spend your money directly with UPI, anytime, anywhere.
                         </div>
                     </AccordionItem>
 
                     <AccordionItem header={({ state }) => (
-                        <div className={styles.accordionItemHeader}>
+                        <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             Is my money kept in the Yes Bank account or invested in a Mutual Fund plan?
                             <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
@@ -70,13 +70,13 @@ const FAQComp = () => {
                         className: ({ isEnter }) =>
                             `${styles.itemBtn} ${isEnter && styles.itemBtnExpanded}`,
                     }} className={styles.accordianItem}  >
-                         <div className={styles.accordionContent}>
+                         <div className={clsx(styles.accordionContent,secondaryFont.className)}>
                         All the money you add to Curie Save is invested in SEBI-compliant mutual fund plans through our registered ARN. However, any refunds, cashback amounts, or funds moved to your Spending account will remain in your Yes Bank account.
                         </div>
                     </AccordionItem>
 
                     <AccordionItem header={({ state }) => (
-                        <div className={styles.accordionItemHeader}>
+                        <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What are the risks associated with liquid mutual funds?
                             <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
@@ -84,13 +84,13 @@ const FAQComp = () => {
                         className: ({ isEnter }) =>
                             `${styles.itemBtn} ${isEnter && styles.itemBtnExpanded}`,
                     }} className={styles.accordianItem}  >
-                        <div className={styles.accordionContent}>
+                        <div className={clsx(styles.accordionContent,secondaryFont.className)}>
                         Liquid mutual funds are generally considered low-risk funds, as they invest in short-term, high-quality assets like government securities and high-rated corporate bonds. However, like any investment, they're not entirely risk-free. The main risks include slight changes in returns due to market fluctuations. That said, liquid funds are designed to offer stability and quick access to your money.
                        </div>
                     </AccordionItem>
 
                     <AccordionItem header={({ state }) => (
-                        <div className={styles.accordionItemHeader}>
+                        <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             How do the returns of Curie compare to a traditional bank account?
                             <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} playOnClick />
                         </div>
@@ -103,7 +103,7 @@ const FAQComp = () => {
                     </AccordionItem>
 
                     <AccordionItem header={({ state }) => (
-                        <div className={styles.accordionItemHeader}>
+                        <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             How can I use my money added to Curie Save?
                             <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>
@@ -115,7 +115,7 @@ const FAQComp = () => {
                     </AccordionItem>
 
                     <AccordionItem header={({ state }) => (
-                        <div className={styles.accordionItemHeader}>
+                        <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What are the various charges of investing in the mutual fund?
                             <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
                         </div>

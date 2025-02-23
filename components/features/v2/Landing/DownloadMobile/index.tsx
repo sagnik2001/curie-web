@@ -24,8 +24,9 @@ export default function DownloadMobile() {
           "_blank"
         )
       }
-    >
-      <Lottie animationData={animationData} autoplay loop />
+    >   <a className={calson.className}>
+    <span>download curie</span>
+  </a>  
     </div>
   );
 }

@@ -82,12 +82,17 @@
 }
 
 .accordianHeader{
-    color: #FFF;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px; /* 142.857% */
-    letter-spacing: 0.2px;
+    // color: #FFF;
+    // font-size: 20px;
+    // font-style: normal;
+    // font-weight: 600;
+    // line-height: 28px; /* 142.857% */
+    // letter-spacing: 0.2px;
+    color: var(--neutral-900, #252529);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
 .accordianItem{
@@ -97,7 +102,7 @@
     font-weight: 400;
     line-height: 26px; /* 141.667% */
     letter-spacing: 0.2px;
-    padding: 32px 28px;
+    padding: 12px 16px;
     border: 2px solid #252529;
     margin-bottom: 40px;
     background-color: #F8F7FE;
@@ -119,12 +124,11 @@
     text-align: left;
     background-color: transparent;
     border: none;
-    color: #252529;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 28px; /* 142.857% */
-letter-spacing: 0.2px;
+    color: var(--neutral-900, #252529);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 
   .itemBtnExpanded{
@@ -156,6 +160,11 @@ margin-bottom: 40px;
     overflow: hidden;
     transition: max-height 0.25s ease-in-out, padding 0.25s ease-out;
     padding: 0;
+    color: var(--neutral-700, #4A4A52);
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
     // display: none; /* Initially hidden */
     opacity: 1;
     transition: opacity 0.3s ease;
