@@ -27,7 +27,7 @@ const CompareComp = () => {
     return (
        <div ref={ref} className={styles.wrapper}>
         <div className={styles.animation}>
-         {isOnScreen && <Lottie animationData={animationData} />}
+         {isOnScreen && <Lottie animationData={animationData} style={{height:'40px',width:'249px',position:'relative',left:'-85%'}} />}
          </div>
          <div className={clsx(styles.textField,secondaryFont.className)}>
            <span>

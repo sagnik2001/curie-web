@@ -108,8 +108,8 @@ text-underline-position: from-font;
 .btn {
   width: 312px;
   height: 44px;
-  left: 50%;
-  transform: translateX(-50%);
+  // left: 50%;
+  // transform: translateX(-50%);
   position: relative;
   transition: all 0.3s ease-in;
   cursor: pointer;

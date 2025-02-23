@@ -105,7 +105,7 @@ export default function Hero() {
       <div className={styles.container}>
      
         <div className={clsx(styles.content,secondaryFont.className)}>
-          <RivePage file="/India_only.riv" customStyles={{ width: '250px', height: '79px' }} />
+          <RivePage file="/India_only.riv" customStyles={{ width: '125px', height: '40px' }} />
           <div className={styles.heading} ref={textRef}>
             <span>
             UPI app that
