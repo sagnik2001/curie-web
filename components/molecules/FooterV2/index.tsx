@@ -20,7 +20,6 @@ export default function FooterV2({
     <>
       <DesktopFooter landingPage={landingPage} />
       <div className={clsx(styles.footer, secondaryFont.className)}>
-        {!landingPage && <div className={styles.band}></div>}
         <div className={styles.join}>
           <h4 className={styles.joinText}>
           <span>Download our app!</span>

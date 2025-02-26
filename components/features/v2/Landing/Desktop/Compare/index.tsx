@@ -57,8 +57,8 @@ const CompareComp = () => {
                   </span>
                   </div>
                     <div className={styles.btn} onClick={() => console.log("hi")}>
-                              <a className={calson.className}>
-                                <span>compare now</span>
+                              <a className={secondaryFont.className}>
+                                <span>Compare now</span>
                               </a>
                             </div>
                </div>

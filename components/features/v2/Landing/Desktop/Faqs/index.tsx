@@ -50,12 +50,12 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What is Curie Save?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
                             `${styles.itemBtn} ${isEnter && styles.itemBtnExpanded}`,
-                    }} className={styles.accordianItem}  initialEntered>
+                    }} className={styles.accordianItem}>
                          <div className={clsx(styles.accordionContent,secondaryFont.className)}>
                         Curie Save combines the best of banking with the power of mutual funds. Unlike traditional bank accounts, where your money mostly sits idle, Curie Save allows you to grow your savings by investing them in mutual funds. You can still access and spend your money directly with UPI, anytime, anywhere.
                         </div>
@@ -64,7 +64,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             Is my money kept in the Yes Bank account or invested in a Mutual Fund plan?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -78,7 +78,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What are the risks associated with liquid mutual funds?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -92,7 +92,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             How do the returns of Curie compare to a traditional bank account?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} playOnClick />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} playOnClick />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -105,7 +105,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             How can I use my money added to Curie Save?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -117,7 +117,7 @@ const FAQComp = () => {
                     <AccordionItem header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What are the various charges of investing in the mutual fund?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px',objectFit:'contain'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>

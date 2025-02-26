@@ -1,12 +1,14 @@
-import StickiedNavbar from "@molecules/StickiedNavbar";
 import * as styles from "./Privacy.module.scss";
-import Footer from "@molecules/Footer";
+import FooterV2 from "@molecules/FooterV2";
+import Navbar from "@molecules/Navbar";
+import { secondaryFont } from "@utilities/font";
+import clsx from "clsx";
 
 export default function Privacy() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+ <div className={styles.page}>
+      <Navbar className={styles.nav} />
+      <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>Privacy Policy</h1>
         <p className={styles.para}>
           This Privacy Policy applies to the www.curie.money
@@ -259,7 +261,7 @@ export default function Privacy() {
           India.
         </p>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

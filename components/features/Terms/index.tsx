@@ -1,11 +1,11 @@
-import StickiedNavbar from "@molecules/StickiedNavbar";
+import Navbar from "@molecules/Navbar";
 import * as styles from "./Terms.module.scss";
-import Footer from "@molecules/Footer";
+import FooterV2 from "@molecules/FooterV2";
 
 export default function Privacy() {
   return (
-    <>
-      <StickiedNavbar />
+    <div className={styles.page}>
+      <Navbar className={styles.nav} />
       <div className={styles.container}>
         <h1 className={styles.title}>Terms of Service Agreement</h1>
         <p className={styles.para}>
@@ -429,7 +429,7 @@ export default function Privacy() {
         (d) No such suspension of a Participant shall affect any of its accrued 
         </p>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

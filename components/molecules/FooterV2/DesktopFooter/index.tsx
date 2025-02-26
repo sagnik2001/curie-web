@@ -17,7 +17,6 @@ export default function DesktopFooter({
 }) {
   return (
     <div className={clsx(styles.footer, secondaryFont.className)}>
-      {!landingPage && <div className={styles.band}></div>}
       <div className={styles.container}>
         <div className={styles.join}>
           <div className={styles.msgBox}>

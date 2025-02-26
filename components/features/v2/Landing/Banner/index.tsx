@@ -7,12 +7,13 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const BannerComp = () => {
-     const ref = useRef<HTMLDivElement>(null);
-        const isOnScreen = useOnScreen({
+    const ref = useRef<HTMLDivElement>(null);
+     const isOnScreen = useOnScreen({
              ref,
-             threshold: 0.35,
-             dontUpdateAfterIntersection: true,
+             threshold: 0.15,
+             dontUpdateAfterIntersection: false,
            });
+
            useEffect(() => {
                if (isOnScreen) {
                    const tl = gsap.timeline();

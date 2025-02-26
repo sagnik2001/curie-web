@@ -93,11 +93,10 @@ const Banks = () => {
                 <Lottie animationData={lottieData.icici} />
               </div>
             )}
-            {lottieData.amfi && (
               <div className={clsx(styles.ornament5, animate && styles.animate)}>
                 <Lottie animationData={lottieData.amfi} />
               </div>
-            )}
+            
             {lottieData.npci && (
               <div className={clsx(styles.ornament6, animate && styles.animate)}>
                 <Lottie animationData={lottieData.npci} />

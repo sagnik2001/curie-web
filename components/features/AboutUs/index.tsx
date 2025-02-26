@@ -1,12 +1,15 @@
 import StickiedNavbar from "@molecules/StickiedNavbar";
 import * as styles from "./AboutUs.module.scss";
-import Footer from "@molecules/Footer";
+import FooterV2 from "@molecules/FooterV2";
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import Navbar from "@molecules/Navbar";
 
 export default function AboutUs() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+    <div className={styles.page}>
+      <Navbar className={styles.nav} />
+      <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>About us</h1>
         <p className={styles.para}>
           At Curie Money, we believe that every individual&apos;s financial
@@ -29,7 +32,7 @@ export default function AboutUs() {
           synergy of regulation, innovation, and security, all in one place.
         </p>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }
