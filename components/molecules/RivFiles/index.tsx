@@ -188,6 +188,20 @@ const RivePage: React.FC<RivePageProps> = ({ file, customStyles = {}, playOnClic
     }
   };
 
+  const handleTouchEnd = () => {
+    setIsHovered(false);
+    if (riveRef.current) {
+      console.log("Touch ended");
+      const inputs = riveRef.current.stateMachineInputs("State Machine 1");
+      if (inputs) {
+        const outHoverInput = inputs.find((input) => input.name === "Out-Hover");
+        if (outHoverInput) {
+          outHoverInput.fire();
+        }
+      }
+    }
+  };
+
   return (
     <div
       ref={containerRef}
@@ -196,6 +210,8 @@ const RivePage: React.FC<RivePageProps> = ({ file, customStyles = {}, playOnClic
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onTouchStart={handleClick}
+      onTouchEnd={handleTouchEnd}
+      onTouchMove={handleMouseLeave}
     >
       <canvas ref={canvasRef} style={{ width: "100%", height: "100%" }} />
     </div>
