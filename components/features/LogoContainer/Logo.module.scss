@@ -10,6 +10,15 @@
     @media #{$xsmall}  {
        left: 24px;
       }
+      @media screen and (min-width:1840px) {
+        left: 544px;
+      }
+      @media screen and (min-width:2700px) {
+        left: 644px;
+      }
+      @media screen and (min-width:3000px) {
+        left: 844px;
+      }
 }
 
 .newLogo{
