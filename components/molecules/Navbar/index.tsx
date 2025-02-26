@@ -35,7 +35,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
     <div className={clsx(className,styles.test)}>
       <div className={clsx(styles.container)}>
         <div className={styles.box}>
-          <div
+          {/* <div
             onClick={() => {
               window.location.pathname === "/"
                 ? window.scroll({
@@ -48,7 +48,7 @@ export default function Navbar({ className = "" }: { className?: string }) {
             style={{ cursor: "pointer" }}
           >
             <CurieLogo className={styles.newLogo} />
-          </div>
+          </div> */}
           <div className={styles.btn} onClick={() => setShowPopup(true)}>
             <a className={calson.className}>
               <span>download curie app</span>

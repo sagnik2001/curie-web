@@ -4,6 +4,7 @@ import clsx from "clsx";
 import useOnScreen from "@hooks/useOnScreen";
 import { secondaryFont } from "@utilities/font";
 import dynamic from "next/dynamic";
+import CustomRivPage from "./CustomRivComp";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -88,35 +89,26 @@ const Banks = () => {
         </div>
         <div>
           <div className={styles.bankContainer}>
-            {lottieData.icici && (
               <div className={clsx(styles.ornament2, animate && styles.animateOrnament2)}>
-                <Lottie animationData={lottieData.icici} />
+              <CustomRivPage file="/lottiebanks/icici.riv" customStyles={{ width: '180px', height: '185px' }}/>
               </div>
-            )}
-              <div className={clsx(styles.ornament5, animate && styles.animate)}>
-                <Lottie animationData={lottieData.amfi} />
+              <div className={clsx(styles.ornament5, animate && styles.animateOrnament5)}>
+              <CustomRivPage file="/lottiebanks/amfi.riv" customStyles={{ width: '180px', height: '185px' }}/>
               </div>
             
-            {lottieData.npci && (
-              <div className={clsx(styles.ornament6, animate && styles.animate)}>
-                <Lottie animationData={lottieData.npci} />
+              <div className={clsx(styles.ornament6, animate && styles.animateOrnament6)}>
+              <CustomRivPage file="/lottiebanks/npci.riv" customStyles={{ width: '180px', height: '185px' }}/>
               </div>
-            )}
-            {lottieData.pci && (
-              <div className={clsx(styles.ornament4, animate && styles.animate)}>
-                <Lottie animationData={lottieData.pci} />
+              <div className={clsx(styles.ornament4, animate && styles.animateOrnament4)}>
+              <CustomRivPage file="/lottiebanks/pcidss.riv" customStyles={{ width: '180px', height: '185px' }}/>
               </div>
-            )}
-            {lottieData.bajaj && (
-              <div className={clsx(styles.ornament3, animate && styles.animate)}>
-                <Lottie animationData={lottieData.bajaj} />
+              <div className={clsx(styles.ornament3, animate && styles.animateOrnament3)}>
+              <CustomRivPage file="/lottiebanks/bajaj.riv" customStyles={{ width: '180px', height: '185px' }}/>
               </div>
-            )}
-            {lottieData.yesbank && (
-              <div className={clsx(styles.ornament1, animate && styles.animate)}>
-                <Lottie animationData={lottieData.yesbank} />
+              <div className={clsx(styles.ornament1, animate && styles.animateOrnament1)}>
+              <CustomRivPage file="/lottiebanks/yes_bank.riv" customStyles={{ width: '180px', height: '185px',zIndex:15 }}/>
               </div>
-            )}
+          
           </div>
         </div>
       </div>

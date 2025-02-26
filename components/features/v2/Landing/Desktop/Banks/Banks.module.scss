@@ -40,12 +40,12 @@ height: 185px;
     position: absolute;
    bottom: 58%;
    left: 132px;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
         left: 10%;
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;
@@ -161,6 +161,39 @@ height: 185px;
   }
 
   .ornament3 {
+    width: 180px;
+    height: 185px;
+    position: absolute;
+   bottom: 72px;
+   left: 35%;
+    z-index: 1;
+    @media screen and (max-width: 1600px) {
+      width: 180px;
+      height: 185px;
+      z-index: 1;
+      left: 30%;
+      bottom: 15%;
+    }
+    @media screen and (max-width: 1400px) {
+      width: 180px;
+      height: 185px;
+    
+    }
+    @media screen and (max-width: 1200px) {
+      width: 180px;
+      height: 185px;
+      bottom: 28%;
+      left: 30%;
+    }
+    @media screen and (max-width: 900px) {
+      width: 120px;
+      height: 120px;
+      bottom: 30%;
+      left: 30%;
+    }
+  }
+
+  .animateOrnament3 {
     width: 180px;
     height: 185px;
     position: absolute;

@@ -1,3 +1,4 @@
+import LogoContainer from "@features/LogoContainer";
 import * as styles from "./Privacy.module.scss";
 import FooterV2 from "@molecules/FooterV2";
 import Navbar from "@molecules/Navbar";
@@ -7,6 +8,7 @@ import clsx from "clsx";
 export default function Privacy() {
   return (
  <div className={styles.page}>
+  <LogoContainer/>
       <Navbar className={styles.nav} />
       <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>Privacy Policy</h1>

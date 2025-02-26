@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 import * as styles from "./Popup.module.scss";
 import clsx from "clsx";
 import CloseSvg from "@svgs/close.svg";
-import { calson, figtree } from "@utilities/font";
+import { calson, figtree, secondaryFont } from "@utilities/font";
 import WhatsappIcon from "@svgs/whatsappIcon.svg";
 
 function Download({ onClose }: { onClose: () => void }) {
@@ -10,7 +10,7 @@ function Download({ onClose }: { onClose: () => void }) {
     <>
       <div className={styles.bg} />
       <div className={styles.elementBox}>
-        <div className={clsx(styles.modal, figtree.className)}>
+        <div className={clsx(styles.modal, secondaryFont.className)}>
           <div className={styles.close} onClick={onClose}>
             <CloseSvg />
           </div>
@@ -28,7 +28,7 @@ function Download({ onClose }: { onClose: () => void }) {
               Once downloaded get your invite code
             </div>
             <div
-              className={styles.btn}
+              className={clsx(secondaryFont.className,styles.btn)}
               onClick={() =>
                 window.open(
                   "https://chat.whatsapp.com/Lj9reYKGt8079JRTDhmHLi",

@@ -3,17 +3,11 @@
 .test{
   top:0;
   left: 0;
-
+  isolation: isolate;
+  z-index: 9999; 
 }
 
-.newLogo{
-  width: 149.2px;
-height: 46px;
-@media #{$xsmall}  {
-  width: 88px;
-  height: 28px;
-}
-}
+
 
 .container {
   width: 100%;
@@ -30,7 +24,7 @@ height: 46px;
   .box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     // @media screen and (min-width: 1440px) {
     //   margin-left: abs((100vw - 1440px) / 2);
@@ -48,6 +42,7 @@ height: 46px;
   position: relative;
   transition: all 0.3s ease-in;
   cursor: pointer;
+  right: 0;
 
   @media #{$touch} {
     display: none;

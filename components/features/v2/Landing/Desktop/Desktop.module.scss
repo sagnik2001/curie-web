@@ -1,9 +1,13 @@
+
+
 .container {
   position: relative;
   max-width: 1700px;
   width: 100%;
+  isolation: isolate;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   background-color: #FFF7DF;
 }
+

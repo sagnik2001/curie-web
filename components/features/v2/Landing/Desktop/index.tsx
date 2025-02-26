@@ -13,17 +13,20 @@ import CompareComp from "./Compare";
 import BannerComp from "./Banner";
 import MidBanner from "./MidBanner";
 import BenefitsComp from "./Benefits";
+import LogoContainer from "@features/LogoContainer";
 
 export default function DesktopLanding() {
+  
   return (
     <div className={styles.container}>
+      <LogoContainer/>
       <Hero />
       <BenefitsComp/>
       <BannerComp/>
       <MidBanner/>
       <Banks/>
       <FAQComp/>
-      <CompareComp/>
+      {/* <CompareComp/> */}
       {/* <Explain /> */}
       {/* <Welcome /> */}
      <FooterV2 landingPage />

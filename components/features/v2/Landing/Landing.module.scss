@@ -1,4 +1,18 @@
+@import "@styles/vars.scss";
+
+
 .container {
   position: relative;
   background-color: #FFF7DF;
+}
+
+.newLogo{
+  width: 149.2px;
+height: 46px;
+position: relative;
+z-index: 2;
+@media #{$xsmall}  {
+  width: 88px;
+  height: 28px;
+}
 }

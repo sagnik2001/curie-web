@@ -17,6 +17,9 @@ import BannerComp from "./Banner";
 import MidBanner from "./MidBanner";
 import CompareComp from "./Compare";
 
+import LogoContainer from "@features/LogoContainer";
+
+
 type ScreenSize = "unknown" | "mobile" | "not-mobile";
 
 export default function LandingV2() {
@@ -35,6 +38,7 @@ export default function LandingV2() {
 
   return (
     <div className={styles.container}>
+     <LogoContainer/>
       <div style={{ overflow: "hidden" }}>
         <Hero />
         <BenefitsComp/>
@@ -42,7 +46,7 @@ export default function LandingV2() {
         <MidBanner/>
         <Banks/>
         <FAQComp/>
-        <CompareComp/>
+        {/* <CompareComp/> */}
         <FooterV2 landingPage />
         <DownloadMobile />
       </div>

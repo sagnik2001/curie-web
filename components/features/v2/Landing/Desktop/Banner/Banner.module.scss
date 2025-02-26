@@ -39,7 +39,7 @@ line-height: normal;
 .imgContainer{
     display: flex;
     justify-content: center;
-   margin-top: 80px;
+   margin-top: 40px;
    position: relative;
    z-index: 20;
 }
@@ -83,10 +83,10 @@ top: 10%;
     width: 1160px;
 height: 994px;
 position: absolute;
-bottom: 58%;
+bottom: 50%;
     left: 50%;
     transform: translateX(-50%);
     @media #{$xs-xl} {
-        bottom: 55%;
+        bottom: 50%;
     }
 }
