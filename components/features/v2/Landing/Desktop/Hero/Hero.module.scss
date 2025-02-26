@@ -441,6 +441,8 @@
     line-height: normal;
     letter-spacing: -1.92px;
     display: flex;
+    position: relative;
+    z-index: 10;
     flex-direction: column;
   }
 
@@ -451,6 +453,8 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    z-index: 10;
+    position: relative;
   }
   
 }

@@ -40,7 +40,6 @@ const Elements = () => {
                `${styles.itemBtn} ${isEnter && styles.itemBtnExpanded}`,
            }}
            className={styles.accordianItem}
-           initialEntered
          >
            <div className={clsx(styles.accordionContent,secondaryFont.className)}>
              Curie Save combines the best of banking with the power of mutual funds. Unlike traditional bank accounts, where your money mostly sits idle, Curie Save allows you to grow your savings by investing them in mutual funds. You can still access and spend your money directly with UPI, anytime, anywhere.
