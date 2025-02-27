@@ -108,9 +108,10 @@ interface RivePageProps {
   customStyles?: React.CSSProperties;
   playOnClick?: boolean;
   onClick?: () => void;
+  isActive ?: boolean;
 }
 
-const RivePage: React.FC<RivePageProps> = ({ file, customStyles = {}, playOnClick = false, onClick }) => {
+const RivePage: React.FC<RivePageProps> = ({ file, customStyles = {}, playOnClick = false, onClick,isActive }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const riveRef = useRef<Rive | null>(null);
@@ -145,6 +146,23 @@ const RivePage: React.FC<RivePageProps> = ({ file, customStyles = {}, playOnClic
       rive.cleanup();
     };
   }, [file]);
+
+  // useEffect(() => {
+  //   if (!isActive && riveRef.current) {
+  //     const inputs = riveRef.current.stateMachineInputs("State Machine 1");
+  //     if (inputs) {
+  //       for(let i=0;i<inputs.length;i++)
+  //       {
+  //          console.log(inputs[i].name)
+  //       }
+  //       // const resetInput = inputs.find((input) => input.name === "Click-Hover");
+  //       // console.log(resetInput,'jk')
+  //       // if (resetInput) {
+  //       //   resetInput.fire();
+  //       // }
+  //     }
+  //   }
+  // }, [isActive]);
 
   const handleClick = () => {
     if (riveRef.current) {

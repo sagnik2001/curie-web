@@ -1,12 +1,17 @@
-import StickiedNavbar from "@molecules/StickiedNavbar";
-import Footer from "@molecules/Footer";
+
 import * as styles from "./Terms.module.scss";
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import Navbar from "@molecules/Navbar";
+import LogoContainer from "@features/LogoContainer";
+import FooterV2 from "@molecules/FooterV2";
 
 export default function UpiLite() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+    <div className={styles.page}>
+    <LogoContainer/>
+    <Navbar className={styles.nav} />
+    <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>UPI LITE Terms and Conditions</h1>
         <p className={styles.para}>
           These UPI LITE Terms and Conditions ("UPI LITE Terms") apply to and govern the UPI LITE Feature enabled by National Payments Corporation of India ("NPCI", "We", "Us" and "Our") on App. Please read these Terms carefully before accessing or using UPI LITE. These UPI LITE Terms are in addition to and not in derogation of the terms and conditions governing the use of Curie Money App prescribed by NPCI ("Terms And Conditions"). In the event of conflict between the UPI LITE Terms and the Curie Money App terms, the UPI LITE Terms shall have an overriding effect. By requesting to enable, or using, UPI LITE, you acknowledge that you have read, understood and agree to be bound by the UPI LITE Terms.
@@ -46,7 +51,7 @@ export default function UpiLite() {
           The UPI LITE Terms shall be read in conjunction with the Curie Money App terms. The UPI LITE Terms and Curie Money App Terms shall together form the entire agreement between you and NPCI with respect to UPI LITE.
         </p>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

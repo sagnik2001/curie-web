@@ -1,12 +1,17 @@
 import StickiedNavbar from "@molecules/StickiedNavbar";
 import * as styles from "./MutualFundTerms.module.scss";
-import Footer from "@molecules/Footer";
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import Navbar from "@molecules/Navbar";
+import LogoContainer from "@features/LogoContainer";
+import FooterV2 from "@molecules/FooterV2";
 
 export default function MutualFundTerms() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+    <div className={styles.page}>
+    <LogoContainer/>
+    <Navbar className={styles.nav} />
+    <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>Yield Technologies Private Limited</h1>
         <h2 className={styles.header}>TERMS AND CONDITIONS</h2>
         
@@ -163,7 +168,7 @@ export default function MutualFundTerms() {
           Once Yield Technologies Private Limited receives a complaint and a registration number is allotted, you can expect our first response within 24 (twenty four) hours and will endeavour to resolve your complaint within 3 (three) business days of registering the complaint. However, resolution of your complaint maybe delayed due to delays at the AMC's end or other operational and technical reasons. In cases of such delays We will endeavour to inform you of the revised resolution timelines. If your queries pertain directly to your investment such as NAV applied to a subscribed Scheme, delays in processing of redemption or switch requests, the resolution might take longer since Yield Technologies Private Limited is dependent on feedback received from the AMC.
         </p>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

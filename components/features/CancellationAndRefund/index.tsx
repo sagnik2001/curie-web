@@ -1,12 +1,16 @@
-import StickiedNavbar from "@molecules/StickiedNavbar";
 import * as styles from "./CancellationAndRefund.module.scss";
-import Footer from "@molecules/Footer";
+import LogoContainer from "@features/LogoContainer";
+import Navbar from "@molecules/Navbar";
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import FooterV2 from "@molecules/FooterV2";
 
 export default function CancellationAndRefund() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+    <div className={styles.page}>
+    <LogoContainer/>
+    <Navbar className={styles.nav} />
+    <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>Cancellation And Refund Policy</h1>
         <h2 className={styles.header}>EFFECTIVE DATE: 27/12/2023</h2>
         <p className={styles.para}>
@@ -76,7 +80,7 @@ export default function CancellationAndRefund() {
           outlined in this Cancellation and Refund Policy.
         </p>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

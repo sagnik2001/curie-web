@@ -49,13 +49,13 @@ export default function DesktopFooter({
           <Link href="https://twitter.com/CurieMoney" target="_blank">
             <div className={styles.socialBox}>
               <span className={styles.socialLabel}>Twitter</span>
-              <span className={styles.socialValue}>@curie_money</span>
+              <span className={styles.socialValue}>@CurieMoney</span>
             </div>
           </Link>
           <Link href="https://www.instagram.com/curiemoney/" target="_blank">
             <div className={styles.socialBox}>
               <span className={styles.socialLabel}>Instagram</span>
-              <span className={styles.socialValue}>@curie_money</span>
+              <span className={styles.socialValue}>@CurieMoney</span>
             </div>
           </Link>
           <Link href="https://www.facebook.com/curiemoney/" target="_blank">
@@ -99,6 +99,28 @@ export default function DesktopFooter({
             </Link>
             <Link href="/terms" target="_blank" className={styles.link}>
               Terms and Conditions
+            </Link>
+            <Link
+              href="/cancellation-and-refund-policy"
+              target="_blank"
+              className={styles.link}
+            >
+              Refund and Cancellation Policy
+            </Link>
+            <Link href="/contact-us" target="_blank" className={styles.link}>
+              Contact Us
+            </Link>
+            <Link href="/investor-charter" target="_blank" className={styles.link}>
+              Investor Charter
+            </Link>
+            <Link href="/grievance-data" target="_blank" className={styles.link}>
+              Grievance Data
+            </Link>
+            <Link href="/mutual-fund-terms" target="_blank" className={styles.link}>
+              Mutual Fund Terms and conditions
+            </Link>
+            <Link href="/upi-lite-terms" target="_blank" className={styles.link}>
+              UPI Lite Terms and conditions
             </Link>
           </div>
           <div className={styles.footertxt}>

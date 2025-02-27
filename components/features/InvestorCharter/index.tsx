@@ -1,12 +1,16 @@
-import StickiedNavbar from "@molecules/StickiedNavbar";
 import * as styles from "./InvestorCharter.module.scss";
-import Footer from "@molecules/Footer";
+import FooterV2 from "@molecules/FooterV2";
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import Navbar from "@molecules/Navbar";
+import LogoContainer from "@features/LogoContainer";
 
 export default function InvestorCharter() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+    <div className={styles.page}>
+    <LogoContainer/>
+    <Navbar className={styles.nav} />
+    <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>Investor Charter in respect of Investment Adviser (IA)</h1>
 
         <h2 className={styles.header}>A. Vision and Mission Statements for investors</h2>
@@ -79,7 +83,7 @@ export default function InvestorCharter() {
           <li>Do not share login credential and password of your trading and demat accounts with the Investment Adviser.</li>
         </ol>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

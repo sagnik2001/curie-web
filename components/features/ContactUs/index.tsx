@@ -1,12 +1,16 @@
-import StickiedNavbar from "@molecules/StickiedNavbar";
 import * as styles from "./ContactUs.module.scss";
-import Footer from "@molecules/Footer";
+import FooterV2 from "@molecules/FooterV2";
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import Navbar from "@molecules/Navbar";
+import LogoContainer from "@features/LogoContainer";
 
 export default function ContactUs() {
   return (
-    <>
-      <StickiedNavbar />
-      <div className={styles.container}>
+    <div className={styles.page}>
+      <LogoContainer/>
+      <Navbar className={styles.nav} />
+      <div className={clsx(styles.container,secondaryFont.className)}>
         <h1 className={styles.title}>Contact Us</h1>
         <p className={styles.para}>For assistance, please contact us at:</p>
         <ul className={styles.para}>
@@ -22,7 +26,7 @@ export default function ContactUs() {
           </li>
         </ul>
       </div>
-      <Footer />
-    </>
+      <FooterV2 />
+    </div>
   );
 }

@@ -22,6 +22,16 @@ const CloseIcon = () => <span>
 
 const FAQComp = () => {
     const [animationData, setAnimationData] = useState(null);
+    const [activeItem, setActiveItem] = useState<string | null>(null);
+    const handleAccordionToggle = (itemKey : string) => {
+        if (activeItem === itemKey) {
+          // If the same item is clicked again, close it
+          setActiveItem(null);
+        } else {
+          // Open the new item and reset the Rive animations for others
+          setActiveItem(itemKey);
+        }
+      };
      const ref = useRef<HTMLDivElement>(null);
             const isOnScreen = useOnScreen({
                  ref,
@@ -47,10 +57,11 @@ const FAQComp = () => {
             transitionTimeout={300} // Duration for the transition
             className={styles.accordianHeader}
            >
-                    <AccordionItem header={({ state }) => (
+                    <AccordionItem itemKey="item-1" header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             What is Curie Save?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}}  onClick={() => handleAccordionToggle('item-1')}
+                   isActive={activeItem === 'item-1'} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>
@@ -61,10 +72,11 @@ const FAQComp = () => {
                         </div>
                     </AccordionItem>
 
-                    <AccordionItem header={({ state }) => (
+                    <AccordionItem itemKey="item-2" header={({ state }) => (
                         <div className={clsx(styles.accordionItemHeader,secondaryFont.className)}>
                             Is my money kept in the Yes Bank account or invested in a Mutual Fund plan?
-                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} />
+                            <RivePage file='/faq_button.riv' customStyles={{width:'40px',height:'40px'}} onClick={() => handleAccordionToggle('item-2')}
+                   isActive={activeItem === 'item-2'} />
                         </div>
                     )} buttonProps={{
                         className: ({ isEnter }) =>

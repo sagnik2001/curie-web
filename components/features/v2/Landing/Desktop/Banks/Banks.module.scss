@@ -70,12 +70,12 @@ height: 185px;
     position: absolute;
    bottom: 55%;
    left: 132px;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
         left: 10%;
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;
@@ -103,13 +103,13 @@ height: 185px;
    bottom: 40%;
    transform: translateY(50%);
    left: 332px;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
         left: 16%;
         bottom: 48%;
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;
@@ -135,13 +135,13 @@ height: 185px;
    bottom: 40%;
    transform: translateY(50%);
    left: 332px;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
         left: 16%;
         bottom: 42%;
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;
@@ -166,11 +166,11 @@ height: 185px;
     position: absolute;
    bottom: 72px;
    left: 35%;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
-      z-index: 1;
+      z-index: 15;
       left: 30%;
       bottom: 15%;
     }
@@ -199,11 +199,11 @@ height: 185px;
     position: absolute;
    bottom: 72px;
    left: 35%;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
-      z-index: 1;
+      z-index: 15;
       left: 30%;
       bottom: 15%;
     }
@@ -232,13 +232,13 @@ height: 185px;
     position: absolute;
     bottom: 72px;
     right: 27%;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
       right: 30%;
       bottom: 15%;
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;
@@ -266,13 +266,13 @@ height: 185px;
    bottom: 40%;
    transform: translateY(50%);
    right: 302px;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
       right: 16%;
       bottom: 42%;
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;
@@ -299,13 +299,13 @@ height: 185px;
         position: absolute;
        right: 132px;
        bottom: 55%;
-    z-index: 1;
+    z-index: 15;
     @media screen and (max-width: 1600px) {
       width: 180px;
       height: 185px;
         right: 10%;
      
-      z-index: 1;
+      z-index: 15;
     }
     @media screen and (max-width: 1400px) {
       width: 180px;

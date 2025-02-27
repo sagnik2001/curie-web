@@ -52,7 +52,7 @@ export default function FooterV2({
           <span className={styles.socialLabel}>Twitter</span>
           <span className={styles.socialValue}>
             <Link href="https://twitter.com/CurieMoney" target="_blank">
-              @curie_money
+              @CurieMoney
             </Link>
           </span>
         </div>
@@ -60,7 +60,7 @@ export default function FooterV2({
           <span className={styles.socialLabel}>Instagram</span>
           <span className={styles.socialValue}>
             <Link href="https://www.instagram.com/curiemoney/" target="_blank">
-              @curie_money
+              @CurieMoney
             </Link>
           </span>
         </div>

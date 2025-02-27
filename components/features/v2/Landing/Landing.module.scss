@@ -4,15 +4,6 @@
 .container {
   position: relative;
   background-color: #FFF7DF;
+  overflow-x: hidden;
 }
 
-.newLogo{
-  width: 149.2px;
-height: 46px;
-position: relative;
-z-index: 2;
-@media #{$xsmall}  {
-  width: 88px;
-  height: 28px;
-}
-}

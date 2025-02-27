@@ -27,7 +27,7 @@
   width: fit-content;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 700px;
+  max-width: 855px;
   margin-bottom: 76px;
   .link {
     color: #252529;
@@ -156,13 +156,13 @@
 }
 
 .footerTxt{
-  color: #252529;
-text-align: right;
-font-size: 16px;
-font-style: normal;
-font-weight: 600;
-line-height: 22px;
-letter-spacing: 0.15px;
+  color: var(--neutral-900, #252529);
+  text-align: right;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.15px;
 display: flex;
 flex-direction: column;
 }

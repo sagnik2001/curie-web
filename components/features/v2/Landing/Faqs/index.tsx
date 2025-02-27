@@ -4,7 +4,7 @@ import CloseDownIcon from "@svgs/closedState.svg";
 import OpenDownIcon from "@svgs/openState.svg";
 import clsx from "clsx";
 import { figtree, secondaryFont } from '@utilities/font';
-import { useEffect, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import useOnScreen from '@hooks/useOnScreen';
 import RivePage from '@molecules/RivFiles';
@@ -14,8 +14,21 @@ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 const OpenIcon = () => <span><CloseDownIcon /></span>;
 const CloseIcon = () => <span><OpenDownIcon /></span>;
 
-const Elements = () => {
+const Elements = ({ activeItem, setActiveItem } : { activeItem: string|null; setActiveItem: Dispatch<SetStateAction<string | null>>; }) => {
     const {  toggle } = useAccordionState();
+
+    const handleAccordionToggle = (itemKey : string) => {
+      if (activeItem === itemKey) {
+        // If the same item is clicked again, close it
+        setActiveItem(null);
+      } else {
+        // Open the new item and reset the Rive animations for others
+        setActiveItem(itemKey);
+      }
+      toggle(itemKey); // Toggle the accordion item
+    };
+  
+
     return(
         <>
          {/* AccordionItem 1 */}
@@ -30,7 +43,8 @@ const Elements = () => {
                  <RivePage
                    file='/faq_button.riv'
                    customStyles={{ width: '24px', height: '24px', objectFit: 'contain' }}
-                   onClick={() => { toggle('item-1')}}
+                   onClick={() => handleAccordionToggle('item-1')}
+                   isActive={activeItem === 'item-1'}
                  />
                </div>
              </div>
@@ -197,7 +211,7 @@ const FAQComp = () => {
     threshold: 0.15,
     dontUpdateAfterIntersection: false,
   });
-
+  const [activeItem, setActiveItem] = useState<string | null>(null);
 
 
 
@@ -219,7 +233,7 @@ const FAQComp = () => {
       <div className={styles.container}>
         <div className={clsx(styles.header,secondaryFont.className)}>
           <Accordion allowMultiple transition transitionTimeout={300} className={styles.accordianHeader}>
-           <Elements/>
+           <Elements activeItem={activeItem} setActiveItem={setActiveItem}/>
           </Accordion>
         </div>
       </div>

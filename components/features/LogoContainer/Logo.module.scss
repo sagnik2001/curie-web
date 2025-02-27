@@ -11,14 +11,9 @@
        left: 24px;
       }
       @media screen and (min-width:1840px) {
-        left: 544px;
+        left: calc((100% - 1660px)/2);
       }
-      @media screen and (min-width:2700px) {
-        left: 644px;
-      }
-      @media screen and (min-width:3000px) {
-        left: 844px;
-      }
+    
 }
 
 .newLogo{

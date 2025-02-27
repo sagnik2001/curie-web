@@ -12,12 +12,29 @@ import { useEffect, useRef, useState } from "react";
 import usePauseAnimation from "@hooks/usePauseAnimation";
 import Navbar from "@molecules/Navbar";
 import RivePage from "@molecules/RivFiles";
+import useOnScreen from "@hooks/useOnScreen";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
 
 export default function Hero() {
   const [loadAnimation, setLoadAnimation] = useState(false);
   const bgRef = useRef<HTMLSourceElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
   const paraRef = useRef<HTMLParagraphElement>(null);
+   const [animationData, setAnimationData] = useState(null);
+         const ref = useRef<HTMLDivElement>(null);
+      const isOnScreen = useOnScreen({
+           ref,
+           threshold: 0.15,
+           dontUpdateAfterIntersection: false,
+         });
+      useEffect(() => {
+        fetch("/subText.json")
+          .then((response) => response.json())
+          .then((data) => setAnimationData(data));
+      }, []);
   usePauseAnimation(bgRef);
   usePauseAnimation(textRef);
   usePauseAnimation(paraRef);
@@ -102,7 +119,7 @@ export default function Hero() {
           )}
           id="hero-desktop-ornament5"
         />
-      <div className={styles.container}>
+      <div ref={ref} className={styles.container}>
      
         <div className={clsx(styles.content,secondaryFont.className)}>
           <RivePage file="/India_only.riv" customStyles={{ width: '125px', height: '40px' }} />
@@ -115,7 +132,10 @@ export default function Hero() {
             </span>
           </div>
           <div className={styles.paragraph}>
-          Because growth is better than reward
+          Because growth is better than 
+          <div className={styles.animation}>
+                   {isOnScreen && <Lottie animationData={animationData} />}
+                   </div>
           </div>
           <div className={styles.videoContainer}>
               <div className={styles.leftCloudStyles1}>

@@ -69,7 +69,26 @@ const Banks = () => {
       loadLotties();
     }, []);
 
-    console.log(animate,'anim')
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 900);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const customStyles = isSmallScreen
+    ? { width: '120px', height: '120px' }
+    : { width: '180px', height: '185px' };
 
     return (
       <div ref={ref} className={styles.container}>
@@ -90,23 +109,23 @@ const Banks = () => {
         <div>
           <div className={styles.bankContainer}>
               <div className={clsx(styles.ornament2, animate && styles.animateOrnament2)}>
-              <CustomRivPage file="/lottiebanks/icici.riv" customStyles={{ width: '180px', height: '185px' }}/>
+              <CustomRivPage file="/lottiebanks/icici.riv" customStyles={customStyles}/>
               </div>
               <div className={clsx(styles.ornament5, animate && styles.animateOrnament5)}>
-              <CustomRivPage file="/lottiebanks/amfi.riv" customStyles={{ width: '180px', height: '185px' }}/>
+              <CustomRivPage file="/lottiebanks/amfi.riv" customStyles={customStyles}/>
               </div>
             
               <div className={clsx(styles.ornament6, animate && styles.animateOrnament6)}>
-              <CustomRivPage file="/lottiebanks/npci.riv" customStyles={{ width: '180px', height: '185px' }}/>
+              <CustomRivPage file="/lottiebanks/npci.riv" customStyles={customStyles}/>
               </div>
               <div className={clsx(styles.ornament4, animate && styles.animateOrnament4)}>
-              <CustomRivPage file="/lottiebanks/pcidss.riv" customStyles={{ width: '180px', height: '185px' }}/>
+              <CustomRivPage file="/lottiebanks/pcidss.riv" customStyles={customStyles}/>
               </div>
               <div className={clsx(styles.ornament3, animate && styles.animateOrnament3)}>
-              <CustomRivPage file="/lottiebanks/bajaj.riv" customStyles={{ width: '180px', height: '185px' }}/>
+              <CustomRivPage file="/lottiebanks/bajaj.riv" customStyles={customStyles}/>
               </div>
               <div className={clsx(styles.ornament1, animate && styles.animateOrnament1)}>
-              <CustomRivPage file="/lottiebanks/yes_bank.riv" customStyles={{ width: '180px', height: '185px',zIndex:15 }}/>
+              <CustomRivPage file="/lottiebanks/yes_bank.riv" customStyles={customStyles}/>
               </div>
           
           </div>

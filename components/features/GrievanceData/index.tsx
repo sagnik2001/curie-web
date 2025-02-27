@@ -1,14 +1,18 @@
 import React from 'react';
 import * as styles from "./GrievanceData.module.scss";
-import StickiedNavbar from '@molecules/StickiedNavbar';
+import clsx from "clsx";
+import { secondaryFont } from "@utilities/font";
+import Navbar from "@molecules/Navbar";
+import LogoContainer from "@features/LogoContainer";
 
 export default function GrievanceData() { 
     return (
-        <>
-            <StickiedNavbar />
-            <div className={styles.container}>
-                <h1>Grievance Data</h1>
-                <h2>Data for the month ending - <strong>November 2024</strong></h2>
+        <div className={styles.page}>
+        <LogoContainer/>
+        <Navbar className={styles.nav} />
+        <div className={clsx(styles.container,secondaryFont.className)}>
+                <div className={styles.title}>Grievance Data</div>
+                <div className={styles.para}>Data for the month ending - <strong>November 2024</strong></div>
                 <div className={styles.tableContainer}>
                     <table className={styles.dataTable}>
                         <thead>
@@ -170,7 +174,7 @@ export default function GrievanceData() {
 
                 <p>You can submit your grievance/complaints at <a href="mailto:support@curie.money">support@curie.money</a></p>
             </div>
-        </>
+        </div>
     );
 }
 
