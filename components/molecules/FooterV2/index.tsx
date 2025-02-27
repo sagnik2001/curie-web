@@ -107,7 +107,28 @@ export default function FooterV2({
           <Link href="/terms" target="_blank" className={styles.link}>
             Terms and Conditions
           </Link>
-          
+          <Link
+            href="/cancellation-and-refund-policy"
+            target="_blank"
+            className={styles.link}
+          >
+            Refund and Cancellation Policy
+          </Link>
+          <Link href="/contact-us" target="_blank" className={styles.link}>
+            Contact Us
+          </Link>
+          <Link href="/investor-charter" target="_blank" className={styles.link}>
+            Investor Charter
+          </Link>
+          <Link href="/grievance-data" target="_blank" className={styles.link}>
+            Grievance Data
+          </Link>
+          <Link href="/mutual-fund-terms" target="_blank" className={styles.link}>
+            Mutual Fund Terms and conditions
+          </Link>
+          <Link href="/upi-lite-terms" target="_blank" className={styles.link}>
+            UPI Lite Terms and conditions
+          </Link>
                
         </div>
         <div className={styles.footertxt}>
