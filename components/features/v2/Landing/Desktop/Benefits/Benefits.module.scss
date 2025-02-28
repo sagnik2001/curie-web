@@ -117,7 +117,7 @@ flex-shrink: 0;
 .ornament2 {
     top: 30%;
     left: -86px;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
   
     @media screen and (max-width: 1600px) {
@@ -128,24 +128,16 @@ flex-shrink: 0;
       width: 196px;
     }
   
-    &.animateOrnament2 {
-      top: 30%;
-      left: -86px;
-      opacity: 1;
-    }
+
   }
   
   .ornament5 {
     right: 0;
     top: 30%;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
   
     @media screen and (max-width: 1400px) {}
   
-    &.animateOrnament5 {
-      right: 0px;
-      top: 30%;
-      opacity: 1;
-    }
+ 
   }

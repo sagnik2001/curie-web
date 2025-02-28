@@ -229,9 +229,7 @@
 .ornament6,
 .ornament7,
 .ornament8 {
-  position: absolute;
-  transition: all 0.6s cubic-bezier(0, 0, 0.09, 0.99);
-  transition-delay: 0.1s;
+  
 }
 
 .ornament1 {
@@ -257,7 +255,11 @@
 .ornament2 {
   top: -6px;
   left: 46px;
-  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  // transition: all 0.6s cubic-bezier(0, 0, 0.09, 0.99);
+  // transition-delay: 0.1s;
+
 
   @media screen and (max-width: 1600px) {
     width: 196px;
@@ -267,25 +269,18 @@
     width: 196px;
   }
 
-  &.animateOrnament2 {
-    top: -6px;
-    left: 46px;
-    opacity: 1;
-  }
+  
 }
 
 .ornament5 {
-  right: 450px;
-  top: -30px;
-  opacity: 0;
+  right: 0px;
+  top: -10px;
+  position: absolute;
+  z-index: 80;
 
   @media screen and (max-width: 1400px) {}
 
-  &.animateOrnament5 {
-    right: 0px;
-    top: -30px;
-    opacity: 1;
-  }
+ 
 }
 
 .ornament4 {
@@ -457,6 +452,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    top: -50px;
+    left: 35px;
   }
   
 }

@@ -10,10 +10,24 @@ import Ornament2 from "@svgs/desktop-hero/new-ornament-1.svg";
 import Ornament5 from "@svgs/desktop-hero/new-ornament-2.svg";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+
+let ScrollTrigger : any;
 
 const BenefitsComp = () => {
     const [animationData, setAnimationData] = useState(null);
     const [loadAnimation, setLoadAnimation] = useState(false);
+    const [isGsapReady, setIsGsapReady] = useState(false);
+
+
+      useEffect(() => {
+        (async () => {
+          const mod = await import("gsap/ScrollTrigger");
+          ScrollTrigger = mod.ScrollTrigger;
+          gsap.registerPlugin(ScrollTrigger);
+          setIsGsapReady(true);
+        })();
+      }, []);
 
     const ref = useRef<HTMLDivElement>(null);
     const isOnScreen = useOnScreen({
@@ -61,6 +75,33 @@ const BenefitsComp = () => {
         }
     }, [isOnScreen]);
 
+     useGSAP(
+        () => {
+          if (!isGsapReady || !ScrollTrigger) return; // Ensure GSAP is ready
+
+          console.log("I m herre")
+    
+          ScrollTrigger.create({
+            trigger: '.ornament_2',
+            start: 'top top',
+            end: '+=50%',
+            pin: true,
+    
+          });
+    
+          ScrollTrigger.create({
+            trigger: '.ornament_5',
+            start: 'top top',
+            end: '+=50%',
+            pin: true,
+    
+          });
+    
+          // Add other GSAP animations here
+        },
+        { scope: ref, dependencies: [isGsapReady] } // Add isGsapReady as a dependency
+      );
+
     useEffect(() => {
         if (isOnScreen) {
             gsap.fromTo(
@@ -97,8 +138,7 @@ const BenefitsComp = () => {
             <Ornament2
           className={clsx(
             styles.ornament2,
-            loadAnimation && styles.float,
-            loadAnimation && styles.animateOrnament2
+            'ornament_2'
           )}
           id="hero-desktop-ornament2"
         />
@@ -106,8 +146,7 @@ const BenefitsComp = () => {
         <Ornament5
           className={clsx(
             styles.ornament5,
-            loadAnimation && styles.float,
-            loadAnimation && styles.animateOrnament5
+            'ornament_5'
           )}
           id="hero-desktop-ornament5"
         />
