@@ -79,21 +79,24 @@ const BenefitsComp = () => {
         () => {
           if (!isGsapReady || !ScrollTrigger) return; // Ensure GSAP is ready
 
-          console.log("I m herre")
     
           ScrollTrigger.create({
             trigger: '.ornament_2',
             start: 'top top',
-            end: '+=50%',
+            end: '+=300',
             pin: true,
+  pinType: "transform", 
+  scrub: 1,
     
           });
     
           ScrollTrigger.create({
             trigger: '.ornament_5',
             start: 'top top',
-            end: '+=50%',
+            end: '+=300',
             pin: true,
+            pinType: "transform", 
+            scrub: 1,
     
           });
     

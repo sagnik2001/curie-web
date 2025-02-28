@@ -22,14 +22,14 @@ const BannerComp = () => {
                    tl.fromTo(
                        ".Banner_img1__wRtU7",
                        { y: "100%" }, // Starts 100% below
-                       { y: "0%", duration: 1.5, ease: "power2.out" }
+                       { y: "0%", duration: 0.6, ease: "power2.out" }
                    );
            
                    // Animate img2 & img3 together with a slight delay
                    tl.fromTo(
                        [".Banner_img2__CM2uG", ".Banner_img3__fuVzX"],
                        { y: "100%" }, // Starts 100% below
-                       { y: "0%", duration: 1.5, ease: "power2.out", stagger: 0.2 }
+                       { y: "0%", duration: 0.7, ease: "power2.out", stagger: 0.2 }
                    );
                }
            }, [isOnScreen]);

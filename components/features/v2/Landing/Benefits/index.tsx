@@ -101,8 +101,9 @@ const BenefitsComp = () => {
                 </div>
                 <div className={clsx(styles.content, secondaryFont.className)}>
                     <div className={clsx(styles.heading, secondaryFont.className)}>
-                        <span>Up to 3x returns on your</span>
-                        <span>bank account</span>
+                        <span>Up to 3x returns</span>
+                        <span>on your bank</span>
+                        <span>account</span>
                     </div>
                     <div className={styles.subContent}>
                         Savings account fixed! Forever.

@@ -1,6 +1,6 @@
 @import "@styles/vars.scss";
 .container{
-     min-height: 660px;
+     min-height: 360px;
         max-height: 1194px;
         border-radius: 0px 0px 32px 32px;
 background: #18181A;
@@ -21,7 +21,7 @@ line-height: normal;
 letter-spacing: -1.6px;
 display: flex;
 flex-direction: column;
-margin-bottom: 56px;
+margin-bottom: 25px;
 @media #{$xs-lg} {
    font-size: 64px;
 }
@@ -39,7 +39,7 @@ line-height: normal;
 .imgContainer{
     display: flex;
     justify-content: center;
-   margin-top: 40px;
+   margin-top: 10px;
    position: relative;
    z-index: 20;
 }
