@@ -75,35 +75,48 @@ const BenefitsComp = () => {
         }
     }, [isOnScreen]);
 
-     useGSAP(
-        () => {
-          if (!isGsapReady || !ScrollTrigger) return; // Ensure GSAP is ready
-
+  useGSAP(
+      () => {
+        if (!isGsapReady || !ScrollTrigger) return; // Ensure GSAP is ready
+  
+        
+  gsap.fromTo(
+    ".ornament_2",
+    { y: 400 },
+    {
+      y: 0,
+      scrollTrigger: {
+        trigger: ".ornament_2",
+        start: "top bottom",
+        end: "top top",
+        scrub: 1,
+        pinType: "transform",
+        pinSpacing: false,
+  
+      },
+    }
+  );
+  gsap.fromTo(
+    ".ornament_5",
+    { y: 400 },
+    {
+      y: 0,
+      scrollTrigger: {
+        trigger: ".ornament_5",
+        start: "top bottom",
+        end: "top top",
+        scrub: 1,
+        pinType: "transform",
+        pinSpacing: false,
+  
+      },
+    }
+  );
+  
     
-          ScrollTrigger.create({
-            trigger: '.ornament_2',
-            start: 'top top',
-            end: '+=300',
-            pin: true,
-  pinType: "transform", 
-  scrub: 1,
-    
-          });
-    
-          ScrollTrigger.create({
-            trigger: '.ornament_5',
-            start: 'top top',
-            end: '+=300',
-            pin: true,
-            pinType: "transform", 
-            scrub: 1,
-    
-          });
-    
-          // Add other GSAP animations here
-        },
-        { scope: ref, dependencies: [isGsapReady] } // Add isGsapReady as a dependency
-      );
+      },
+      { scope: ref, dependencies: [isGsapReady] } // Add isGsapReady as a dependency
+    );
 
     useEffect(() => {
         if (isOnScreen) {

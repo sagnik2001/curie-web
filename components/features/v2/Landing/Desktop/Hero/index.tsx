@@ -63,23 +63,41 @@ export default function Hero() {
     () => {
       if (!isGsapReady || !ScrollTrigger) return; // Ensure GSAP is ready
 
-      ScrollTrigger.create({
-        trigger: '.ornament_2',
-        start: 'top top',
-        end: '+=500',
-        pin: true,
+      
+gsap.fromTo(
+  ".ornament_2",
+  { y: 400 },
+  {
+    y: 0,
+    scrollTrigger: {
+      trigger: ".ornament_2",
+      start: "top bottom",
+      end: "top top",
+      scrub: 1,
+      pinType: "transform",
+      pinSpacing: false,
 
-      });
+    },
+  }
+);
+gsap.fromTo(
+  ".ornament_5",
+  { y: 400 },
+  {
+    y: 0,
+    scrollTrigger: {
+      trigger: ".ornament_5",
+      start: "top bottom",
+      end: "top top",
+      scrub: 1,
+      pinType: "transform",
+      pinSpacing: false,
 
-      ScrollTrigger.create({
-        trigger: '.ornament_5',
-        start: 'top top',
-        end: '+=500',
-        pin: true,
+    },
+  }
+);
 
-      });
-
-      // Add other GSAP animations here
+  
     },
     { scope: bodyRef, dependencies: [isGsapReady] } // Add isGsapReady as a dependency
   );

@@ -5,6 +5,7 @@ import useOnScreen from "@hooks/useOnScreen";
 import { secondaryFont } from "@utilities/font";
 import dynamic from "next/dynamic";
 import CustomRivPage from "./CustomRivComp";
+import gsap from "gsap";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
@@ -90,6 +91,10 @@ const Banks = () => {
     ? { width: '120px', height: '120px' }
     : { width: '180px', height: '185px' };
 
+
+  
+
+    
     return (
       <div ref={ref} className={styles.container}>
      <img src="/desktop/banks_bg.png" alt="" className={styles.bg} />
@@ -108,23 +113,23 @@ const Banks = () => {
         </div>
         <div>
           <div className={styles.bankContainer}>
-              <div className={clsx(styles.ornament2, animate && styles.animateOrnament2)}>
+              <div className={clsx(styles.ornament2,'ornament2', animate && styles.animateOrnament2)}>
               <CustomRivPage file="/lottiebanks/icici.riv" customStyles={customStyles}/>
               </div>
-              <div className={clsx(styles.ornament5, animate && styles.animateOrnament5)}>
+              <div className={clsx(styles.ornament5,'ornament5', animate && styles.animateOrnament5)}>
               <CustomRivPage file="/lottiebanks/amfi.riv" customStyles={customStyles}/>
               </div>
             
-              <div className={clsx(styles.ornament6, animate && styles.animateOrnament6)}>
+              <div className={clsx(styles.ornament6,'ornament6', animate && styles.animateOrnament6)}>
               <CustomRivPage file="/lottiebanks/npci.riv" customStyles={customStyles}/>
               </div>
-              <div className={clsx(styles.ornament4, animate && styles.animateOrnament4)}>
+              <div className={clsx(styles.ornament4,'ornament4', animate && styles.animateOrnament4)}>
               <CustomRivPage file="/lottiebanks/pcidss.riv" customStyles={customStyles}/>
               </div>
-              <div className={clsx(styles.ornament3, animate && styles.animateOrnament3)}>
+              <div className={clsx(styles.ornament3,'ornament3', animate && styles.animateOrnament3)}>
               <CustomRivPage file="/lottiebanks/bajaj.riv" customStyles={customStyles}/>
               </div>
-              <div className={clsx(styles.ornament1, animate && styles.animateOrnament1)}>
+              <div className={clsx(styles.ornament1,'ornament1', animate && styles.animateOrnament1)}>
               <CustomRivPage file="/lottiebanks/yes_bank.riv" customStyles={customStyles}/>
               </div>
           
