@@ -91,9 +91,26 @@ const Banks = () => {
     ? { width: '120px', height: '120px' }
     : { width: '180px', height: '185px' };
 
+   
 
   
-
+    useEffect(() => {
+      if (isOnScreen) {
+        gsap.set(".bankContainer", {
+          transformOrigin: "50% 0",
+        });
+        gsap.fromTo(
+          ".bankContainer",
+          { rotation: -60 },
+          {
+            rotation: 0,
+            duration: 1.5,         // lengthen duration for a gentler motion
+            ease: "power4.out",    // or "expo.out" / "power2.inOut" for a smoother ease
+          }
+        );
+      }
+    }, [isOnScreen]);
+    
     
     return (
       <div ref={ref} className={styles.container}>
@@ -111,8 +128,8 @@ const Banks = () => {
             with our partner Banks and AMCs
           </div>
         </div>
-        <div>
-          <div className={styles.bankContainer}>
+        <div className={styles.pendulumWrapper}>
+          <div className={clsx(styles.bankContainer,'bankContainer')}>
               <div className={clsx(styles.ornament2,'ornament2', animate && styles.animateOrnament2)}>
               <CustomRivPage file="/lottiebanks/icici.riv" customStyles={customStyles}/>
               </div>
@@ -132,8 +149,7 @@ const Banks = () => {
               <div className={clsx(styles.ornament1,'ornament1', animate && styles.animateOrnament1)}>
               <CustomRivPage file="/lottiebanks/yes_bank.riv" customStyles={customStyles}/>
               </div>
-          
-          </div>
+              </div>
         </div>
       </div>
     );

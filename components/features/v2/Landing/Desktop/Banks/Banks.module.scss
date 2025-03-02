@@ -523,3 +523,25 @@ height: 185px;
   user-select: none;
   pointer-events: none;
 }
+
+.pendulumWrapper {
+  position: absolute;
+  top: 200px;      /* adjust to match your desired final vertical position */
+  left: 50%;       /* center horizontally */
+  transform: translateX(-50%);
+
+  /* set a fixed size so you can absolutely position coins inside */
+  width: 100%;    /* or however wide you need for the coin layout */
+  height: 616px;   /* or whatever suits your design */
+  //  background: rgba(255, 0, 0, 0.1);  // TEMP: to visualize the wrapper */
+}
+
+.bankContainer{
+  position: relative; /* or absolute if you prefer */
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  @media #{$xs-lg}{
+    top: -100px;
+  }
+}
