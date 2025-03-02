@@ -17,7 +17,7 @@ const Banks = () => {
     const isOnScreen = useOnScreen({
       ref,
       threshold: 0.15,
-      dontUpdateAfterIntersection: false,
+      dontUpdateAfterIntersection: true,
     });
 
     useEffect(() => {
@@ -104,7 +104,7 @@ const Banks = () => {
           { rotation: -60 },
           {
             rotation: 0,
-            duration: 1.5,         // lengthen duration for a gentler motion
+            duration: 2,         // lengthen duration for a gentler motion
             ease: "power4.out",    // or "expo.out" / "power2.inOut" for a smoother ease
           }
         );
