@@ -254,37 +254,20 @@
 }
 
 .ornament2 {
-  top: -16px;
-  left: -36px;
-  opacity: 0;
+  top: 5px;
+  right: 0px;
 
-  @media screen and (max-width: 1600px) {
-    width: 196px;
-  }
+ z-index: 100;
 
-  @media screen and (max-width: 1400px) {
-    width: 196px;
-  }
-
-  &.animateOrnament2 {
-    top: -16px;
-    left: -36px;
-    opacity: 1;
-  }
 }
 
 .ornament5 {
-  right: 450px;
-  top: -30px;
-  opacity: 0;
-
+  left: 0px;
+  top: 5px;
+z-index: 100;
   @media screen and (max-width: 1400px) {}
 
-  &.animateOrnament5 {
-    right: 0px;
-    top: -30px;
-    opacity: 1;
-  }
+
 }
 
 .ornament4 {
