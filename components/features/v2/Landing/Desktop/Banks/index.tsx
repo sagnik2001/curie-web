@@ -17,7 +17,7 @@ const Banks = () => {
     const isOnScreen = useOnScreen({
       ref,
       threshold: 0.15,
-      dontUpdateAfterIntersection: true,
+      dontUpdateAfterIntersection: false,
     });
 
     useEffect(() => {
@@ -96,20 +96,36 @@ const Banks = () => {
   
     useEffect(() => {
       if (isOnScreen) {
-        gsap.set(".bankContainer", {
-          transformOrigin: "50% 0",
-        });
-        gsap.fromTo(
-          ".bankContainer",
-          { rotation: -60 },
-          {
-            rotation: 0,
-            duration: 2,         // lengthen duration for a gentler motion
-            ease: "power4.out",    // or "expo.out" / "power2.inOut" for a smoother ease
-          }
-        );
+        // Delay the start so the animation triggers when the section is fully in view.
+        setTimeout(() => {
+          gsap.set(".bankContainer", { transformOrigin: "50% 0" });
+          gsap.fromTo(
+            ".bankContainer",
+            { rotation: -30 }, // Reduced rotation angle
+            {
+              rotation: 0,
+              duration: 2,
+              ease: "power4.out",
+            }
+          );
+        }, 400); // 500ms delay before starting the animation
       }
     }, [isOnScreen]);
+
+    // useEffect(() => {
+    //   if (!isOnScreen) {
+    //     // When the section leaves the viewport, animate the bank container
+    //     // with a pivot at the top left so it rotates and moves downward.
+    //     gsap.set(".bankContainer", { transformOrigin: "0 0" });
+    //     gsap.to(".bankContainer", {
+    //       rotation: -30,
+    //       y: 100, // adjust this value to control how far down it moves
+    //       duration: 2,
+    //       ease: "power4.out",
+    //     });
+    //   }
+    // }, [isOnScreen]);
+    
     
     
     return (

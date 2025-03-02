@@ -39,6 +39,8 @@ export default function Hero() {
   usePauseAnimation(textRef);
   usePauseAnimation(paraRef);
 
+  
+
   useEffect(() => {
     setTimeout(() => {
       setLoadAnimation(true);
