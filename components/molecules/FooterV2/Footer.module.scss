@@ -2,7 +2,7 @@
 
 .footer {
   padding-bottom: 20px;
-  background-color: #FFF7DF;
+  background: linear-gradient(to bottom, #FFF7DF 90%, #FFECB4 10%);
   @media #{$not-touch} {
     display: none;
   }
@@ -161,6 +161,6 @@ line-height: 20px; /* 142.857% */
 letter-spacing: 0.2px;
 padding: 15px 24px 17px;
 background-color: #FFECB4;
-margin-bottom: 60px;
+padding-bottom: 70px;
 margin-top: 31px;
 }
