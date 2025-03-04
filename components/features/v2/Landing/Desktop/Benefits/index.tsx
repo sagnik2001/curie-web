@@ -82,7 +82,7 @@ const BenefitsComp = () => {
         
   gsap.fromTo(
     ".ornament_2",
-    { y: 400 },
+    { y: 300 },
     {
       y: 0,
       scrollTrigger: {
@@ -98,7 +98,7 @@ const BenefitsComp = () => {
   );
   gsap.fromTo(
     ".ornament_5",
-    { y: 400 },
+    { y: 300 },
     {
       y: 0,
       scrollTrigger: {

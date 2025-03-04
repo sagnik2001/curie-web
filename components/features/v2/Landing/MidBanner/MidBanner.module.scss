@@ -50,6 +50,8 @@ overflow: hidden;
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.56px;
+    display: flex;
+flex-direction: column;
 @media #{$xs-lg} {
   font-size: 32px;
  }
@@ -73,7 +75,7 @@ position: relative;
 }
 
 .highlighter{
-    left: 70%;
+    left: 0%;
     position: absolute;
     width: fit-content;
    top: 30%;

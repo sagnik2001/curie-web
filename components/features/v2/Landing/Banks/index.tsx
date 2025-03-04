@@ -14,7 +14,7 @@ const Banks = () => {
     const [floatOrnaments, setFloatOrnaments] = useState(false);
     const isOnScreen = useOnScreen({
       ref,
-      threshold: 0.15,
+      threshold: 0.65,
       dontUpdateAfterIntersection: false,
     });
 
@@ -64,9 +64,9 @@ const Banks = () => {
           console.error("Error loading Lottie animations:", error);
         }
       };
-
+      if(!isOnScreen) return;
       loadLotties();
-    }, []);
+    }, [isOnScreen]);
 
 
     return (
@@ -89,32 +89,32 @@ const Banks = () => {
           <div className={styles.bankContainer}>
             {lottieData.icici && (
               <div className={clsx(styles.ornament2, animate && styles.animate)}>
-                <Lottie animationData={lottieData.icici} />
+                <Lottie loop={false} animationData={lottieData.icici} />
               </div>
             )}
             {lottieData.amfi && (
               <div className={clsx(styles.ornament5, animate && styles.animate)}>
-                <Lottie animationData={lottieData.amfi} />
+                <Lottie loop={false}  animationData={lottieData.amfi} />
               </div>
             )}
             {lottieData.npci && (
               <div className={clsx(styles.ornament6, animate && styles.animate)}>
-                <Lottie animationData={lottieData.npci} />
+                <Lottie loop={false} animationData={lottieData.npci} />
               </div>
             )}
             {lottieData.pci && (
               <div className={clsx(styles.ornament4, animate && styles.animate)}>
-                <Lottie animationData={lottieData.pci} />
+                <Lottie loop={false} animationData={lottieData.pci} />
               </div>
             )}
             {lottieData.bajaj && (
               <div className={clsx(styles.ornament3, animate && styles.animate)}>
-                <Lottie animationData={lottieData.bajaj} />
+                <Lottie loop={false} animationData={lottieData.bajaj} />
               </div>
             )}
             {lottieData.yesbank && (
               <div className={clsx(styles.ornament1, animate && styles.animate)}>
-                <Lottie animationData={lottieData.yesbank} />
+                <Lottie loop={false} animationData={lottieData.yesbank} />
               </div>
             )}
           </div>

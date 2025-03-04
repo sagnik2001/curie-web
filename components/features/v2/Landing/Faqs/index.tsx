@@ -42,7 +42,7 @@ const Elements = ({ activeItem, setActiveItem } : { activeItem: string|null; set
                <div style={{ flex: 0.066,position:'relative',top:'4px' }}>
                  <RivePage
                    file='/faq_button.riv'
-                   customStyles={{ width: '24px', height: '24px', objectFit: 'contain' }}
+                   customStyles={{ width: '24px', height: '24px', objectFit: 'contain',position:'relative',top:'-4px' }}
                    onClick={() => handleAccordionToggle('item-1')}
                    isActive={activeItem === 'item-1'}
                  />

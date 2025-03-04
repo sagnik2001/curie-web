@@ -9,16 +9,18 @@ import useOnScreen from "@hooks/useOnScreen";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 type DataProp = {
-    heading : string; 
+    heading1 : string; 
+    heading2 : string;
     img : string;
 }
 
 const ImgComponent = ({data} : {data : DataProp}) => {
-    const {heading="",img=""} = data ?? {}
+    const {heading1="",heading2="",img=""} = data ?? {}
     return(
          <div className={styles.box}>
             <div className={styles.header}>
-            {heading}
+              <span>{heading1}</span>
+              <span>{heading2}</span>
             </div>
             <img src={img} alt="" className={styles.imgCtn}/>
          </div>
@@ -26,14 +28,16 @@ const ImgComponent = ({data} : {data : DataProp}) => {
 }
 
 const content = [
-     {
-        heading : 'Money grows in liquid funds',
-        img : '/desktop/mid_banner_1.png'
-     },
-     {
-        heading : 'Send or receive via UPI',
-        img : '/desktop/mid_banner_2.png'
-     }
+  {
+     heading1 : 'Money grows in',
+     heading2 : 'liquid funds',
+     img : '/desktop/mid_banner_1.png'
+  },
+  {
+     heading1 : 'Send or receive',
+     heading2 : 'via UPI',
+     img : '/desktop/mid_banner_2.png'
+  }
 ]
 
 const MidBanner = () => {
@@ -69,10 +73,14 @@ const MidBanner = () => {
                      })}
                    </div>
                    <div className={clsx(styles.subHeading,secondaryFont.className)}>
-                   Isn’t that cool? The feeling is mutual
+                   Isn’t that cool? The feeling is 
+                   <span style={{position:'relative',marginLeft:'4px'}}>
+                   mutual
                    <div className={styles.highlighter}>
              <CompareHighlighter className={styles.highlight}/>
            </div>
+                   </span>
+               
                    </div>
        </div>
     )

@@ -9,6 +9,7 @@ import gsap from "gsap";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
+let ScrollTrigger;
 
 const Banks = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -87,30 +88,96 @@ const Banks = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const [isGsapReady, setIsGsapReady] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      const mod = await import("gsap/ScrollTrigger");
+      ScrollTrigger = mod.ScrollTrigger;
+      gsap.registerPlugin(ScrollTrigger);
+      setIsGsapReady(true);
+    })();
+  }, []);
+
   const customStyles = isSmallScreen
     ? { width: '120px', height: '120px' }
     : { width: '180px', height: '185px' };
 
+  
+
+    useEffect(() => {
+      // Remove on-screen checks so the scroll-based effect happens naturally
+       if (!isGsapReady && !isOnScreen) return;
    
+      // Create a timeline that spans from when the container enters
+      // the viewport bottom (start) to when it leaves the viewport top (end).
+       const tl = gsap.timeline({
+         scrollTrigger: {
+           trigger: ref.current,
+           start: "top bottom", // when the top of .container hits bottom of viewport
+           end: "bottom top",   // when the bottom of .container hits top of viewport
+           scrub: true,         // ties the animation progress to scroll position
+         },
+       });
+   
+      // Images will move from y=200 (off the bottom) to y=0
+      // If you want a more or less dramatic movement, adjust the y values
+       tl.fromTo(
+         ".ornament4",
+         { y: "1000px" },
+         { y: "-65%", duration: 0.5, ease: "power4.out"  }
+       );
+       tl.fromTo(
+        ".ornament1",
+        { y: "1000px" },
+        { y: "-65%", duration: 0.5, ease: "power4.out"  },
+        0
+      );
+       tl.fromTo(
+         ".ornament2",
+         { y:  "1000px"},
+         { y: 0, duration: 0.5, ease: "power4.out", stagger: 0.2    },
+         0 // overlap with previous; or delay if you prefer
+       )
+       tl.fromTo(
+         ".ornament5",
+         { y:  "1000px"},
+         { y: 0, duration: 0.5, ease: "power4.out" , stagger: 0.2   },
+         0
+       )
+       tl.fromTo(
+        ".ornament6",
+        { y:  "1000px"},
+        { y: 0, duration: 0.5, ease: "power4.out", stagger: 0.4    },
+        0 // overlap with previous; or delay if you prefer
+      );
+      tl.fromTo(
+        ".ornament3",
+        { y:  "1000px"},
+        { y: 0, duration: 0.5, ease: "power4.out" , stagger: 0.4   },
+        0
+      )
+       ;
+     }, [isGsapReady,isOnScreen]);
 
   
-    useEffect(() => {
-      if (isOnScreen) {
-        // Delay the start so the animation triggers when the section is fully in view.
-        setTimeout(() => {
-          gsap.set(".bankContainer", { transformOrigin: "50% 0" });
-          gsap.fromTo(
-            ".bankContainer",
-            { rotation: -30 }, // Reduced rotation angle
-            {
-              rotation: 0,
-              duration: 2,
-              ease: "power4.out",
-            }
-          );
-        }, 400); // 500ms delay before starting the animation
-      }
-    }, [isOnScreen]);
+    // useEffect(() => {
+    //   if (isOnScreen) {
+    //     // Delay the start so the animation triggers when the section is fully in view.
+    //     setTimeout(() => {
+    //       gsap.set(".bankContainer", { transformOrigin: "50% 0" });
+    //       gsap.fromTo(
+    //         ".bankContainer",
+    //         { rotation: -30 }, // Reduced rotation angle
+    //         {
+    //           rotation: 0,
+    //           duration: 2,
+    //           ease: "power4.out",
+    //         }
+    //       );
+    //     }, 400); // 500ms delay before starting the animation
+    //   }
+    // }, [isOnScreen]);
 
     // useEffect(() => {
     //   if (!isOnScreen) {
@@ -156,13 +223,13 @@ const Banks = () => {
               <div className={clsx(styles.ornament6,'ornament6', animate && styles.animateOrnament6)}>
               <CustomRivPage file="/lottiebanks/npci.riv" customStyles={customStyles}/>
               </div>
-              <div className={clsx(styles.ornament4,'ornament4', animate && styles.animateOrnament4)}>
+              <div className={clsx(styles.ornament4,'ornament4')}>
               <CustomRivPage file="/lottiebanks/pcidss.riv" customStyles={customStyles}/>
               </div>
               <div className={clsx(styles.ornament3,'ornament3', animate && styles.animateOrnament3)}>
               <CustomRivPage file="/lottiebanks/bajaj.riv" customStyles={customStyles}/>
               </div>
-              <div className={clsx(styles.ornament1,'ornament1', animate && styles.animateOrnament1)}>
+              <div className={clsx(styles.ornament1,'ornament1')}>
               <CustomRivPage file="/lottiebanks/yes_bank.riv" customStyles={customStyles}/>
               </div>
               </div>
