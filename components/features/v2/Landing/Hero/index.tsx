@@ -61,7 +61,7 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      if (!isGsapReady || !ScrollTrigger) return; // Ensure GSAP is ready
+      if (!isGsapReady || !ScrollTrigger || !isOnScreen) return; // Ensure GSAP is ready
 
       
 gsap.fromTo(
@@ -71,11 +71,11 @@ gsap.fromTo(
     y: 0,
     scrollTrigger: {
       trigger: ".ornament_2",
-       start: "top 10%",
-       end: "top 50%",
+       start: "top 0",
+       end: "top top",
       scrub: 1,
-      pinType: "transform",
       pinSpacing: false,
+      markers:true
     },
   }
 );
@@ -86,10 +86,9 @@ gsap.fromTo(
     y: 0,
     scrollTrigger: {
       trigger: ".ornament_5",
-      start: "top 10%",
-       end: "top 50%",
+      start: "top 0",
+       end: "top top",
       scrub: 1,
-      pinType: "transform",
       pinSpacing: false,
     },
   }
@@ -97,7 +96,7 @@ gsap.fromTo(
 
   
     },
-    { scope: bodyRef, dependencies: [isGsapReady] } // Add isGsapReady as a dependency
+    { scope: bodyRef, dependencies: [isGsapReady,ScrollTrigger] } // Add isGsapReady as a dependency
   );
 
 
