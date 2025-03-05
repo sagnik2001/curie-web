@@ -71,8 +71,8 @@ gsap.fromTo(
     y: 0,
     scrollTrigger: {
       trigger: ".ornament_2",
-       start: "top 40%",
-       end: "top top",
+       start: "top 10%",
+       end: "top 50%",
       scrub: 1,
       pinSpacing: false,
     },
@@ -85,8 +85,8 @@ gsap.fromTo(
     y: 0,
     scrollTrigger: {
       trigger: ".ornament_5",
-      start: "top 40%",
-       end: "top top",
+      start: "top 10%",
+       end: "top 50%",
       scrub: 1,
       pinSpacing: false,
     },
