@@ -73,10 +73,12 @@ const MidBanner = () => {
                      })}
                    </div>
                    <div className={clsx(styles.subHeading,secondaryFont.className)}>
-                   Isn’t that cool? The feeling is mutual
+                   Isn’t that cool? The feeling is <span style={{position:'relative'}}>mutual
                    <div className={styles.highlighter}>
              <CompareHighlighter style={{height:'21px',width:'109px'}}/>
            </div>
+                   </span>
+                   
                    </div>
        </div>
     )

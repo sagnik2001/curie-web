@@ -79,19 +79,10 @@ position: relative;
 }
 
 .highlighter{
-    left: 32%;
+    left: 0;
     position: absolute;
     width: fit-content;
     font-size: 0;
     bottom: -20%;
-    @media screen and (max-width: 1600px) {
-        left: 44%;
-    }
-    @media screen and (max-width: 1200px) {
-        left: 56%;
-    }
-    @media screen and (max-width: 990px) {
-        left: 76%;
-        
-    }
+  
 }

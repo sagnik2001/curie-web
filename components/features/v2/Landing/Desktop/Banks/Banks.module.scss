@@ -512,7 +512,7 @@ height: 185px;
   width: 100%;
   height: 100%;
   top: 0px;
-  @media #{$xs-lg}{
-    top: -100px;
-  }
+  // @media #{$xs-lg}{
+  //   top: -100px;
+  // }
 }

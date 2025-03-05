@@ -212,6 +212,7 @@ const Banks = () => {
           </div>
         </div>
         <div className={styles.pendulumWrapper}>
+          {/* <div style={{position:'absolute',top:'0',background:'#000',height:'3px',width:'100%'}} /> */}
           <div className={clsx(styles.bankContainer,'bankContainer')}>
               <div className={clsx(styles.ornament2,'ornament2', animate && styles.animateOrnament2)}>
               <CustomRivPage file="/lottiebanks/icici.riv" customStyles={customStyles}/>
